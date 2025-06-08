@@ -15,13 +15,13 @@ React component library for Preline UI - Easy integration of Preline UI componen
 
 ```bash
 # npm
-npm install @minagishl/preline-react preline
+npm install preline-react preline
 
 # yarn
-yarn add @minagishl/preline-react preline
+yarn add preline-react preline
 
 # pnpm
-pnpm add @minagishl/preline-react preline
+pnpm add preline-react preline
 ```
 
 ## Setup
