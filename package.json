@@ -18,7 +18,7 @@
     "lint": "eslint src --ext .ts,.tsx",
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
     "type-check": "tsc --noEmit",
-    "prepare": "pnpm run build",
+    "prepare": "pnpm run build && husky",
     "prepublishOnly": "pnpm run build && pnpm run test",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -59,6 +59,8 @@
     "preline": "^3.1.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
@@ -80,6 +82,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "9.0.6",
+    "husky": "^9.1.7",
     "jest": "^29.7.0",
     "postcss": "^8.4.32",
     "rollup": "^4.6.1",
