@@ -39,15 +39,15 @@ npm install -D tailwindcss @tailwindcss/forms
 Add the following to your CSS file (e.g., `globals.css`):
 
 ```css
-@import 'tailwindcss';
-@import 'preline/variants.css';
+@import "tailwindcss";
+@import "preline/variants.css";
 
 /* Optional Preline UI styles */
 @layer base {
-	button:not(:disabled),
-	[role='button']:not(:disabled) {
-		cursor: pointer;
-	}
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
 }
 ```
 
@@ -56,14 +56,14 @@ Add the following to your CSS file (e.g., `globals.css`):
 Use `PrelineProvider` at the root of your application:
 
 ```tsx
-import { PrelineProvider } from '@minagishl/preline-react';
+import { PrelineProvider } from "@minagishl/preline-react";
 
 function App() {
-	return (
-		<PrelineProvider>
-			<div className='App'>{/* Your application */}</div>
-		</PrelineProvider>
-	);
+  return (
+    <PrelineProvider>
+      <div className="App">{/* Your application */}</div>
+    </PrelineProvider>
+  );
 }
 ```
 
@@ -72,113 +72,123 @@ function App() {
 ### Basic Components
 
 ```tsx
-import { Button, Card, Alert, Badge, Avatar } from '@minagishl/preline-react';
+import { Button, Card, Alert, Badge, Avatar } from "@minagishl/preline-react";
 
 function MyComponent() {
-	return (
-		<Card>
-			<h2>Hello Preline React!</h2>
+  return (
+    <Card>
+      <h2>Hello Preline React!</h2>
 
-			<Button variant='solid' color='primary' onClick={() => alert('Button clicked!')}>
-				Click me
-			</Button>
+      <Button
+        variant="solid"
+        color="primary"
+        onClick={() => alert("Button clicked!")}
+      >
+        Click me
+      </Button>
 
-			<Alert variant='success' dismissible>
-				Operation completed successfully!
-			</Alert>
+      <Alert variant="success" dismissible>
+        Operation completed successfully!
+      </Alert>
 
-			<Badge color='primary' variant='soft'>
-				New Feature
-			</Badge>
+      <Badge color="primary" variant="soft">
+        New Feature
+      </Badge>
 
-			<Avatar src='/path/to/avatar.jpg' alt='User avatar' size='md' />
-		</Card>
-	);
+      <Avatar src="/path/to/avatar.jpg" alt="User avatar" size="md" />
+    </Card>
+  );
 }
 ```
 
 ### Form Components
 
 ```tsx
-import { Input, Textarea, Select, Checkbox, Switch } from '@minagishl/preline-react';
+import {
+  Input,
+  Textarea,
+  Select,
+  Checkbox,
+  Switch,
+} from "@minagishl/preline-react";
 
 function ContactForm() {
-	return (
-		<form>
-			<Input type='text' placeholder='Enter your name' label='Name' />
+  return (
+    <form>
+      <Input type="text" placeholder="Enter your name" label="Name" />
 
-			<Textarea placeholder='Enter your message' rows={4} />
+      <Textarea placeholder="Enter your message" rows={4} />
 
-			<Select>
-				<option value=''>Select category</option>
-				<option value='inquiry'>Inquiry</option>
-				<option value='support'>Support</option>
-			</Select>
+      <Select>
+        <option value="">Select category</option>
+        <option value="inquiry">Inquiry</option>
+        <option value="support">Support</option>
+      </Select>
 
-			<Checkbox>I agree to the terms and conditions</Checkbox>
+      <Checkbox>I agree to the terms and conditions</Checkbox>
 
-			<Switch>Receive email notifications</Switch>
-		</form>
-	);
+      <Switch>Receive email notifications</Switch>
+    </form>
+  );
 }
 ```
 
 ### Navigation Components
 
 ```tsx
-import { Navbar, Sidebar, Breadcrumb, Tabs } from '@minagishl/preline-react';
+import { Navbar, Sidebar, Breadcrumb, Tabs } from "@minagishl/preline-react";
 
 function NavigationExample() {
-	return (
-		<div>
-			<Navbar>
-				<div>Logo</div>
-				<div>Menu</div>
-			</Navbar>
+  return (
+    <div>
+      <Navbar>
+        <div>Logo</div>
+        <div>Menu</div>
+      </Navbar>
 
-			<Breadcrumb>
-				<li>Home</li>
-				<li>Products</li>
-				<li>Details</li>
-			</Breadcrumb>
+      <Breadcrumb>
+        <li>Home</li>
+        <li>Products</li>
+        <li>Details</li>
+      </Breadcrumb>
 
-			<Tabs>
-				<button>Tab 1</button>
-				<button>Tab 2</button>
-				<button>Tab 3</button>
-			</Tabs>
-		</div>
-	);
+      <Tabs>
+        <button>Tab 1</button>
+        <button>Tab 2</button>
+        <button>Tab 3</button>
+      </Tabs>
+    </div>
+  );
 }
 ```
 
 ### Using Hooks
 
 ```tsx
-import { useModal, useDropdown } from '@minagishl/preline-react';
+import { useModal, useDropdown } from "@minagishl/preline-react";
 
 function HookExample() {
-	const { isOpen, openModal, closeModal } = useModal();
-	const { isOpen: isDropdownOpen, toggleDropdown } = useDropdown();
+  const { isOpen, openModal, closeModal } = useModal();
+  const { isOpen: isDropdownOpen, toggleDropdown } = useDropdown();
 
-	return (
-		<div>
-			<Button onClick={openModal}>Open Modal</Button>
+  return (
+    <div>
+      <Button onClick={openModal}>Open Modal</Button>
 
-			<Modal isOpen={isOpen} onClose={closeModal} title='Sample Modal'>
-				<p>This is modal content.</p>
-			</Modal>
+      <Modal isOpen={isOpen} onClose={closeModal} title="Sample Modal">
+        <p>This is modal content.</p>
+      </Modal>
 
-			<Dropdown
-				trigger={<Button>Dropdown</Button>}
-				isOpen={isDropdownOpen}
-				onToggle={toggleDropdown}
-			>
-				<div>Menu Item 1</div>
-				<div>Menu Item 2</div>
-			</Dropdown>
-		</div>
-	);
+      <Dropdown
+        trigger={<Button>Dropdown</Button>}
+        isOpen={isDropdownOpen}
+        onToggle={toggleDropdown}
+      >
+        <div>Menu Item 1</div>
+        <div>Menu Item 2</div>
+      </Dropdown>
+    </div>
+  );
 }
 ```
 
@@ -230,7 +240,7 @@ function HookExample() {
 All components accept the `className` property, making it easy to apply custom styles:
 
 ```tsx
-<Button className='custom-button-style'>Custom Button</Button>
+<Button className="custom-button-style">Custom Button</Button>
 ```
 
 ## Storybook
