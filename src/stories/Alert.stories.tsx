@@ -247,6 +247,8 @@ export const AllSoftVariants: Story = {
   ),
 };
 
+// TODO: Allow it to work without specifying a style.
+
 // Border options showcase
 export const BorderOptions: Story = {
   render: () => (
