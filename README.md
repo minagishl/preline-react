@@ -56,7 +56,7 @@ Add the following to your CSS file (e.g., `globals.css`):
 Use `PrelineProvider` at the root of your application:
 
 ```tsx
-import { PrelineProvider } from "@minagishl/preline-react";
+import { PrelineProvider } from "preline-react";
 
 function App() {
   return (
@@ -72,7 +72,7 @@ function App() {
 ### Basic Components
 
 ```tsx
-import { Button, Card, Alert, Badge, Avatar } from "@minagishl/preline-react";
+import { Button, Card, Alert, Badge, Avatar } from "preline-react";
 
 function MyComponent() {
   return (
@@ -104,13 +104,7 @@ function MyComponent() {
 ### Form Components
 
 ```tsx
-import {
-  Input,
-  Textarea,
-  Select,
-  Checkbox,
-  Switch,
-} from "@minagishl/preline-react";
+import { Input, Textarea, Select, Checkbox, Switch } from "preline-react";
 
 function ContactForm() {
   return (
@@ -136,7 +130,7 @@ function ContactForm() {
 ### Navigation Components
 
 ```tsx
-import { Navbar, Sidebar, Breadcrumb, Tabs } from "@minagishl/preline-react";
+import { Navbar, Sidebar, Breadcrumb, Tabs } from "preline-react";
 
 function NavigationExample() {
   return (
@@ -163,6 +157,8 @@ function NavigationExample() {
 ```
 
 ## Available Components
+
+> **Note:** Currently, only the basic components have been implemented.
 
 ### Basic Components
 
