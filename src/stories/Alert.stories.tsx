@@ -253,13 +253,21 @@ export const BorderOptions: Story = {
     <div className="space-y-4">
       <div>
         <h3 className="text-lg font-semibold mb-2">Top Border</h3>
-        <Alert variant="success" border="top" soft>
+        <Alert
+          variant="success"
+          border="top"
+          className="!bg-teal-50 !text-gray-700 dark:!text-neutral-400"
+        >
           Soft success alert with top border
         </Alert>
       </div>
       <div>
         <h3 className="text-lg font-semibold mb-2">Left Border</h3>
-        <Alert variant="danger" border="left" soft className="rounded-none">
+        <Alert
+          variant="danger"
+          border="left"
+          className="rounded-none !bg-red-50 !text-gray-700 dark:!text-neutral-400"
+        >
           Soft danger alert with left border
         </Alert>
       </div>
