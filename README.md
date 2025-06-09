@@ -162,36 +162,6 @@ function NavigationExample() {
 }
 ```
 
-### Using Hooks
-
-```tsx
-import { useModal, useDropdown } from "@minagishl/preline-react";
-
-function HookExample() {
-  const { isOpen, openModal, closeModal } = useModal();
-  const { isOpen: isDropdownOpen, toggleDropdown } = useDropdown();
-
-  return (
-    <div>
-      <Button onClick={openModal}>Open Modal</Button>
-
-      <Modal isOpen={isOpen} onClose={closeModal} title="Sample Modal">
-        <p>This is modal content.</p>
-      </Modal>
-
-      <Dropdown
-        trigger={<Button>Dropdown</Button>}
-        isOpen={isDropdownOpen}
-        onToggle={toggleDropdown}
-      >
-        <div>Menu Item 1</div>
-        <div>Menu Item 2</div>
-      </Dropdown>
-    </div>
-  );
-}
-```
-
 ## Available Components
 
 ### Basic Components
@@ -201,9 +171,6 @@ function HookExample() {
 - `Alert` - Alert
 - `Badge` - Badge
 - `Avatar` - Avatar
-- `Modal` - Modal
-- `Dropdown` - Dropdown
-- `Accordion` - Accordion
 - `Toast` - Toast
 - `Progress` - Progress bar
 
@@ -228,12 +195,6 @@ function HookExample() {
 
 - `Container` - Container
 - `Grid` - Grid
-
-### Hooks
-
-- `usePreline` - Initialize Preline UI
-- `useModal` - Modal control
-- `useDropdown` - Dropdown control
 
 ## Customization
 
