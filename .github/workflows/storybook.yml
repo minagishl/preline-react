@@ -38,7 +38,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build Storybook
-        run: pnpm run build-storybook
+        run: pnpm run storybook:build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

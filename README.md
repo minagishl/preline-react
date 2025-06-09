@@ -217,7 +217,7 @@ Open `http://localhost:6006` in your browser to view Storybook.
 
 ```bash
 # Build static Storybook site
-pnpm run build-storybook
+pnpm run storybook:build
 ```
 
 Built files will be output to the `storybook-static` directory.
