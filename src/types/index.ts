@@ -1,4 +1,4 @@
-import { ReactNode, HTMLAttributes, InputHTMLAttributes } from "react";
+import { ReactNode, InputHTMLAttributes } from "react";
 
 // Common props interface
 export interface BaseProps {
@@ -20,18 +20,6 @@ export type Color =
   | "light"
   | "dark";
 
-// Button specific types
-export interface ButtonProps
-  extends BaseProps,
-    Omit<HTMLAttributes<HTMLButtonElement>, "className"> {
-  variant?: "solid" | "outline" | "ghost" | "soft";
-  size?: Size;
-  color?: Color;
-  disabled?: boolean;
-  loading?: boolean;
-  type?: "button" | "submit" | "reset";
-}
-
 // Modal types
 export interface ModalProps extends BaseProps {
   isOpen: boolean;
@@ -40,30 +28,6 @@ export interface ModalProps extends BaseProps {
   size?: Size;
   backdrop?: boolean;
   keyboard?: boolean;
-}
-
-// Alert types
-export interface AlertProps extends BaseProps {
-  variant?: Color;
-  style?: "solid" | "soft" | "bordered-top" | "bordered-left" | "card";
-  dismissible?: boolean;
-  onDismiss?: () => void;
-  title?: string;
-  description?: string;
-  icon?: ReactNode;
-  showIcon?: boolean;
-  list?: string[];
-  actions?: Array<{
-    label: string;
-    onClick: () => void;
-    variant?: "primary" | "secondary";
-  }>;
-  link?: {
-    text: string;
-    href?: string;
-    onClick?: () => void;
-  };
-  animated?: boolean;
 }
 
 // Form field types

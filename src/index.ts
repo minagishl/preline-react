@@ -1,4 +1,5 @@
 // Core components
+export { default as Alert } from "./components/Alerts";
 
 // Form components
 export { default as Input } from "./components/forms/Input";
