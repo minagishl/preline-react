@@ -31,6 +31,11 @@ const meta: Meta<typeof Alert> = {
       control: "boolean",
       description: "Toggle between soft (outlined) and solid styling",
     },
+    border: {
+      control: "select",
+      options: [null, "top", "left"],
+      description: "Border position option - top or left border",
+    },
     children: {
       control: "text",
       description: "The content to display inside the alert",
@@ -224,6 +229,26 @@ export const AllSoftVariants: Story = {
       <Alert variant="light" soft>
         Soft light alert message
       </Alert>
+    </div>
+  ),
+};
+
+// Border options showcase
+export const BorderOptions: Story = {
+  render: () => (
+    <div className="space-y-4">
+      <div>
+        <h3 className="text-lg font-semibold mb-2">Top Border</h3>
+        <Alert variant="success" border="top" soft>
+          Soft success alert with top border
+        </Alert>
+      </div>
+      <div>
+        <h3 className="text-lg font-semibold mb-2">Left Border</h3>
+        <Alert variant="danger" border="left" soft className="rounded-none">
+          Soft danger alert with left border
+        </Alert>
+      </div>
     </div>
   ),
 };
