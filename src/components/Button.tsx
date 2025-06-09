@@ -182,7 +182,7 @@ export const Button: React.FC<ButtonProps> = ({
       {!loading && (
         <>
           {leftIcon}
-          {iconOnly ? children : <span>{children}</span>}
+          {children}
           {rightIcon}
         </>
       )}
