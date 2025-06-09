@@ -1,4 +1,3 @@
-import React from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { AvatarGroup } from "../components/AvatarGroup";
 import { Avatar } from "../components/Avatar";
