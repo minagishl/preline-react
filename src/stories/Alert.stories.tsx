@@ -194,13 +194,27 @@ export const WithComplexContent: Story = {
 export const AllVariants: Story = {
   render: () => (
     <div className="space-y-4">
-      <Alert variant="info">Info alert message</Alert>
-      <Alert variant="success">Success alert message</Alert>
-      <Alert variant="warning">Warning alert message</Alert>
-      <Alert variant="danger">Danger alert message</Alert>
-      <Alert variant="dark">Dark alert message</Alert>
-      <Alert variant="secondary">Secondary alert message</Alert>
-      <Alert variant="light">Light alert message</Alert>
+      <Alert variant="dark">
+        Dark alert! You should check in on some of those fields below.
+      </Alert>
+      <Alert variant="secondary">
+        Secondary alert! You should check in on some of those fields below.
+      </Alert>
+      <Alert variant="info">
+        Info alert! You should check in on some of those fields below.
+      </Alert>
+      <Alert variant="success">
+        Success alert! You should check in on some of those fields below.
+      </Alert>
+      <Alert variant="danger">
+        Danger alert! You should check in on some of those fields below.
+      </Alert>
+      <Alert variant="warning">
+        Warning alert! You should check in on some of those fields below.
+      </Alert>
+      <Alert variant="light">
+        Light alert! You should check in on some of those fields below.
+      </Alert>
     </div>
   ),
 };
@@ -208,23 +222,23 @@ export const AllVariants: Story = {
 export const AllSoftVariants: Story = {
   render: () => (
     <div className="space-y-4">
+      <Alert variant="dark" soft>
+        Soft dark alert message
+      </Alert>
+      <Alert variant="danger" soft>
+        Soft danger alert message
+      </Alert>
       <Alert variant="info" soft>
         Soft info alert message
+      </Alert>
+      <Alert variant="secondary" soft>
+        Soft secondary alert message
       </Alert>
       <Alert variant="success" soft>
         Soft success alert message
       </Alert>
       <Alert variant="warning" soft>
         Soft warning alert message
-      </Alert>
-      <Alert variant="danger" soft>
-        Soft danger alert message
-      </Alert>
-      <Alert variant="dark" soft>
-        Soft dark alert message
-      </Alert>
-      <Alert variant="secondary" soft>
-        Soft secondary alert message
       </Alert>
       <Alert variant="light" soft>
         Soft light alert message
