@@ -4,6 +4,7 @@ export { default as Grid } from "./components/layout/Grid";
 
 // Content components
 export { default as Typography } from "./components/content/Typography";
+export { default as Link } from "./components/content/Link";
 
 // Core components
 export { default as Alert } from "./components/Alert";
