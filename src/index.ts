@@ -25,13 +25,6 @@ export { default as Modal } from "./components/overlays/Modal";
 export { default as Tooltip } from "./components/overlays/Tooltip";
 export { default as Popover } from "./components/forms/Popover";
 
-// Navigation components
-export { default as Navbar } from "./components/navigation/Navbar";
-export { default as Sidebar } from "./components/navigation/Sidebar";
-export { default as Breadcrumb } from "./components/navigation/Breadcrumb";
-export { default as Pagination } from "./components/navigation/Pagination";
-export { default as Tabs } from "./components/navigation/Tabs";
-
 // Layout components
 export { default as Container } from "./components/layout/Container";
 export { default as Grid } from "./components/layout/Grid";
