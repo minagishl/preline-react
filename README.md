@@ -42,7 +42,11 @@ Add the following to your CSS file (e.g., `globals.css`):
 
 ```css
 @import "tailwindcss";
+@plugin "@tailwindcss/forms";
+
+/* Preline UI */
 @import "preline/variants.css";
+@source "../node_modules/preline/dist/*.js";
 
 /* Optional Preline UI styles */
 @layer base {
