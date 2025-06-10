@@ -55,7 +55,7 @@ type ButtonGroupComponent = FC<ButtonGroupProps> & {
   Button: FC<GroupButtonProps>;
 };
 
-export const ButtonGroup: ButtonGroupComponent = ({
+const ButtonGroup: ButtonGroupComponent = ({
   vertical = false,
   className,
   children,
@@ -93,3 +93,5 @@ export const ButtonGroup: ButtonGroupComponent = ({
 };
 
 ButtonGroup.Button = Button;
+
+export default ButtonGroup;

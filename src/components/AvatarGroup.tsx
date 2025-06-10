@@ -19,7 +19,7 @@ export interface AvatarGroupProps {
   shape?: "circular" | "rounded";
 }
 
-export const AvatarGroup: React.FC<AvatarGroupProps> = ({
+const AvatarGroup: React.FC<AvatarGroupProps> = ({
   children,
   max,
   spacing,
@@ -82,3 +82,5 @@ export const AvatarGroup: React.FC<AvatarGroupProps> = ({
     </div>
   );
 };
+
+export default AvatarGroup;

@@ -39,7 +39,7 @@ const QuoteIcon: React.FC<{ align?: Align }> = ({ align = "left" }) => {
   );
 };
 
-export const Blockquote: React.FC<BlockquoteProps> = ({
+const Blockquote: React.FC<BlockquoteProps> = ({
   children,
   footer,
   size = "md",
@@ -107,3 +107,5 @@ export const Blockquote: React.FC<BlockquoteProps> = ({
     </blockquote>
   );
 };
+
+export default Blockquote;

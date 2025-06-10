@@ -70,7 +70,7 @@ const indicatorColorClasses: Record<Color, string> = {
   white: "bg-gray-800",
 };
 
-export const Badge: React.FC<BadgeProps> = ({
+const Badge: React.FC<BadgeProps> = ({
   children,
   color = "gray",
   variant = "solid",
@@ -137,3 +137,5 @@ export const Badge: React.FC<BadgeProps> = ({
     </span>
   );
 };
+
+export default Badge;

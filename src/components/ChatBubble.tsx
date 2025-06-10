@@ -168,11 +168,7 @@ type ChatBubbleComponent = FC<ChatBubbleProps> & {
   Footer: FC<FooterProps>;
 };
 
-export const ChatBubble: ChatBubbleComponent = ({
-  className,
-  children,
-  ...props
-}) => {
+const ChatBubble: ChatBubbleComponent = ({ className, children, ...props }) => {
   const chatClasses = classNames("space-y-5", className);
   return (
     <ul className={chatClasses} {...props}>
@@ -186,3 +182,5 @@ ChatBubble.Content = Content;
 ChatBubble.Avatar = Avatar;
 ChatBubble.AvatarInitials = AvatarInitials;
 ChatBubble.Footer = Footer;
+
+export default ChatBubble;

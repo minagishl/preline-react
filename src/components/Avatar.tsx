@@ -81,7 +81,7 @@ const outlineColorClasses: Record<Color, string> = {
 const whiteVariantClasses =
   "border border-gray-200 bg-white text-gray-800 shadow-2xs dark:bg-neutral-900 dark:border-neutral-700 dark:text-white";
 
-export const Avatar: React.FC<AvatarProps> = ({
+const Avatar: React.FC<AvatarProps> = ({
   src,
   alt = "Avatar",
   size = "md",
@@ -196,3 +196,5 @@ export const Avatar: React.FC<AvatarProps> = ({
 
   return renderContent();
 };
+
+export default Avatar;

@@ -90,7 +90,7 @@ export interface StyledIconProps extends HTMLAttributes<HTMLSpanElement> {
   children: ReactElement<{ className?: string }>;
 }
 
-export const StyledIcon: FC<StyledIconProps> = ({
+const StyledIcon: FC<StyledIconProps> = ({
   variant = "ghost",
   color = "blue",
   size = "md",
@@ -144,3 +144,5 @@ export const StyledIcon: FC<StyledIconProps> = ({
     </span>
   );
 };
+
+export default StyledIcon;

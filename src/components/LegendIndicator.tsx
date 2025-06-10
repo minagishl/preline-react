@@ -21,7 +21,7 @@ export interface LegendIndicatorProps extends HTMLAttributes<HTMLDivElement> {
   color?: LegendIndicatorColor;
 }
 
-export const LegendIndicator: FC<LegendIndicatorProps> = ({
+const LegendIndicator: FC<LegendIndicatorProps> = ({
   children,
   className,
   color = "gray",
@@ -42,3 +42,5 @@ export const LegendIndicator: FC<LegendIndicatorProps> = ({
     </div>
   );
 };
+
+export default LegendIndicator;

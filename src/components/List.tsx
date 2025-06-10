@@ -159,7 +159,7 @@ type ListComponent = FC<ListProps> & {
   Icon: FC<IconProps>;
 };
 
-export const List: ListComponent = ({
+const List: ListComponent = ({
   children,
   className,
   variant = "none",
@@ -193,3 +193,5 @@ export const List: ListComponent = ({
 
 List.Item = Item;
 List.Icon = Icon;
+
+export default List;

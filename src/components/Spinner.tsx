@@ -28,7 +28,7 @@ export interface SpinnerProps extends HTMLAttributes<HTMLDivElement> {
   size?: SpinnerSize;
 }
 
-export const Spinner: FC<SpinnerProps> = ({
+const Spinner: FC<SpinnerProps> = ({
   color = "blue",
   size = "md",
   className,
@@ -52,3 +52,5 @@ export const Spinner: FC<SpinnerProps> = ({
     </div>
   );
 };
+
+export default Spinner;

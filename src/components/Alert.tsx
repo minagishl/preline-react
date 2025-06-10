@@ -18,13 +18,13 @@ interface AlertProps {
   className?: string;
 }
 
-export default function Alert({
+const Alert: React.FC<AlertProps> = ({
   variant = "info",
   children,
   soft = false,
   border = null,
   className,
-}: AlertProps) {
+}) => {
   const variantClasses: Record<AlertVariant, string> = {
     dark: soft
       ? "bg-gray-100 border-gray-200 text-gray-800 dark:bg-white/10 dark:border-white/20 dark:text-white border"
@@ -77,4 +77,6 @@ export default function Alert({
       {children}
     </div>
   );
-}
+};
+
+export default Alert;

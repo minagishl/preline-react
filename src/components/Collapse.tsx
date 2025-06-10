@@ -169,7 +169,7 @@ type CollapseComponent = FC<CollapseProps> & {
   TriggerLink: FC<TriggerLinkProps>;
 };
 
-export const Collapse: CollapseComponent = ({
+const Collapse: CollapseComponent = ({
   className,
   defaultOpen = false,
   children,
@@ -198,3 +198,5 @@ Collapse.Button = Button;
 Collapse.Content = Content;
 Collapse.Icon = Icon;
 Collapse.TriggerLink = TriggerLink;
+
+export default Collapse;

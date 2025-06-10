@@ -117,7 +117,7 @@ const buttonStyles = {
   },
 };
 
-export const Button: React.FC<ButtonProps> = ({
+const Button: React.FC<ButtonProps> = ({
   children,
   variant = "solid",
   color = "blue",
@@ -189,3 +189,5 @@ export const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };
+
+export default Button;

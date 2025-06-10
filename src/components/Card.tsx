@@ -158,7 +158,7 @@ type CardComponent = FC<CardProps> & {
   Footer: FC<HTMLAttributes<HTMLDivElement>>;
 };
 
-export const Card: CardComponent = ({
+const Card: CardComponent = ({
   className,
   hoverEffect,
   bordered,
@@ -200,3 +200,5 @@ Card.Text = Text;
 Card.Link = Link;
 Card.Header = Header;
 Card.Footer = Footer;
+
+export default Card;

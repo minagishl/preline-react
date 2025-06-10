@@ -113,7 +113,7 @@ type ToastComponent = FC<ToastProps> & {
   CloseButton: FC<ButtonHTMLAttributes<HTMLButtonElement>>;
 };
 
-export const Toast: ToastComponent = ({
+const Toast: ToastComponent = ({
   className,
   variant = "default",
   color = "blue",
@@ -164,3 +164,5 @@ export const Toast: ToastComponent = ({
 };
 
 Toast.CloseButton = CloseButton;
+
+export default Toast;

@@ -2,26 +2,26 @@
 export { default as Alert } from "./components/Alert";
 export { default as Timeline } from "./components/Timeline";
 export { default as Accordion } from "./components/Accordion";
-export { Toast } from "./components/Toast";
-export { StyledIcon } from "./components/StyledIcon";
-export { Spinner } from "./components/Spinner";
-export { Ratings } from "./components/Ratings";
-export { Progress } from "./components/Progress";
-export { LegendIndicator } from "./components/LegendIndicator";
-export { List } from "./components/List";
-export { Device } from "./components/Device";
-export { Collapse } from "./components/Collapse";
-export { Button } from "./components/Button";
-export { ChatBubble } from "./components/ChatBubble";
-export { Card } from "./components/Card";
-export { ButtonGroup } from "./components/ButtonGroup";
-export { Blockquote } from "./components/Blockquote";
-export { Badge } from "./components/Badge";
-export { AvatarGroup } from "./components/AvatarGroup";
-export { Avatar } from "./components/Avatar";
+export { default as Toast } from "./components/Toast";
+export { default as StyledIcon } from "./components/StyledIcon";
+export { default as Spinner } from "./components/Spinner";
+export { default as Ratings } from "./components/Ratings";
+export { default as Progress } from "./components/Progress";
+export { default as LegendIndicator } from "./components/LegendIndicator";
+export { default as List } from "./components/List";
+export { default as Device } from "./components/Device";
+export { default as Collapse } from "./components/Collapse";
+export { default as Button } from "./components/Button";
+export { default as ChatBubble } from "./components/ChatBubble";
+export { default as Card } from "./components/Card";
+export { default as ButtonGroup } from "./components/ButtonGroup";
+export { default as Blockquote } from "./components/Blockquote";
+export { default as Badge } from "./components/Badge";
+export { default as AvatarGroup } from "./components/AvatarGroup";
+export { default as Avatar } from "./components/Avatar";
 
 // Overlay components
-export { Modal } from "./components/overlays/Modal";
+export { default as Modal } from "./components/overlays/Modal";
 
 // Navigation components
 export { default as Navbar } from "./components/navigation/Navbar";

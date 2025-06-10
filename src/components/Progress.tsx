@@ -37,7 +37,7 @@ export interface ProgressProps extends HTMLAttributes<HTMLDivElement> {
   barClassName?: string;
 }
 
-export const Progress: FC<ProgressProps> = ({
+const Progress: FC<ProgressProps> = ({
   value,
   color = "blue",
   size = "sm",
@@ -85,3 +85,5 @@ export const Progress: FC<ProgressProps> = ({
     </div>
   );
 };
+
+export default Progress;

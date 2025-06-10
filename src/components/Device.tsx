@@ -67,7 +67,7 @@ type DeviceComponent = FC<DeviceProps> & {
   Browser: FC<BrowserProps>;
 };
 
-export const Device: DeviceComponent = ({ children, className, ...props }) => {
+const Device: DeviceComponent = ({ children, className, ...props }) => {
   return (
     <div className={className} {...props}>
       {children}
@@ -77,3 +77,5 @@ export const Device: DeviceComponent = ({ children, className, ...props }) => {
 
 Device.Mobile = Mobile;
 Device.Browser = Browser;
+
+export default Device;

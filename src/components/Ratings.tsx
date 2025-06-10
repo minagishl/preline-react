@@ -74,7 +74,7 @@ type RatingsComponent = FC<RatingsProps> & {
   EmojiButton: FC<EmojiButtonProps>;
 };
 
-export const Ratings: RatingsComponent = ({
+const Ratings: RatingsComponent = ({
   total = 5,
   value = 0,
   onChange,
@@ -153,3 +153,5 @@ export const Ratings: RatingsComponent = ({
 };
 
 Ratings.EmojiButton = EmojiButton;
+
+export default Ratings;

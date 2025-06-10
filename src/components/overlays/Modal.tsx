@@ -248,7 +248,7 @@ type ModalComponent = FC<ModalProps> & {
   Close: FC<{ children: ReactElement; asChild?: boolean }>;
 };
 
-export const Modal: ModalComponent = ({ children }) => {
+const Modal: ModalComponent = ({ children }) => {
   const modalId = useId().replace(/:/g, "");
   return (
     <ModalContext.Provider value={{ modalId }}>
@@ -265,3 +265,5 @@ Modal.Body = Body;
 Modal.Footer = Footer;
 Modal.CloseButton = CloseButton;
 Modal.Close = Close;
+
+export default Modal;

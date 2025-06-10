@@ -189,7 +189,7 @@ const TimelineCollapseButton = React.forwardRef<
 });
 TimelineCollapseButton.displayName = "Timeline.CollapseButton";
 
-export const Timeline = Object.assign(TimelineRoot, {
+const Timeline = Object.assign(TimelineRoot, {
   Heading: TimelineHeading,
   Item: TimelineItem,
   Icon: TimelineIcon,
