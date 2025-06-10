@@ -225,6 +225,18 @@ function InteractiveExample() {
 
 ## Available Components
 
+### Layout Components
+
+- `Container` - Container
+- `Grid` - Grid
+
+### Content Components
+
+- `Typography` - Text styling component
+- `Link` - Hyperlink component
+- `Divider` - Horizontal or vertical line separator
+- `KBD` - Keyboard input element
+
 ### Basic Components
 
 - `Alert` - Alert messages
@@ -260,11 +272,6 @@ function InteractiveExample() {
 - `RangeSlider` - Range slider
 - `ColorPicker` - Color picker
 - `TimePicker` - Time picker
-
-### Layout Components
-
-- `Container` - Container
-- `Grid` - Grid
 
 ### Overlay Components
 
