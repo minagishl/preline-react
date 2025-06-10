@@ -1,14 +1,6 @@
 // Core components
 export { default as Alert } from "./components/Alert";
 
-// Form components
-export { default as Input } from "./components/forms/Input";
-export { default as Textarea } from "./components/forms/Textarea";
-export { default as Select } from "./components/forms/Select";
-export { default as Checkbox } from "./components/forms/Checkbox";
-export { default as Radio } from "./components/forms/Radio";
-export { default as Switch } from "./components/forms/Switch";
-
 // Navigation components
 export { default as Navbar } from "./components/navigation/Navbar";
 export { default as Sidebar } from "./components/navigation/Sidebar";
