@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import Input from "../Input";
+import Input from "../forms/Input";
 
 describe("Input Component", () => {
   it("renders basic input without label", () => {
