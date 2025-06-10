@@ -1,7 +1,6 @@
-import React, { FC, HTMLAttributes } from "react";
+import { FC, HTMLAttributes } from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import {
-  StyledIcon,
+import StyledIcon, {
   StyledIconColor,
   StyledIconShape,
   StyledIconSize,

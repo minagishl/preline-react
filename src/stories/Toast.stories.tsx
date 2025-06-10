@@ -1,13 +1,12 @@
 import React, { FC, useState, HTMLAttributes } from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import {
-  Toast,
+import Toast, {
   ToastProps,
   ToastColor,
   ToastVariant,
 } from "../components/Toast";
-import { Button } from "../components/Button";
-import { Avatar } from "../components/Avatar";
+import Button from "../components/Button";
+import Avatar from "../components/Avatar";
 
 const variants: ToastVariant[] = ["default", "solid", "soft"];
 const colors: ToastColor[] = ["dark", "gray", "red", "yellow", "blue", "teal"];

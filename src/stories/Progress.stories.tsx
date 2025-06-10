@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Progress, ProgressColor } from "../components/Progress";
-import React from "react";
+import Progress, { ProgressColor } from "../components/Progress";
 
 const colors: ProgressColor[] = [
   "blue",

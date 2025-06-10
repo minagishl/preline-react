@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { List, ListProps } from "../components/List";
+import List, { ListProps } from "../components/List";
 
 const meta: Meta<ListProps> = {
   title: "Components/List",

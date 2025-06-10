@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { ButtonGroup, ButtonGroupProps } from "../components/ButtonGroup";
+import ButtonGroup, { ButtonGroupProps } from "../components/ButtonGroup";
 
 const meta: Meta<ButtonGroupProps> = {
   title: "Components/ButtonGroup",

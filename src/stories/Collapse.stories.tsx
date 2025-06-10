@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Collapse, CollapseProps } from "../components/Collapse";
-import { Button } from "../components/Button";
+import Collapse, { CollapseProps } from "../components/Collapse";
+import Button from "../components/Button";
 
 const meta: Meta<CollapseProps> = {
   title: "Components/Collapse",

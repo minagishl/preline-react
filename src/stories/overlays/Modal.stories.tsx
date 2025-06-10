@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Modal } from "../../components/overlays/Modal";
-import { Button } from "../../components/Button";
+import Modal from "../../components/overlays/Modal";
+import Button from "../../components/Button";
 
 const meta: Meta<typeof Modal> = {
   title: "Overlays/Modal",

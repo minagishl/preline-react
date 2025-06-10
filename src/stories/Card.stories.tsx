@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Card, CardProps } from "../components/Card";
-import { Button } from "../components/Button";
+import Card, { CardProps } from "../components/Card";
+import Button from "../components/Button";
 
 const meta: Meta<CardProps> = {
   title: "Components/Card",

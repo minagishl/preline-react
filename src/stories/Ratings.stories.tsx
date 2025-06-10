@@ -1,7 +1,7 @@
-import React, { FC, HTMLAttributes, useState } from "react";
+import { FC, HTMLAttributes, useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Ratings, RatingsSize } from "../components/Ratings";
-import { Button } from "../components/Button";
+import Ratings, { RatingsSize } from "../components/Ratings";
+import Button from "../components/Button";
 
 const meta: Meta<typeof Ratings> = {
   title: "Components/Ratings",

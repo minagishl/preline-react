@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Spinner, SpinnerColor, SpinnerSize } from "../components/Spinner";
+import Spinner, { SpinnerColor, SpinnerSize } from "../components/Spinner";
 
 const colors: SpinnerColor[] = [
   "blue",

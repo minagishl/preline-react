@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Device, DeviceProps } from "../components/Device";
+import Device, { DeviceProps } from "../components/Device";
 
 const meta: Meta<DeviceProps> = {
   title: "Components/Device",
