@@ -178,9 +178,9 @@ export const WithComplexContent: Story = {
     variant: "info",
     children: (
       <div>
-        <h4 className="font-bold mb-1">Alert with Rich Content</h4>
+        <h4 className="mb-1 font-bold">Alert with Rich Content</h4>
         <p>You can include any React content inside the alert component.</p>
-        <ul className="list-disc list-inside mt-2">
+        <ul className="mt-2 list-inside list-disc">
           <li>Lists</li>
           <li>Links</li>
           <li>Other components</li>
@@ -254,7 +254,7 @@ export const BorderOptions: Story = {
   render: () => (
     <div className="space-y-4">
       <div>
-        <h3 className="text-lg font-semibold mb-2">Top Border</h3>
+        <h3 className="mb-2 text-lg font-semibold">Top Border</h3>
         <Alert
           variant="success"
           border="top"
@@ -264,7 +264,7 @@ export const BorderOptions: Story = {
         </Alert>
       </div>
       <div>
-        <h3 className="text-lg font-semibold mb-2">Left Border</h3>
+        <h3 className="mb-2 text-lg font-semibold">Left Border</h3>
         <Alert
           variant="danger"
           border="left"

@@ -33,7 +33,7 @@ const Button: FC<GroupButtonProps> = ({
     "dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800",
     "hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none",
     sizeClasses[size],
-    className
+    className,
   );
 
   return (
@@ -66,7 +66,7 @@ const ButtonGroup: ButtonGroupComponent = ({
     {
       "flex-col": vertical,
     },
-    className
+    className,
   );
 
   const childrenWithProps = Children.map(children, (child) => {

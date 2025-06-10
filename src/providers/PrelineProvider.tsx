@@ -3,7 +3,7 @@ import { PrelineContextValue } from "../types";
 import usePreline from "../hooks/usePreline";
 
 const PrelineContext = createContext<PrelineContextValue | undefined>(
-  undefined
+  undefined,
 );
 
 export const usePrelineContext = () => {

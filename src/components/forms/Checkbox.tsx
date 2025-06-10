@@ -52,7 +52,7 @@ const Checkbox: FC<CheckboxProps> = ({
         validationState === "success",
       "ms-auto": labelPosition === "start" && variant === "card",
     },
-    className
+    className,
   );
 
   const inputEl = (
@@ -68,7 +68,7 @@ const Checkbox: FC<CheckboxProps> = ({
 
   if (variant === "card") {
     const cardLabelClasses = classNames(
-      "flex p-3 w-full bg-white border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 items-center"
+      "flex p-3 w-full bg-white border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 items-center",
     );
 
     const content =
@@ -101,7 +101,7 @@ const Checkbox: FC<CheckboxProps> = ({
     });
     return (
       <div className={wrapperClasses}>
-        <div className="flex items-center h-5 mt-1">{inputEl}</div>
+        <div className="mt-1 flex h-5 items-center">{inputEl}</div>
         <label htmlFor={id} className="ms-3">
           <span className="block text-sm font-semibold text-gray-800 dark:text-neutral-300">
             {label}
@@ -119,8 +119,8 @@ const Checkbox: FC<CheckboxProps> = ({
 
   if (variant === "list") {
     return (
-      <div className="relative flex items-start w-full">
-        <div className="flex items-center h-5">{inputEl}</div>
+      <div className="relative flex w-full items-start">
+        <div className="flex h-5 items-center">{inputEl}</div>
         <label
           htmlFor={id}
           className="ms-3.5 block w-full text-sm text-gray-600 dark:text-neutral-500"

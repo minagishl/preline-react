@@ -34,8 +34,8 @@ const Header: FC<HTMLAttributes<HTMLDivElement>> = ({
 }) => (
   <div
     className={classNames(
-      "flex justify-between items-center py-3 px-4 border-b border-gray-200 dark:border-neutral-700",
-      className
+      "flex items-center justify-between border-b border-gray-200 px-4 py-3 dark:border-neutral-700",
+      className,
     )}
     {...props}
   >
@@ -63,7 +63,7 @@ const Body: FC<HTMLAttributes<HTMLDivElement>> = ({
   children,
   ...props
 }) => (
-  <div className={classNames("p-4 overflow-y-auto", className)} {...props}>
+  <div className={classNames("overflow-y-auto p-4", className)} {...props}>
     {children}
   </div>
 );
@@ -76,8 +76,8 @@ const Footer: FC<HTMLAttributes<HTMLDivElement>> = ({
 }) => (
   <div
     className={classNames(
-      "flex justify-end items-center gap-x-2 py-3 px-4 border-t border-gray-200 dark:border-neutral-700",
-      className
+      "flex items-center justify-end gap-x-2 border-t border-gray-200 px-4 py-3 dark:border-neutral-700",
+      className,
     )}
     {...props}
   >
@@ -95,8 +95,8 @@ const CloseButton: FC<HTMLAttributes<HTMLButtonElement>> = ({
     <button
       type="button"
       className={classNames(
-        "size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-700 dark:hover:bg-neutral-600 dark:text-neutral-400 dark:focus:bg-neutral-600",
-        className
+        "inline-flex size-8 items-center justify-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:bg-gray-200 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:bg-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-600 dark:focus:bg-neutral-600",
+        className,
       )}
       aria-label="Close"
       data-hs-overlay={`#${modalId}`}
@@ -104,7 +104,7 @@ const CloseButton: FC<HTMLAttributes<HTMLButtonElement>> = ({
     >
       <span className="sr-only">Close</span>
       <svg
-        className="shrink-0 size-4"
+        className="size-4 shrink-0"
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
@@ -191,7 +191,7 @@ const Content: FC<ContentProps> = ({
       "[--overlay-backdrop:static]": staticBackdrop,
       "opacity-0 hs-overlay-open:opacity-100 hs-overlay-open:duration-500":
         animation === "none",
-    }
+    },
   );
 
   const contentContainerClasses = classNames(
@@ -207,7 +207,7 @@ const Content: FC<ContentProps> = ({
       "min-h-[calc(100%-56px)] flex items-center": centered,
       "h-[calc(100%-56px)]": scroll === "inside",
     },
-    className
+    className,
   );
 
   return (
@@ -220,8 +220,8 @@ const Content: FC<ContentProps> = ({
       <div className={contentContainerClasses}>
         <div
           className={classNames(
-            "w-full flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl pointer-events-auto dark:bg-neutral-800 dark:border-neutral-700 dark:shadow-neutral-700/70",
-            { "max-h-full overflow-hidden": scroll === "inside" }
+            "pointer-events-auto flex w-full flex-col rounded-xl border border-gray-200 bg-white shadow-2xs dark:border-neutral-700 dark:bg-neutral-800 dark:shadow-neutral-700/70",
+            { "max-h-full overflow-hidden": scroll === "inside" },
           )}
         >
           {children}

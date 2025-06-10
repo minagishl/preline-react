@@ -50,7 +50,7 @@ const CloseButton: FC<ButtonHTMLAttributes<HTMLButtonElement>> = ({
       ? softCloseButtonColorClasses[color]
       : "text-white hover:text-white",
     variant === "default" && "text-gray-800 dark:text-white",
-    className
+    className,
   );
 
   return (
@@ -63,7 +63,7 @@ const CloseButton: FC<ButtonHTMLAttributes<HTMLButtonElement>> = ({
     >
       <span className="sr-only">Close</span>
       <svg
-        className="shrink-0 size-4"
+        className="size-4 shrink-0"
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
@@ -147,7 +147,7 @@ const Toast: ToastComponent = ({
     },
     variant === "solid" && solidColorClasses[color],
     variant === "soft" && softColorClasses[color],
-    className
+    className,
   );
 
   if (!isRendered) {

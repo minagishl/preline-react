@@ -4,7 +4,7 @@ import Tooltip from "../../components/overlays/Tooltip";
 
 const ChevronUp = () => (
   <svg
-    className="shrink-0 size-4"
+    className="size-4 shrink-0"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -21,7 +21,7 @@ const ChevronUp = () => (
 
 const ChevronLeft = () => (
   <svg
-    className="shrink-0 size-4"
+    className="size-4 shrink-0"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -38,7 +38,7 @@ const ChevronLeft = () => (
 
 const ChevronRight = () => (
   <svg
-    className="shrink-0 size-4"
+    className="size-4 shrink-0"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -55,7 +55,7 @@ const ChevronRight = () => (
 
 const ChevronDown = () => (
   <svg
-    className="shrink-0 size-4"
+    className="size-4 shrink-0"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -101,7 +101,7 @@ type Story = StoryObj<typeof Tooltip>;
 const renderButton = (icon: React.ReactNode) => (
   <button
     type="button"
-    className="size-10 inline-flex justify-center items-center gap-2 rounded-full bg-gray-50 border border-gray-200 text-gray-600 hover:bg-blue-50 hover:border-blue-200 hover:text-blue-600 focus:outline-hidden focus:bg-blue-50 focus:border-blue-200 focus:text-blue-600 dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-white/10 dark:hover:border-white/10 dark:hover:text-white dark:focus:bg-white/10 dark:focus:border-white/10 dark:focus:text-white"
+    className="inline-flex size-10 items-center justify-center gap-2 rounded-full border border-gray-200 bg-gray-50 text-gray-600 hover:border-blue-200 hover:bg-blue-50 hover:text-blue-600 focus:border-blue-200 focus:bg-blue-50 focus:text-blue-600 focus:outline-hidden dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:border-white/10 dark:hover:bg-white/10 dark:hover:text-white dark:focus:border-white/10 dark:focus:bg-white/10 dark:focus:text-white"
   >
     {icon}
   </button>
@@ -114,7 +114,7 @@ export const Default: Story = {
     children: renderButton(<ChevronUp />),
   },
   render: (args) => (
-    <div className="flex justify-center items-center h-48">
+    <div className="flex h-48 items-center justify-center">
       <Tooltip {...args} />
     </div>
   ),
@@ -122,8 +122,8 @@ export const Default: Story = {
 
 export const Placements: Story = {
   render: () => (
-    <div className="flex justify-center items-center h-48">
-      <div className="grid grid-cols-3 gap-y-4 gap-x-2 max-w-60 mx-auto">
+    <div className="flex h-48 items-center justify-center">
+      <div className="mx-auto grid max-w-60 grid-cols-3 gap-x-2 gap-y-4">
         <div className="col-start-2 text-center">
           <Tooltip content="Tooltip on top" placement="top">
             {renderButton(<ChevronUp />)}

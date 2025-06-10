@@ -34,8 +34,8 @@ const LegendIndicator: FC<LegendIndicatorProps> = ({
     >
       <span
         className={classNames(
-          "size-2 inline-block rounded-full me-2",
-          colorClasses[color]
+          "me-2 inline-block size-2 rounded-full",
+          colorClasses[color],
         )}
       ></span>
       <span className="text-gray-600 dark:text-neutral-400">{children}</span>

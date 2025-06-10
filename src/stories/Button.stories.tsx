@@ -39,7 +39,7 @@ type Story = StoryObj<ButtonProps>;
 
 const CartIcon = () => (
   <svg
-    className="shrink-0 size-4"
+    className="size-4 shrink-0"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -62,7 +62,7 @@ const CartIcon = () => (
 
 const ArrowRightIcon = () => (
   <svg
-    className="shrink-0 size-4"
+    className="size-4 shrink-0"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -118,7 +118,7 @@ export const Types: Story = {
 
 export const Sizes: Story = {
   render: () => (
-    <div className="flex items-center flex-wrap gap-4">
+    <div className="flex flex-wrap items-center gap-4">
       <Button size="sm">Small</Button>
       <Button size="md">Default</Button>
       <Button size="lg">Large</Button>
@@ -284,7 +284,7 @@ export const LinkColors: Story = {
 
 export const Shapes: Story = {
   render: () => (
-    <div className="flex items-center flex-wrap gap-4">
+    <div className="flex flex-wrap items-center gap-4">
       <Button shape="pill">Pill</Button>
       <Button shape="block">Block</Button>
     </div>
@@ -293,7 +293,7 @@ export const Shapes: Story = {
 
 export const WithIcon: Story = {
   render: () => (
-    <div className="flex items-center flex-wrap gap-4">
+    <div className="flex flex-wrap items-center gap-4">
       <Button leftIcon={<CartIcon />}>Add to cart</Button>
       <Button variant="white" color="dark" rightIcon={<ArrowRightIcon />}>
         Signup free
@@ -304,7 +304,7 @@ export const WithIcon: Story = {
 
 export const IconOnly: Story = {
   render: () => (
-    <div className="flex items-center flex-wrap gap-4">
+    <div className="flex flex-wrap items-center gap-4">
       <Button iconOnly={true} size="sm">
         <CartIcon />
       </Button>
@@ -321,7 +321,7 @@ export const IconOnly: Story = {
 
 export const Loading: Story = {
   render: () => (
-    <div className="flex items-center flex-wrap gap-4">
+    <div className="flex flex-wrap items-center gap-4">
       <Button loading={true} iconOnly={true} />
       <Button loading={true}>Loading</Button>
     </div>

@@ -125,7 +125,7 @@ const StyledIcon: FC<StyledIconProps> = ({
       "rounded-lg": shape === "square",
     },
     getVariantClasses(),
-    className
+    className,
   );
 
   const iconSized = isValidElement(children)
@@ -133,7 +133,7 @@ const StyledIcon: FC<StyledIconProps> = ({
         className: classNames(
           children.props.className,
           "shrink-0",
-          iconSizeClasses[size]
+          iconSizeClasses[size],
         ),
       })
     : null;

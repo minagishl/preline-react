@@ -66,7 +66,7 @@ const Blockquote: React.FC<BlockquoteProps> = ({
       "border-s-4 border-gray-200 ps-4 sm:ps-6 dark:border-neutral-700":
         bordered,
     },
-    className
+    className,
   );
 
   const paragraphClasses = classNames(sizeClasses[size]);

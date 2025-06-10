@@ -8,7 +8,7 @@ interface AvatarProps extends React.ImgHTMLAttributes<HTMLImageElement> {}
 const Avatar: FC<AvatarProps> = ({ className, ...props }) => {
   const avatarClasses = classNames(
     "inline-block size-9 rounded-full",
-    className
+    className,
   );
   return <img className={avatarClasses} {...props} />;
 };
@@ -24,7 +24,7 @@ const AvatarInitials: FC<AvatarInitialsProps> = ({
 }) => {
   const avatarClasses = classNames(
     "shrink-0 inline-flex items-center justify-center size-9 rounded-full bg-gray-600",
-    className
+    className,
   );
   return (
     <span className={avatarClasses} {...props}>
@@ -53,7 +53,7 @@ const Content: FC<ContentProps> = ({
         variant === "default",
       "inline-block bg-blue-600 text-white shadow-2xs": variant === "primary",
     },
-    className
+    className,
   );
 
   return (
@@ -73,7 +73,7 @@ interface FooterProps extends HTMLAttributes<HTMLSpanElement> {
 
 const SentIcon = () => (
   <svg
-    className="shrink-0 size-3"
+    className="size-3 shrink-0"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -91,7 +91,7 @@ const SentIcon = () => (
 
 const NotSentIcon = () => (
   <svg
-    className="shrink-0 size-3"
+    className="size-3 shrink-0"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -115,7 +115,7 @@ const Footer: FC<FooterProps> = ({ className, status, children, ...props }) => {
       "text-gray-500 dark:text-neutral-500": status === "sent",
       "text-red-500": status === "not-sent",
     },
-    className
+    className,
   );
 
   return (
@@ -145,7 +145,7 @@ const Bubble: FC<BubbleProps> = ({
     {
       "ms-auto justify-end": align === "right",
     },
-    className
+    className,
   );
   return (
     <li className={bubbleClasses} {...props}>

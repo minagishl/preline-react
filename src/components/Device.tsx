@@ -10,10 +10,10 @@ const Mobile: FC<HTMLAttributes<HTMLElement>> = ({
 }) => {
   return (
     <figure
-      className={classNames("mx-auto max-w-full w-60 h-auto", className)}
+      className={classNames("mx-auto h-auto w-60 max-w-full", className)}
       {...props}
     >
-      <div className="p-1.5 bg-gray-800 shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)] dark:bg-neutral-600 dark:shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(0_0_0_/_20%),_0_2rem_4rem_-2rem_rgb(0_0_0_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(0_0_0_/_20%)] rounded-3xl">
+      <div className="rounded-3xl bg-gray-800 p-1.5 shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)] dark:bg-neutral-600 dark:shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(0_0_0_/_20%),_0_2rem_4rem_-2rem_rgb(0_0_0_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(0_0_0_/_20%)]">
         {children}
       </div>
     </figure>
@@ -34,23 +34,23 @@ const Browser: FC<BrowserProps> = ({
   return (
     <figure
       className={classNames(
-        "ms-auto me-20 relative z-1 max-w-full w-3xl h-auto shadow-[0_2.75rem_3.5rem_-2rem_rgb(45_55_75_/_20%),_0_0_5rem_-2rem_rgb(45_55_75_/_15%)] dark:shadow-[0_2.75rem_3.5rem_-2rem_rgb(0_0_0_/_20%),_0_0_5rem_-2rem_rgb(0_0_0_/_15%)] rounded-b-lg",
-        className
+        "relative z-1 ms-auto me-20 h-auto w-3xl max-w-full rounded-b-lg shadow-[0_2.75rem_3.5rem_-2rem_rgb(45_55_75_/_20%),_0_0_5rem_-2rem_rgb(45_55_75_/_15%)] dark:shadow-[0_2.75rem_3.5rem_-2rem_rgb(0_0_0_/_20%),_0_0_5rem_-2rem_rgb(0_0_0_/_15%)]",
+        className,
       )}
       {...props}
     >
-      <div className="relative flex items-center max-w-3xl bg-gray-800 rounded-t-lg py-2 px-24 dark:bg-neutral-700">
-        <div className="flex gap-x-1 absolute top-2/4 start-4 -translate-y-1">
-          <span className="size-2 bg-gray-600 rounded-full dark:bg-neutral-600"></span>
-          <span className="size-2 bg-gray-600 rounded-full dark:bg-neutral-600"></span>
-          <span className="size-2 bg-gray-600 rounded-full dark:bg-neutral-600"></span>
+      <div className="relative flex max-w-3xl items-center rounded-t-lg bg-gray-800 px-24 py-2 dark:bg-neutral-700">
+        <div className="absolute start-4 top-2/4 flex -translate-y-1 gap-x-1">
+          <span className="size-2 rounded-full bg-gray-600 dark:bg-neutral-600"></span>
+          <span className="size-2 rounded-full bg-gray-600 dark:bg-neutral-600"></span>
+          <span className="size-2 rounded-full bg-gray-600 dark:bg-neutral-600"></span>
         </div>
-        <div className="flex justify-center items-center size-full bg-gray-700 text-[.25rem] text-gray-400 rounded-sm sm:text-[.5rem] dark:bg-neutral-600 dark:text-neutral-400">
+        <div className="flex size-full items-center justify-center rounded-sm bg-gray-700 text-[.25rem] text-gray-400 sm:text-[.5rem] dark:bg-neutral-600 dark:text-neutral-400">
           {url}
         </div>
       </div>
 
-      <div className="bg-gray-800 rounded-b-lg">{children}</div>
+      <div className="rounded-b-lg bg-gray-800">{children}</div>
     </figure>
   );
 };

@@ -90,7 +90,7 @@ export const Types: Story = {
     <div className="flex flex-col gap-4">
       {variants.map((variant) => (
         <div key={variant} className="flex items-center gap-4">
-          <span className="font-semibold w-28">
+          <span className="w-28 font-semibold">
             {variant.charAt(0).toUpperCase() + variant.slice(1)}
           </span>
           <StyledIcon variant={variant}>

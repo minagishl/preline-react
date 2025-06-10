@@ -99,7 +99,7 @@ const Avatar: React.FC<AvatarProps> = ({
     avatarBaseClasses,
     sizeClasses[size],
     shapeClasses[shape],
-    className
+    className,
   );
 
   const statusBaseClasses =
@@ -115,7 +115,7 @@ const Avatar: React.FC<AvatarProps> = ({
         statusPosition === "top" && shape === "rounded",
       "bottom-0 end-0 transform translate-y-1/2 translate-x-1/2":
         statusPosition === "bottom" && shape === "rounded",
-    }
+    },
   );
 
   const renderContent = () => {
@@ -141,7 +141,7 @@ const Avatar: React.FC<AvatarProps> = ({
       const initialsClasses = classNames(
         "inline-flex items-center justify-center font-semibold",
         avatarClasses,
-        colorClasses
+        colorClasses,
       );
       const textSizeClass =
         size === "sm" ? "text-xs" : size === "md" ? "text-sm" : "text-lg";
@@ -154,7 +154,7 @@ const Avatar: React.FC<AvatarProps> = ({
 
     return (
       <span
-        className={classNames("bg-gray-100 overflow-hidden", avatarClasses)}
+        className={classNames("overflow-hidden bg-gray-100", avatarClasses)}
       >
         <svg
           className="size-full text-gray-300"

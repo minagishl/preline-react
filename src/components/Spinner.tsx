@@ -39,7 +39,7 @@ const Spinner: FC<SpinnerProps> = ({
     "animate-spin inline-block border-[3px] border-current border-t-transparent rounded-full",
     colorClasses[color],
     sizeClasses[size],
-    className
+    className,
   );
 
   return (

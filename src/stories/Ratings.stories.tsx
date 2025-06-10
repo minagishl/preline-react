@@ -87,7 +87,7 @@ export const RateWithEmoji: Story = {
       <h3 className="text-gray-800 dark:text-white">
         Did this answer your question?
       </h3>
-      <div className="mt-2 flex justify-center items-center">
+      <div className="mt-2 flex items-center justify-center">
         {["😔", "😐️", "🤩"].map((emoji) => (
           <Ratings.EmojiButton key={emoji}>{emoji}</Ratings.EmojiButton>
         ))}
@@ -98,7 +98,7 @@ export const RateWithEmoji: Story = {
 
 const ThumbsUpIcon = () => (
   <svg
-    className="shrink-0 size-4"
+    className="size-4 shrink-0"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -116,7 +116,7 @@ const ThumbsUpIcon = () => (
 
 const ThumbsDownIcon = () => (
   <svg
-    className="shrink-0 size-4"
+    className="size-4 shrink-0"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -134,7 +134,7 @@ const ThumbsDownIcon = () => (
 
 export const RateWithThumbs: Story = {
   render: () => (
-    <div className="flex justify-center items-center gap-x-2">
+    <div className="flex items-center justify-center gap-x-2">
       <h3 className="text-gray-800 dark:text-white">Was this page helpful?</h3>
       <div className="flex gap-x-2">
         <Button variant="white" color="gray" size="sm">

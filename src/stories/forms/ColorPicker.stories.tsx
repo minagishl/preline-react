@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import ColorPicker, { ColorPickerProps } from "../../components/forms/ColorPicker";
+import ColorPicker, {
+  ColorPickerProps,
+} from "../../components/forms/ColorPicker";
 
 const meta: Meta<ColorPickerProps> = {
   title: "Forms/Color Picker",

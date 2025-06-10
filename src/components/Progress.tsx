@@ -56,7 +56,7 @@ const Progress: FC<ProgressProps> = ({
       ? `flex-col flex-nowrap justify-end h-32 ${verticalSizeClasses[size]}`
       : `w-full ${sizeClasses[size]}`,
     { "rounded-full": shape === "rounded" },
-    className
+    className,
   );
 
   const barStyles = {
@@ -67,7 +67,7 @@ const Progress: FC<ProgressProps> = ({
     "flex flex-col justify-center overflow-hidden text-xs text-white text-center whitespace-nowrap transition duration-500",
     colorClasses[color],
     { "rounded-full": shape === "rounded" },
-    barClassName
+    barClassName,
   );
 
   return (

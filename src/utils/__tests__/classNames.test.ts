@@ -8,13 +8,13 @@ describe("classNames utilities", () => {
 
     it("handles undefined and null values", () => {
       expect(cn("class1", undefined, "class2", null, "class3")).toBe(
-        "class1 class2 class3"
+        "class1 class2 class3",
       );
     });
 
     it("handles boolean values", () => {
       expect(cn("class1", true && "class2", false && "class3")).toBe(
-        "class1 class2"
+        "class1 class2",
       );
     });
 
@@ -31,8 +31,8 @@ describe("classNames utilities", () => {
           isActive && "active",
           isDisabled && "disabled",
           undefined,
-          "final-class"
-        )
+          "final-class",
+        ),
       ).toBe("base-class active final-class");
     });
 
@@ -54,7 +54,7 @@ describe("classNames utilities", () => {
       ["xl", "text-lg px-6 py-3"],
     ])("returns correct classes for %s size", (size, expectedClasses) => {
       expect(getSizeClasses(size as "xs" | "sm" | "md" | "lg" | "xl")).toBe(
-        expectedClasses
+        expectedClasses,
       );
     });
 
@@ -66,13 +66,13 @@ describe("classNames utilities", () => {
   describe("getColorClasses function", () => {
     it("returns default primary solid classes when no parameters provided", () => {
       expect(getColorClasses()).toBe(
-        "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500"
+        "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500",
       );
     });
 
     it("returns default solid variant when only color provided", () => {
       expect(getColorClasses("success")).toBe(
-        "bg-green-600 text-white hover:bg-green-700 focus:ring-green-500"
+        "bg-green-600 text-white hover:bg-green-700 focus:ring-green-500",
       );
     });
 
@@ -95,7 +95,7 @@ describe("classNames utilities", () => {
         "returns correct classes for primary %s variant",
         (variant, expectedClasses) => {
           expect(getColorClasses("primary", variant)).toBe(expectedClasses);
-        }
+        },
       );
     });
 
@@ -118,7 +118,7 @@ describe("classNames utilities", () => {
         "returns correct classes for success %s variant",
         (variant, expectedClasses) => {
           expect(getColorClasses("success", variant)).toBe(expectedClasses);
-        }
+        },
       );
     });
 
@@ -135,7 +135,7 @@ describe("classNames utilities", () => {
         "returns correct classes for danger %s variant",
         (variant, expectedClasses) => {
           expect(getColorClasses("danger", variant)).toBe(expectedClasses);
-        }
+        },
       );
     });
 
@@ -160,19 +160,19 @@ describe("classNames utilities", () => {
     describe("Fallback behavior", () => {
       it("returns primary solid for unknown color", () => {
         expect(getColorClasses("unknown-color")).toBe(
-          "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500"
+          "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500",
         );
       });
 
       it("returns primary solid for unknown variant", () => {
         expect(getColorClasses("primary", "unknown-variant")).toBe(
-          "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500"
+          "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500",
         );
       });
 
       it("returns primary solid for both unknown color and variant", () => {
         expect(getColorClasses("unknown-color", "unknown-variant")).toBe(
-          "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500"
+          "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500",
         );
       });
     });
@@ -180,13 +180,13 @@ describe("classNames utilities", () => {
     describe("Edge cases", () => {
       it("handles empty string inputs", () => {
         expect(getColorClasses("", "")).toBe(
-          "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500"
+          "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500",
         );
       });
 
       it("handles undefined inputs", () => {
         expect(getColorClasses(undefined, undefined)).toBe(
-          "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500"
+          "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500",
         );
       });
     });

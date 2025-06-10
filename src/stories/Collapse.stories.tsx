@@ -53,7 +53,7 @@ export const ShowHide: Story = {
           the utility-first Tailwind CSS framework.
         </p>
         <Collapse.Content>
-          <p className="text-gray-500 dark:text-neutral-400 mt-2">
+          <p className="mt-2 text-gray-500 dark:text-neutral-400">
             This is a collapse body. It is hidden by default, until the collapse
             plugin adds the appropriate classes that we use to style each
             element. These classes control the overall appearance, as well as

@@ -91,7 +91,7 @@ const Badge: React.FC<BadgeProps> = ({
     shape === "pill" ? "rounded-full" : "rounded-md",
     colorClasses,
     onRemove ? "ps-3 pe-2" : "px-3",
-    className
+    className,
   );
 
   return (
@@ -99,8 +99,8 @@ const Badge: React.FC<BadgeProps> = ({
       {indicator && (
         <span
           className={classNames(
-            "size-1.5 inline-block rounded-full",
-            indicatorColorClasses[color]
+            "inline-block size-1.5 rounded-full",
+            indicatorColorClasses[color],
           )}
         ></span>
       )}
@@ -109,16 +109,16 @@ const Badge: React.FC<BadgeProps> = ({
         <button
           type="button"
           className={classNames(
-            "shrink-0 size-4 inline-flex items-center justify-center rounded-full focus:outline-none",
+            "inline-flex size-4 shrink-0 items-center justify-center rounded-full focus:outline-none",
             variant === "soft"
               ? removeButtonSoftClasses[color]
-              : "hover:bg-black/20 focus:bg-black/20"
+              : "hover:bg-black/20 focus:bg-black/20",
           )}
           onClick={onRemove}
         >
           <span className="sr-only">Remove badge</span>
           <svg
-            className="shrink-0 size-3"
+            className="size-3 shrink-0"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"

@@ -35,9 +35,9 @@ const listItems = [
 
 export const ListStyleType: Story = {
   render: () => (
-    <div className="flex flex-col gap-4 max-w-md">
+    <div className="flex max-w-md flex-col gap-4">
       <div>
-        <span className="font-medium text-sm text-gray-500 font-mono mb-3 dark:text-neutral-400">
+        <span className="mb-3 font-mono text-sm font-medium text-gray-500 dark:text-neutral-400">
           list-disc
         </span>
         <List variant="disc">
@@ -47,7 +47,7 @@ export const ListStyleType: Story = {
         </List>
       </div>
       <div>
-        <span className="font-medium text-sm text-gray-500 font-mono mb-3 dark:text-neutral-400">
+        <span className="mb-3 font-mono text-sm font-medium text-gray-500 dark:text-neutral-400">
           list-decimal
         </span>
         <List as="ol" variant="decimal">
@@ -57,7 +57,7 @@ export const ListStyleType: Story = {
         </List>
       </div>
       <div>
-        <span className="font-medium text-sm text-gray-500 font-mono mb-3 dark:text-neutral-400">
+        <span className="mb-3 font-mono text-sm font-medium text-gray-500 dark:text-neutral-400">
           list-none
         </span>
         <List variant="none">
@@ -143,12 +143,12 @@ const colors: (
 
 export const CheckedColorVariations: Story = {
   render: () => (
-    <div className="flex items-start gap-8 p-4 rounded-lg">
+    <div className="flex items-start gap-8 rounded-lg p-4">
       <List variant="checked">
         {colors.map((color) => (
           <List.Item key={color}>
             <List.Icon variant="simple" color={color} />
-            <span className="text-gray-800 dark:text-white capitalize">
+            <span className="text-gray-800 capitalize dark:text-white">
               {color}
             </span>
           </List.Item>
@@ -158,7 +158,7 @@ export const CheckedColorVariations: Story = {
         {colors.map((color) => (
           <List.Item key={color}>
             <List.Icon variant="circled" color={color} />
-            <span className="text-gray-800 dark:text-white capitalize">
+            <span className="text-gray-800 capitalize dark:text-white">
               {color}
             </span>
           </List.Item>
@@ -168,7 +168,7 @@ export const CheckedColorVariations: Story = {
         {colors.map((color) => (
           <List.Item key={color}>
             <List.Icon variant="filled" color={color} />
-            <span className="text-gray-800 dark:text-white capitalize">
+            <span className="text-gray-800 capitalize dark:text-white">
               {color}
             </span>
           </List.Item>

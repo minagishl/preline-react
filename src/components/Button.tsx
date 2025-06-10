@@ -141,7 +141,7 @@ const Button: React.FC<ButtonProps> = ({
     shape === "pill" ? buttonStyles.shapes.pill : buttonStyles.shapes.default,
     shape === "block" && !iconOnly ? buttonStyles.shapes.block : "",
     variantClasses,
-    className
+    className,
   );
 
   const spinner = <Spinner size="sm" color="white" />;

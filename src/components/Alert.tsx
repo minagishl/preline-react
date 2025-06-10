@@ -64,11 +64,11 @@ const Alert: React.FC<AlertProps> = ({
   return (
     <div
       className={cn(
-        "mt-2 text-sm rounded-lg p-4",
+        "mt-2 rounded-lg p-4 text-sm",
         borderClasses,
         variantClasses[variant],
         !soft && borderColorClasses[variant],
-        className
+        className,
       )}
       role="alert"
       tabIndex={-1}

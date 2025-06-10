@@ -71,7 +71,7 @@ const AvatarGroup: React.FC<AvatarGroupProps> = ({
             "inline-flex items-center justify-center",
             sizeClasses[groupSize],
             groupShape === "circular" ? "rounded-full" : "rounded-lg",
-            "bg-gray-100 border-2 border-white font-medium text-gray-700 shadow-2xs dark:bg-neutral-700 dark:border-neutral-800 dark:text-white"
+            "border-2 border-white bg-gray-100 font-medium text-gray-700 shadow-2xs dark:border-neutral-800 dark:bg-neutral-700 dark:text-white",
           )}
         >
           <span className="font-medium text-gray-500 dark:text-neutral-400">

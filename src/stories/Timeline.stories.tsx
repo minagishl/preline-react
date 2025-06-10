@@ -24,7 +24,7 @@ type Story = StoryObj<typeof Timeline>;
 
 const FileIcon = () => (
   <svg
-    className="shrink-0 size-4 mt-1"
+    className="mt-1 size-4 shrink-0"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -123,16 +123,16 @@ export const Default: Story = {
                   {event.author && (
                     <button
                       type="button"
-                      className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+                      className="-ms-1 mt-1 inline-flex items-center gap-x-2 rounded-lg border border-transparent p-1 text-xs text-gray-500 hover:bg-gray-100 focus:bg-gray-100 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
                     >
                       {event.author.avatar ? (
                         <img
-                          className="shrink-0 size-4 rounded-full"
+                          className="size-4 shrink-0 rounded-full"
                           src={event.author.avatar}
                           alt="Avatar"
                         />
                       ) : (
-                        <span className="flex shrink-0 justify-center items-center size-4 bg-white border border-gray-200 text-[10px] font-semibold uppercase text-gray-600 rounded-full dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400">
+                        <span className="flex size-4 shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white text-[10px] font-semibold text-gray-600 uppercase dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-400">
                           {event.author.initials}
                         </span>
                       )}
@@ -180,16 +180,16 @@ export const Collapsible: Story = {
                   {event.author && (
                     <button
                       type="button"
-                      className="mt-1 -ms-1 p-1 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+                      className="-ms-1 mt-1 inline-flex items-center gap-x-2 rounded-lg border border-transparent p-1 text-xs text-gray-500 hover:bg-gray-100 focus:bg-gray-100 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
                     >
                       {event.author.avatar ? (
                         <img
-                          className="shrink-0 size-4 rounded-full"
+                          className="size-4 shrink-0 rounded-full"
                           src={event.author.avatar}
                           alt="Avatar"
                         />
                       ) : (
-                        <span className="flex shrink-0 justify-center items-center size-4 bg-white border border-gray-200 text-[10px] font-semibold uppercase text-gray-600 rounded-full dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400">
+                        <span className="flex size-4 shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white text-[10px] font-semibold text-gray-600 uppercase dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-400">
                           {event.author.initials}
                         </span>
                       )}

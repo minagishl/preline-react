@@ -128,34 +128,34 @@ export const WithRemoveButton: Story = {
 export const WithAvatar: Story = {
   render: () => (
     <div className="flex flex-wrap gap-2">
-      <div className="inline-flex flex-nowrap items-center bg-white border border-gray-200 rounded-full p-1.5 pe-3 dark:bg-neutral-900 dark:border-neutral-700">
+      <div className="inline-flex flex-nowrap items-center rounded-full border border-gray-200 bg-white p-1.5 pe-3 dark:border-neutral-700 dark:bg-neutral-900">
         <img
           className="me-1.5 inline-block size-6 rounded-full"
           src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
           alt="Avatar"
         />
-        <div className="whitespace-nowrap text-sm font-medium text-gray-800 dark:text-white">
+        <div className="text-sm font-medium whitespace-nowrap text-gray-800 dark:text-white">
           Christina
         </div>
       </div>
 
-      <div className="inline-flex flex-nowrap items-center bg-white border border-gray-200 rounded-full p-1.5 dark:bg-neutral-900 dark:border-neutral-700">
+      <div className="inline-flex flex-nowrap items-center rounded-full border border-gray-200 bg-white p-1.5 dark:border-neutral-700 dark:bg-neutral-900">
         <img
           className="me-1.5 inline-block size-6 rounded-full"
           src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
           alt="Avatar"
         />
-        <div className="whitespace-nowrap text-sm font-medium text-gray-800 dark:text-white">
+        <div className="text-sm font-medium whitespace-nowrap text-gray-800 dark:text-white">
           Mark
         </div>
         <button
           type="button"
-          className="ms-2.5 inline-flex justify-center items-center size-5 rounded-full text-gray-800 bg-gray-200 hover:bg-gray-300 focus:outline-hidden focus:ring-2 focus:ring-gray-400 dark:bg-neutral-700/50 dark:hover:bg-neutral-700 dark:text-neutral-400 cursor-pointer"
+          className="ms-2.5 inline-flex size-5 cursor-pointer items-center justify-center rounded-full bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-2 focus:ring-gray-400 focus:outline-hidden dark:bg-neutral-700/50 dark:text-neutral-400 dark:hover:bg-neutral-700"
           onClick={() => console.log("Remove Mark")}
         >
           <span className="sr-only">Remove badge</span>
           <svg
-            className="shrink-0 size-3"
+            className="size-3 shrink-0"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"

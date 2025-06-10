@@ -45,8 +45,8 @@ const EmojiButton: FC<EmojiButtonProps> = ({
     <button
       type="button"
       className={classNames(
-        "size-10 inline-flex justify-center items-center text-2xl rounded-full hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:hover:bg-neutral-700 dark:focus:bg-neutral-700",
-        className
+        "inline-flex size-10 items-center justify-center rounded-full text-2xl hover:bg-gray-100 focus:bg-gray-100 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700",
+        className,
       )}
       {...props}
     >
@@ -125,7 +125,7 @@ const Ratings: RatingsComponent = ({
                 "shrink-0",
                 sizeClasses[size],
                 iconColorClass,
-                !isFilled && hoverColorClass
+                !isFilled && hoverColorClass,
               ),
             })
           : null;
@@ -135,8 +135,8 @@ const Ratings: RatingsComponent = ({
             key={i}
             type="button"
             className={classNames(
-              "inline-flex justify-center items-center",
-              !readOnly && "cursor-pointer"
+              "inline-flex items-center justify-center",
+              !readOnly && "cursor-pointer",
             )}
             onMouseEnter={() => handleMouseEnter(i)}
             onMouseLeave={handleMouseLeave}

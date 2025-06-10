@@ -23,7 +23,7 @@ export const Mobile: Story = {
   render: () => (
     <Device.Mobile>
       <img
-        className="max-w-full rounded-[1.25rem] h-auto"
+        className="h-auto max-w-full rounded-[1.25rem]"
         src={mobileImgSrc}
         alt="Mobile Placeholder"
       />
@@ -36,7 +36,7 @@ export const Browser: Story = {
     <div className="w-[768px] p-4">
       <Device.Browser url="www.preline.co">
         <img
-          className="max-w-full h-auto rounded-b-lg"
+          className="h-auto max-w-full rounded-b-lg"
           src={browserImgSrc}
           alt="Browser Placeholder"
         />

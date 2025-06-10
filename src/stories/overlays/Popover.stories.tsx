@@ -4,7 +4,7 @@ import Popover from "../../components/forms/Popover";
 
 const ChevronUp = () => (
   <svg
-    className="shrink-0 size-4"
+    className="size-4 shrink-0"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -21,7 +21,7 @@ const ChevronUp = () => (
 
 const ChevronLeft = () => (
   <svg
-    className="shrink-0 size-4"
+    className="size-4 shrink-0"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -38,7 +38,7 @@ const ChevronLeft = () => (
 
 const ChevronRight = () => (
   <svg
-    className="shrink-0 size-4"
+    className="size-4 shrink-0"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -55,7 +55,7 @@ const ChevronRight = () => (
 
 const ChevronDown = () => (
   <svg
-    className="shrink-0 size-4"
+    className="size-4 shrink-0"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -105,7 +105,7 @@ type Story = StoryObj<typeof Popover>;
 const renderButton = (icon: React.ReactNode) => (
   <button
     type="button"
-    className="flex justify-center items-center size-10 text-sm font-semibold rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+    className="flex size-10 items-center justify-center rounded-lg border border-gray-200 bg-white text-sm font-semibold text-gray-800 shadow-2xs hover:bg-gray-50 focus:bg-gray-50 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
   >
     {icon}
   </button>
@@ -119,7 +119,7 @@ export const Default: Story = {
     children: renderButton(<ChevronUp />),
   },
   render: (args) => (
-    <div className="flex justify-center items-center h-48">
+    <div className="flex h-48 items-center justify-center">
       <Popover {...args} />
     </div>
   ),
@@ -127,7 +127,7 @@ export const Default: Story = {
 
 export const Placements: Story = {
   render: () => (
-    <div className="flex justify-center gap-4 h-20">
+    <div className="flex h-20 justify-center gap-4">
       <Popover content="Left popover" placement="left">
         {renderButton(<ChevronLeft />)}
       </Popover>

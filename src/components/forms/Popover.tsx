@@ -31,13 +31,13 @@ const Popover: React.FC<PopoverProps> = ({
       <span
         key="popover"
         className={
-          "hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-3 px-4 bg-white border border-gray-200 text-sm text-gray-600 rounded-lg shadow-md dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400"
+          "hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible invisible absolute z-10 inline-block rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm text-gray-600 opacity-0 shadow-md transition-opacity dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-400"
         }
         role="tooltip"
       >
         {content}
       </span>,
-    ]
+    ],
   );
 
   const placementClasses: Record<PopoverPlacement, string> = {
@@ -59,7 +59,7 @@ const Popover: React.FC<PopoverProps> = ({
         "hs-tooltip inline-block",
         placementClasses[placement],
         triggerClasses[trigger],
-        className
+        className,
       )}
     >
       {triggerWithPopover}

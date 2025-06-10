@@ -90,7 +90,7 @@ export const WithLabelOutside: Story = {
 export const WithTitleLabel: Story = {
   render: (args) => (
     <div className="w-80">
-      <div className="mb-2 flex justify-between items-center">
+      <div className="mb-2 flex items-center justify-between">
         <h3 className="text-sm font-semibold text-gray-800 dark:text-white">
           Upload progress
         </h3>
@@ -111,7 +111,7 @@ export const WithFloatingLabel: Story = {
       <div className="w-80">
         <div
           style={{ marginLeft: offset }}
-          className="inline-block mb-2 py-0.5 px-1.5 bg-blue-50 border border-blue-200 text-xs font-medium text-blue-600 rounded-lg dark:bg-blue-800/30 dark:border-blue-800 dark:text-blue-500 transition-all duration-500"
+          className="mb-2 inline-block rounded-lg border border-blue-200 bg-blue-50 px-1.5 py-0.5 text-xs font-medium text-blue-600 transition-all duration-500 dark:border-blue-800 dark:bg-blue-800/30 dark:text-blue-500"
         >
           {value}%
         </div>
@@ -142,7 +142,7 @@ export const Shapes: Story = {
 
 export const Vertical: Story = {
   render: (args) => (
-    <div className="h-48 flex gap-x-8">
+    <div className="flex h-48 gap-x-8">
       {[25, 50, 75, 90, 17].map((value) => (
         <Progress {...args} key={value} vertical value={value} />
       ))}

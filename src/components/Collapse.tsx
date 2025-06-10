@@ -35,9 +35,9 @@ const Icon: FC<HTMLAttributes<SVGElement>> = ({ className, ...props }) => {
   return (
     <svg
       className={classNames(
-        "shrink-0 size-4 transition-transform duration-300",
+        "size-4 shrink-0 transition-transform duration-300",
         { "rotate-180": isOpen },
-        className
+        className,
       )}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -100,7 +100,7 @@ const Content: FC<HTMLAttributes<HTMLDivElement>> = ({
   const { isOpen } = useCollapse();
   const contentRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState<number | undefined>(
-    isOpen ? undefined : 0
+    isOpen ? undefined : 0,
   );
 
   useEffect(() => {
@@ -113,7 +113,7 @@ const Content: FC<HTMLAttributes<HTMLDivElement>> = ({
     <div
       className={classNames(
         "w-full overflow-hidden transition-[height] duration-300",
-        className
+        className,
       )}
       style={{ height }}
       {...props}
@@ -143,8 +143,8 @@ const TriggerLink: FC<TriggerLinkProps> = ({
       type="button"
       onClick={toggle}
       className={classNames(
-        "inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 decoration-2 hover:text-blue-700 hover:underline focus:outline-hidden focus:underline focus:text-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-600 dark:focus:text-blue-600",
-        className
+        "inline-flex items-center gap-x-1 rounded-lg border border-transparent text-sm font-semibold text-blue-600 decoration-2 hover:text-blue-700 hover:underline focus:text-blue-700 focus:underline focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:text-blue-500 dark:hover:text-blue-600 dark:focus:text-blue-600",
+        className,
       )}
       {...props}
     >

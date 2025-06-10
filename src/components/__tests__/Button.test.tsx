@@ -7,7 +7,7 @@ describe("Button Component", () => {
   it("renders basic button with text", () => {
     render(<Button>Click me</Button>);
     expect(
-      screen.getByRole("button", { name: "Click me" })
+      screen.getByRole("button", { name: "Click me" }),
     ).toBeInTheDocument();
   });
 
@@ -37,7 +37,7 @@ describe("Button Component", () => {
           }
         >
           Test
-        </Button>
+        </Button>,
       );
       const button = screen.getByRole("button");
       expect(button).toHaveClass(expectedClass);
@@ -68,7 +68,7 @@ describe("Button Component", () => {
           }
         >
           Test
-        </Button>
+        </Button>,
       );
       const button = screen.getByRole("button");
       expect(button).toHaveClass(expectedClass);
@@ -115,14 +115,14 @@ describe("Button Component", () => {
       const { rerender } = render(
         <Button iconOnly size="sm">
           🔥
-        </Button>
+        </Button>,
       );
       expect(screen.getByRole("button")).toHaveClass("size-9.5");
 
       rerender(
         <Button iconOnly size="lg">
           🔥
-        </Button>
+        </Button>,
       );
       expect(screen.getByRole("button")).toHaveClass("size-15.5");
     });
@@ -131,7 +131,7 @@ describe("Button Component", () => {
   describe("Icons", () => {
     it("renders left icon", () => {
       render(
-        <Button leftIcon={<span data-testid="left-icon">←</span>}>Test</Button>
+        <Button leftIcon={<span data-testid="left-icon">←</span>}>Test</Button>,
       );
       expect(screen.getByTestId("left-icon")).toBeInTheDocument();
     });
@@ -140,7 +140,7 @@ describe("Button Component", () => {
       render(
         <Button rightIcon={<span data-testid="right-icon">→</span>}>
           Test
-        </Button>
+        </Button>,
       );
       expect(screen.getByTestId("right-icon")).toBeInTheDocument();
     });
@@ -158,7 +158,7 @@ describe("Button Component", () => {
       render(
         <Button loading iconOnly>
           🔥
-        </Button>
+        </Button>,
       );
       const button = screen.getByRole("button");
       expect(button).toBeDisabled();
@@ -172,7 +172,7 @@ describe("Button Component", () => {
           rightIcon={<span data-testid="right-icon">→</span>}
         >
           Loading
-        </Button>
+        </Button>,
       );
 
       expect(screen.queryByTestId("left-icon")).not.toBeInTheDocument();
@@ -210,7 +210,7 @@ describe("Button Component", () => {
       render(
         <Button onClick={handleClick} disabled>
           Disabled
-        </Button>
+        </Button>,
       );
 
       fireEvent.click(screen.getByRole("button"));
@@ -222,7 +222,7 @@ describe("Button Component", () => {
       render(
         <Button onClick={handleClick} loading>
           Loading
-        </Button>
+        </Button>,
       );
 
       fireEvent.click(screen.getByRole("button"));
@@ -235,7 +235,7 @@ describe("Button Component", () => {
       render(
         <Button type="submit" data-testid="custom-button">
           Submit
-        </Button>
+        </Button>,
       );
       const button = screen.getByTestId("custom-button");
       expect(button).toHaveAttribute("type", "submit");

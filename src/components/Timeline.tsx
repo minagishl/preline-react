@@ -10,7 +10,7 @@ const TimelineRoot = React.forwardRef<HTMLDivElement, TimelineProps>(
         {children}
       </div>
     );
-  }
+  },
 );
 TimelineRoot.displayName = "Timeline";
 
@@ -21,15 +21,15 @@ const TimelineHeading = React.forwardRef<HTMLDivElement, TimelineHeadingProps>(
     return (
       <div
         ref={ref}
-        className={cn("ps-2 my-2 first:mt-0", className)}
+        className={cn("my-2 ps-2 first:mt-0", className)}
         {...props}
       >
-        <h3 className="text-xs font-medium uppercase text-gray-500 dark:text-neutral-400">
+        <h3 className="text-xs font-medium text-gray-500 uppercase dark:text-neutral-400">
           {children}
         </h3>
       </div>
     );
-  }
+  },
 );
 TimelineHeading.displayName = "Timeline.Heading";
 
@@ -42,7 +42,7 @@ const TimelineItem = React.forwardRef<HTMLDivElement, TimelineItemProps>(
         {children}
       </div>
     );
-  }
+  },
 );
 TimelineItem.displayName = "Timeline.Item";
 
@@ -54,19 +54,19 @@ const TimelineIcon = React.forwardRef<HTMLDivElement, TimelineIconProps>(
       <div
         ref={ref}
         className={cn(
-          "relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700",
-          className
+          "relative after:absolute after:start-3.5 after:top-7 after:bottom-0 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 last:after:hidden dark:after:bg-neutral-700",
+          className,
         )}
         {...props}
       >
-        <div className="relative z-10 size-7 flex justify-center items-center">
+        <div className="relative z-10 flex size-7 items-center justify-center">
           {children || (
             <div className="size-2 rounded-full bg-gray-400 dark:bg-neutral-600" />
           )}
         </div>
       </div>
     );
-  }
+  },
 );
 TimelineIcon.displayName = "Timeline.Icon";
 
@@ -79,7 +79,7 @@ const TimelineBody = React.forwardRef<HTMLDivElement, TimelineBodyProps>(
         {children}
       </div>
     );
-  }
+  },
 );
 TimelineBody.displayName = "Timeline.Body";
 
@@ -92,14 +92,14 @@ const TimelineTitle = React.forwardRef<HTMLHeadingElement, TimelineTitleProps>(
         ref={ref}
         className={cn(
           "flex gap-x-1.5 font-semibold text-gray-800 dark:text-white",
-          className
+          className,
         )}
         {...props}
       >
         {children}
       </h3>
     );
-  }
+  },
 );
 TimelineTitle.displayName = "Timeline.Title";
 
@@ -112,14 +112,14 @@ const TimelineText = React.forwardRef<HTMLParagraphElement, TimelineTextProps>(
         ref={ref}
         className={cn(
           "mt-1 text-sm text-gray-600 dark:text-neutral-400",
-          className
+          className,
         )}
         {...props}
       >
         {children}
       </p>
     );
-  }
+  },
 );
 TimelineText.displayName = "Timeline.Text";
 
@@ -137,7 +137,7 @@ const TimelineCollapse = React.forwardRef<
       id={id}
       className={cn(
         "hs-collapse hidden w-full overflow-hidden transition-[height] duration-300",
-        className
+        className,
       )}
       {...props}
     >
@@ -157,19 +157,19 @@ const TimelineCollapseButton = React.forwardRef<
   TimelineCollapseButtonProps
 >(({ children, className, target, ...props }, ref) => {
   return (
-    <div className="ps-2 -ms-px flex gap-x-3">
+    <div className="-ms-px flex gap-x-3 ps-2">
       <button
         ref={ref}
         type="button"
         className={cn(
-          "hs-collapse-toggle hs-collapse-open:hidden text-start inline-flex items-center gap-x-1 text-sm text-blue-600 font-medium decoration-2 hover:underline focus:outline-hidden focus:underline dark:text-blue-500",
-          className
+          "hs-collapse-toggle hs-collapse-open:hidden inline-flex items-center gap-x-1 text-start text-sm font-medium text-blue-600 decoration-2 hover:underline focus:underline focus:outline-hidden dark:text-blue-500",
+          className,
         )}
         data-hs-collapse={target}
         {...props}
       >
         <svg
-          className="shrink-0 size-3.5"
+          className="size-3.5 shrink-0"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"

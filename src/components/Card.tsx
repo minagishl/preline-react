@@ -18,7 +18,7 @@ const Image: FC<CardImageProps> = ({
       "rounded-t-xl": position === "top",
       "rounded-b-xl": position === "bottom",
     },
-    className
+    className,
   );
   return <img className={imageClasses} {...props} />;
 };
@@ -57,7 +57,7 @@ const Title: FC<HTMLAttributes<HTMLHeadingElement>> = ({
 }) => {
   const titleClasses = classNames(
     "text-lg font-bold text-gray-800 dark:text-white",
-    className
+    className,
   );
   return <h3 className={titleClasses} {...props} />;
 };
@@ -70,7 +70,7 @@ const Subtitle: FC<HTMLAttributes<HTMLParagraphElement>> = ({
 }) => {
   const subtitleClasses = classNames(
     "mt-1 text-xs font-medium uppercase text-gray-500 dark:text-neutral-500",
-    className
+    className,
   );
   return <p className={subtitleClasses} {...props} />;
 };
@@ -83,7 +83,7 @@ const Text: FC<HTMLAttributes<HTMLParagraphElement>> = ({
 }) => {
   const textClasses = classNames(
     "mt-1 text-gray-500 dark:text-neutral-400",
-    className
+    className,
   );
   return <p className={textClasses} {...props} />;
 };
@@ -96,7 +96,7 @@ const Link: FC<React.AnchorHTMLAttributes<HTMLAnchorElement>> = ({
 }) => {
   const linkClasses = classNames(
     "mt-3 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 decoration-2 hover:text-blue-700 hover:underline focus:underline focus:outline-hidden focus:text-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-600 dark:focus:text-blue-600",
-    className
+    className,
   );
   return <a className={linkClasses} {...props} />;
 };
@@ -110,7 +110,7 @@ const Header: FC<HTMLAttributes<HTMLDivElement>> = ({
 }) => {
   const headerClasses = classNames(
     "bg-gray-100 border-b border-gray-200 rounded-t-xl py-3 px-4 md:py-4 md:px-5 dark:bg-neutral-900 dark:border-neutral-700",
-    className
+    className,
   );
   return (
     <div className={headerClasses} {...props}>
@@ -128,7 +128,7 @@ const Footer: FC<HTMLAttributes<HTMLDivElement>> = ({
 }) => {
   const footerClasses = classNames(
     "bg-gray-100 border-t border-gray-200 rounded-b-xl py-3 px-4 md:py-4 md:px-5 dark:bg-neutral-900 dark:border-neutral-700",
-    className
+    className,
   );
   return (
     <div className={footerClasses} {...props}>
@@ -173,7 +173,7 @@ const Card: CardComponent = ({
         hoverEffect,
       "border-t-4 border-t-blue-600 dark:border-t-blue-500": bordered,
     },
-    className
+    className,
   );
 
   if (href) {

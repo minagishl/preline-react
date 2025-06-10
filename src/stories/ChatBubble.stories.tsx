@@ -18,7 +18,7 @@ const avatarUrl =
 
 const Link = ({ href, children }: { href: string; children: string }) => (
   <a
-    className="text-sm text-blue-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium dark:text-blue-500 dark:hover:text-blue-400"
+    className="text-sm font-medium text-blue-600 decoration-2 hover:underline focus:underline focus:outline-hidden dark:text-blue-500 dark:hover:text-blue-400"
     href={href}
   >
     {children}
@@ -35,7 +35,7 @@ export const Default: Story = {
             <h2 className="font-medium">How can we help?</h2>
             <div className="space-y-1.5">
               <p className="mb-1.5 text-sm">You can ask questions like:</p>
-              <ul className="list-disc list-outside space-y-1.5 ps-3.5">
+              <ul className="list-outside list-disc space-y-1.5 ps-3.5">
                 <li className="text-sm">What&apos;s Preline UI?</li>
                 <li className="text-sm">
                   How many Starter Pages & Examples are there?
@@ -46,7 +46,7 @@ export const Default: Story = {
           </ChatBubble.Content>
         </ChatBubble.Bubble>
         <ChatBubble.Bubble align="right">
-          <div className="grow text-end space-y-3">
+          <div className="grow space-y-3 text-end">
             <ChatBubble.Content variant="primary">
               <p className="text-sm">what&apos;s preline ui?</p>
             </ChatBubble.Content>
@@ -89,7 +89,7 @@ export const WithAvatar: Story = {
         </ChatBubble.Bubble>
 
         <ChatBubble.Bubble align="right">
-          <div className="grow text-end space-y-3">
+          <div className="grow space-y-3 text-end">
             <ChatBubble.Content variant="primary">
               <p className="text-sm">what&apos;s preline ui?</p>
             </ChatBubble.Content>
@@ -126,7 +126,7 @@ export const WithFooter: Story = {
           </div>
         </ChatBubble.Bubble>
         <ChatBubble.Bubble align="right">
-          <div className="grow text-end space-y-3">
+          <div className="grow space-y-3 text-end">
             <div className="inline-flex flex-col justify-end">
               <ChatBubble.Content variant="primary">
                 <p className="text-sm">what&apos;s preline ui?</p>

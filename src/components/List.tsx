@@ -43,7 +43,7 @@ interface IconProps extends HTMLAttributes<HTMLSpanElement> {
 
 const CheckIcon: FC = () => (
   <svg
-    className="shrink-0 size-3.5"
+    className="size-3.5 shrink-0"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -75,7 +75,7 @@ const Icon: FC<IconProps> = ({
 
   const simpleClasses = classNames(
     "shrink-0 size-4 mt-0.5",
-    iconColorClasses[color]
+    iconColorClasses[color],
   );
 
   const circledClasses: Record<IconColor, string> = {
@@ -110,9 +110,9 @@ const Icon: FC<IconProps> = ({
   return (
     <span
       className={classNames(
-        "size-5 flex justify-center items-center rounded-full",
+        "flex size-5 items-center justify-center rounded-full",
         variant === "circled" ? circledClasses[color] : filledClasses[color],
-        className
+        className,
       )}
     >
       <CheckIcon />
@@ -135,7 +135,7 @@ const Item: FC<ItemProps> = ({ children, className, ...props }) => {
       // checked
       "flex gap-x-3": variant === "checked",
     },
-    className
+    className,
   );
   return (
     <li className={itemClasses} {...props}>
@@ -177,7 +177,7 @@ const List: ListComponent = ({
       "space-y-3 text-sm": variant === "checked",
       "marker:text-blue-600": markerColor,
     },
-    className
+    className,
   );
 
   const Component = as;

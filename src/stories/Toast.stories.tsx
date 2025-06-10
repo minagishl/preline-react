@@ -13,7 +13,7 @@ const colors: ToastColor[] = ["dark", "gray", "red", "yellow", "blue", "teal"];
 
 const InfoIcon: FC<HTMLAttributes<SVGElement>> = (props) => (
   <svg
-    className="shrink-0 size-4 text-blue-500 mt-0.5"
+    className="mt-0.5 size-4 shrink-0 text-blue-500"
     {...props}
     xmlns="http://www.w3.org/2000/svg"
     width="16"
@@ -27,7 +27,7 @@ const InfoIcon: FC<HTMLAttributes<SVGElement>> = (props) => (
 
 const SuccessIcon: FC<HTMLAttributes<SVGElement>> = (props) => (
   <svg
-    className="shrink-0 size-4 text-teal-500 mt-0.5"
+    className="mt-0.5 size-4 shrink-0 text-teal-500"
     {...props}
     xmlns="http://www.w3.org/2000/svg"
     width="16"
@@ -41,7 +41,7 @@ const SuccessIcon: FC<HTMLAttributes<SVGElement>> = (props) => (
 
 const ErrorIcon: FC<HTMLAttributes<SVGElement>> = (props) => (
   <svg
-    className="shrink-0 size-4 text-red-500 mt-0.5"
+    className="mt-0.5 size-4 shrink-0 text-red-500"
     {...props}
     xmlns="http://www.w3.org/2000/svg"
     width="16"
@@ -55,7 +55,7 @@ const ErrorIcon: FC<HTMLAttributes<SVGElement>> = (props) => (
 
 const WarningIcon: FC<HTMLAttributes<SVGElement>> = (props) => (
   <svg
-    className="shrink-0 size-4 text-yellow-500 mt-0.5"
+    className="mt-0.5 size-4 shrink-0 text-yellow-500"
     {...props}
     xmlns="http://www.w3.org/2000/svg"
     width="16"
@@ -69,7 +69,7 @@ const WarningIcon: FC<HTMLAttributes<SVGElement>> = (props) => (
 
 const NotificationIcon: FC<HTMLAttributes<SVGElement>> = (props) => (
   <svg
-    className="size-5 text-gray-600 mt-1 dark:text-neutral-400"
+    className="mt-1 size-5 text-gray-600 dark:text-neutral-400"
     {...props}
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -113,7 +113,7 @@ export const Default: Story = {
     }, [args.show]);
 
     return (
-      <div className="flex flex-col items-center gap-4 min-h-48">
+      <div className="flex min-h-48 flex-col items-center gap-4">
         <Button onClick={() => setShow(true)} disabled={show}>
           Show Toast
         </Button>
@@ -126,7 +126,7 @@ export const Default: Story = {
   args: {
     show: false,
     children: (
-      <div className="flex p-4 w-80">
+      <div className="flex w-80 p-4">
         <div className="shrink-0">
           <SuccessIcon />
         </div>
@@ -144,7 +144,7 @@ export const BasicTypes: Story = {
   render: () => (
     <div className="flex flex-col gap-4">
       <Toast>
-        <div className="flex p-4 w-80">
+        <div className="flex w-80 p-4">
           <InfoIcon />
           <p className="ms-3 text-sm text-gray-700 dark:text-neutral-400">
             This is a normal message.
@@ -152,7 +152,7 @@ export const BasicTypes: Story = {
         </div>
       </Toast>
       <Toast>
-        <div className="flex p-4 w-80">
+        <div className="flex w-80 p-4">
           <SuccessIcon />
           <p className="ms-3 text-sm text-gray-700 dark:text-neutral-400">
             This is a success message.
@@ -160,7 +160,7 @@ export const BasicTypes: Story = {
         </div>
       </Toast>
       <Toast>
-        <div className="flex p-4 w-80">
+        <div className="flex w-80 p-4">
           <ErrorIcon />
           <p className="ms-3 text-sm text-gray-700 dark:text-neutral-400">
             This is an error message.
@@ -168,7 +168,7 @@ export const BasicTypes: Story = {
         </div>
       </Toast>
       <Toast>
-        <div className="flex p-4 w-80">
+        <div className="flex w-80 p-4">
           <WarningIcon />
           <p className="ms-3 text-sm text-gray-700 dark:text-neutral-400">
             This is a warning message.
@@ -183,7 +183,7 @@ const renderColorGrid = (variant: ToastVariant) => (
   <div className="grid grid-cols-1 gap-4 text-sm">
     {colors.map((color) => (
       <Toast key={variant + color} variant={variant} color={color}>
-        <div className="flex p-4 w-80">
+        <div className="flex w-80 p-4">
           Hello, world! This is a toast message.
           <div className="ms-auto">
             <Toast.CloseButton />
@@ -213,7 +213,7 @@ export const WithActions: Story = {
     }, [args.show]);
 
     return (
-      <div className="flex flex-col items-center gap-4 min-h-48">
+      <div className="flex min-h-48 flex-col items-center gap-4">
         <Button onClick={() => setShow(true)} disabled={show}>
           Show Toast
         </Button>
@@ -226,12 +226,12 @@ export const WithActions: Story = {
   args: {
     show: false,
     children: (
-      <div className="flex p-4 w-80">
+      <div className="flex w-80 p-4">
         <div className="shrink-0">
           <NotificationIcon />
         </div>
         <div className="ms-4">
-          <h3 className="text-gray-800 font-semibold dark:text-white">
+          <h3 className="font-semibold text-gray-800 dark:text-white">
             App notifications
           </h3>
           <div className="mt-1 text-sm text-gray-600 dark:text-neutral-400">
@@ -241,13 +241,13 @@ export const WithActions: Story = {
             <div className="flex gap-x-3">
               <button
                 type="button"
-                className="text-blue-600 decoration-2 hover:underline font-medium text-sm focus:outline-hidden focus:underline dark:text-blue-500"
+                className="text-sm font-medium text-blue-600 decoration-2 hover:underline focus:underline focus:outline-hidden dark:text-blue-500"
               >
                 Don&apos;t allow
               </button>
               <button
                 type="button"
-                className="text-blue-600 decoration-2 hover:underline font-medium text-sm focus:outline-hidden focus:underline dark:text-blue-500"
+                className="text-sm font-medium text-blue-600 decoration-2 hover:underline focus:underline focus:outline-hidden dark:text-blue-500"
               >
                 Allow
               </button>
@@ -268,7 +268,7 @@ export const WithAvatar: Story = {
     }, [args.show]);
 
     return (
-      <div className="flex flex-col items-center gap-4 min-h-48">
+      <div className="flex min-h-48 flex-col items-center gap-4">
         <Button onClick={() => setShow(true)} disabled={show}>
           Show Toast
         </Button>
@@ -281,18 +281,18 @@ export const WithAvatar: Story = {
   args: {
     show: false,
     children: (
-      <div className="relative flex p-4 w-80">
+      <div className="relative flex w-80 p-4">
         <div className="shrink-0">
           <Avatar
             size="sm"
             src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
           />
-          <div className="absolute top-3 end-3">
+          <div className="absolute end-3 top-3">
             <Toast.CloseButton />
           </div>
         </div>
         <div className="ms-4 me-5">
-          <h3 className="text-gray-800 font-medium text-sm dark:text-white">
+          <h3 className="text-sm font-medium text-gray-800 dark:text-white">
             <span className="font-semibold">James</span> mentioned you in a
             comment
           </h3>
@@ -302,7 +302,7 @@ export const WithAvatar: Story = {
           <div className="mt-3">
             <button
               type="button"
-              className="text-blue-600 decoration-2 hover:underline font-medium text-sm focus:outline-hidden focus:underline dark:text-blue-500"
+              className="text-sm font-medium text-blue-600 decoration-2 hover:underline focus:underline focus:outline-hidden dark:text-blue-500"
             >
               Mark as read
             </button>

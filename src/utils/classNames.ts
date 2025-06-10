@@ -13,7 +13,7 @@ export function cn(...inputs: (string | undefined | null | boolean)[]): string {
  * Get size classes for components
  */
 export const getSizeClasses = (
-  size: "xs" | "sm" | "md" | "lg" | "xl" = "md"
+  size: "xs" | "sm" | "md" | "lg" | "xl" = "md",
 ) => {
   const sizeMap = {
     xs: "text-xs px-2 py-1",
@@ -30,7 +30,7 @@ export const getSizeClasses = (
  */
 export const getColorClasses = (
   color: string = "primary",
-  variant: string = "solid"
+  variant: string = "solid",
 ) => {
   const colorMap = {
     primary: {

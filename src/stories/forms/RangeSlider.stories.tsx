@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import RangeSlider, { RangeSliderProps } from "../../components/forms/RangeSlider";
+import RangeSlider, {
+  RangeSliderProps,
+} from "../../components/forms/RangeSlider";
 
 const meta: Meta<RangeSliderProps> = {
   title: "Forms/Range Slider",

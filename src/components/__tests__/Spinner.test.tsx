@@ -51,7 +51,7 @@ describe("Spinner Component", () => {
               | "orange"
               | "white"
           }
-        />
+        />,
       );
       const spinner = screen.getByRole("status");
       expect(spinner).toHaveClass(expectedClass);

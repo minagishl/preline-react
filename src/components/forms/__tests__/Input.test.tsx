@@ -105,7 +105,7 @@ describe("Input Component", () => {
           maxLength={50}
           required
           autoComplete="email"
-        />
+        />,
       );
       const input = screen.getByRole("textbox");
 
@@ -126,7 +126,7 @@ describe("Input Component", () => {
           onChange={handleChange}
           onFocus={handleFocus}
           onBlur={handleBlur}
-        />
+        />,
       );
       const input = screen.getByRole("textbox");
 
@@ -143,7 +143,7 @@ describe("Input Component", () => {
     it("handles controlled and uncontrolled inputs separately", () => {
       // Test controlled input
       const { unmount } = render(
-        <Input value="controlled" onChange={() => {}} />
+        <Input value="controlled" onChange={() => {}} />,
       );
       expect(screen.getByDisplayValue("controlled")).toBeInTheDocument();
       unmount();
@@ -166,7 +166,7 @@ describe("Input Component", () => {
       render(
         <Input
           type={type as "text" | "email" | "number" | "tel" | "url" | "search"}
-        />
+        />,
       );
       const input = screen.getByRole(role);
       expect(input).toHaveAttribute("type", type);
@@ -218,7 +218,7 @@ describe("Input Component", () => {
           aria-label="Custom label"
           aria-describedby="help-text"
           aria-invalid="true"
-        />
+        />,
       );
       const input = screen.getByRole("textbox");
 

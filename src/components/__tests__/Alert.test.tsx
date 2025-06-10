@@ -42,12 +42,12 @@ describe("Alert Component", () => {
             }
           >
             Alert message
-          </Alert>
+          </Alert>,
         );
         const alert = screen.getByRole("alert");
         expect(alert).toHaveClass(bgClass);
         expect(alert).toHaveClass(textClass);
-      }
+      },
     );
   });
 
@@ -78,13 +78,13 @@ describe("Alert Component", () => {
             soft
           >
             Alert message
-          </Alert>
+          </Alert>,
         );
         const alert = screen.getByRole("alert");
         expect(alert).toHaveClass(bgClass);
         expect(alert).toHaveClass(textClass);
         expect(alert).toHaveClass("border"); // soft mode adds border
-      }
+      },
     );
   });
 
@@ -114,21 +114,21 @@ describe("Alert Component", () => {
       const { rerender } = render(
         <Alert variant="success" border="top">
           Success
-        </Alert>
+        </Alert>,
       );
       expect(screen.getByRole("alert")).toHaveClass("border-teal-500");
 
       rerender(
         <Alert variant="danger" border="left">
           Danger
-        </Alert>
+        </Alert>,
       );
       expect(screen.getByRole("alert")).toHaveClass("border-red-500");
 
       rerender(
         <Alert variant="warning" border="top">
           Warning
-        </Alert>
+        </Alert>,
       );
       expect(screen.getByRole("alert")).toHaveClass("border-yellow-500");
     });
@@ -139,7 +139,7 @@ describe("Alert Component", () => {
       render(
         <Alert variant="success" soft border="top">
           Soft with border
-        </Alert>
+        </Alert>,
       );
       const alert = screen.getByRole("alert");
 
@@ -161,7 +161,7 @@ describe("Alert Component", () => {
         <Alert>
           <strong>Important:</strong> This is a complex message with{" "}
           <em>formatting</em> and <a href="#test">links</a>.
-        </Alert>
+        </Alert>,
       );
 
       expect(screen.getByText("Important:")).toBeInTheDocument();
@@ -202,7 +202,7 @@ describe("Alert Component", () => {
       const alert = screen.getByRole("alert");
       expect(alert).toHaveAttribute(
         "aria-labelledby",
-        "hs-solid-color-danger-label"
+        "hs-solid-color-danger-label",
       );
     });
 
@@ -210,12 +210,12 @@ describe("Alert Component", () => {
       render(
         <Alert variant="success" soft>
           Success alert
-        </Alert>
+        </Alert>,
       );
       const alert = screen.getByRole("alert");
       expect(alert).toHaveAttribute(
         "aria-labelledby",
-        "hs-soft-color-success-label"
+        "hs-soft-color-success-label",
       );
     });
   });

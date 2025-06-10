@@ -27,13 +27,13 @@ const Tooltip: React.FC<TooltipProps> = ({
       trigger.props.children,
       <span
         key="tooltip"
-        className="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-md shadow-2xs dark:bg-neutral-700"
+        className="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible invisible absolute z-10 inline-block rounded-md bg-gray-900 px-2 py-1 text-xs font-medium text-white opacity-0 shadow-2xs transition-opacity dark:bg-neutral-700"
         role="tooltip"
         data-placement={placement}
       >
         {content}
       </span>,
-    ]
+    ],
   );
 
   const placementClasses = {
@@ -48,7 +48,7 @@ const Tooltip: React.FC<TooltipProps> = ({
       className={cn(
         "hs-tooltip inline-block",
         placementClasses[placement],
-        className
+        className,
       )}
     >
       {triggerWithTooltip}
