@@ -12,6 +12,7 @@ const colors: SpinnerColor[] = [
   "purple",
   "pink",
   "orange",
+  "white",
 ];
 
 const sizes: SpinnerSize[] = ["sm", "md", "lg"];

@@ -1,4 +1,4 @@
-import React, { FC, HTMLAttributes } from "react";
+import { FC, HTMLAttributes } from "react";
 import classNames from "classnames";
 
 const colorClasses = {
@@ -12,6 +12,7 @@ const colorClasses = {
   purple: "text-purple-600",
   pink: "text-pink-600",
   orange: "text-orange-600",
+  white: "text-white",
 };
 
 const sizeClasses = {
