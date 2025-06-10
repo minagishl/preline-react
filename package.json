@@ -21,7 +21,8 @@
     "prepare": "pnpm run build && husky",
     "prepublishOnly": "pnpm run build && pnpm run test",
     "storybook": "storybook dev -p 6006",
-    "storybook:build": "storybook build"
+    "storybook:build": "storybook build",
+    "format": "prettier --write ."
   },
   "keywords": [
     "react",
@@ -89,6 +90,8 @@
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^30.0.0",
     "postcss": "^8.4.32",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.12",
     "rollup": "^4.6.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "storybook": "^9.0.6",
