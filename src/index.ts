@@ -1,5 +1,27 @@
 // Core components
 export { default as Alert } from "./components/Alert";
+export { default as Timeline } from "./components/Timeline";
+export { default as Accordion } from "./components/Accordion";
+export { Toast } from "./components/Toast";
+export { StyledIcon } from "./components/StyledIcon";
+export { Spinner } from "./components/Spinner";
+export { Ratings } from "./components/Ratings";
+export { Progress } from "./components/Progress";
+export { LegendIndicator } from "./components/LegendIndicator";
+export { List } from "./components/List";
+export { Device } from "./components/Device";
+export { Collapse } from "./components/Collapse";
+export { Button } from "./components/Button";
+export { ChatBubble } from "./components/ChatBubble";
+export { Card } from "./components/Card";
+export { ButtonGroup } from "./components/ButtonGroup";
+export { Blockquote } from "./components/Blockquote";
+export { Badge } from "./components/Badge";
+export { AvatarGroup } from "./components/AvatarGroup";
+export { Avatar } from "./components/Avatar";
+
+// Overlay components
+export { Modal } from "./components/overlays/Modal";
 
 // Navigation components
 export { default as Navbar } from "./components/navigation/Navbar";
