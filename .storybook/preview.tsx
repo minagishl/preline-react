@@ -1,6 +1,14 @@
 import type { Preview } from "@storybook/react-vite";
 import "../src/styles/globals.css";
-import React from "react";
+import React, { useEffect } from "react";
+
+declare global {
+  interface Window {
+    HSStaticMethods: {
+      autoInit: () => void;
+    };
+  }
+}
 
 const preview: Preview = {
   parameters: {
@@ -27,13 +35,22 @@ const preview: Preview = {
   },
   decorators: [
     (Story, context) => {
-      const isDark = context.globals.backgrounds?.value === "dark";
-      const html = document.documentElement;
-      if (isDark) {
-        html.classList.add("dark");
-      } else {
-        html.classList.remove("dark");
-      }
+      const { theme } = context.globals;
+
+      useEffect(() => {
+        const html = document.querySelector("html");
+        if (html) {
+          html.classList.remove("light", "dark");
+          html.classList.add(theme);
+        }
+      }, [theme]);
+
+      useEffect(() => {
+        import("preline/dist/preline.js").then(() => {
+          window.HSStaticMethods.autoInit();
+        });
+      }, []);
+
       return <Story />;
     },
   ],
