@@ -1,3 +1,10 @@
+// Layout components
+export { default as Container } from "./components/layout/Container";
+export { default as Grid } from "./components/layout/Grid";
+
+// Content components
+export { default as Typography } from "./components/content/Typography";
+
 // Core components
 export { default as Alert } from "./components/Alert";
 export { default as Timeline } from "./components/Timeline";
@@ -24,10 +31,6 @@ export { default as Avatar } from "./components/Avatar";
 export { default as Modal } from "./components/overlays/Modal";
 export { default as Tooltip } from "./components/overlays/Tooltip";
 export { default as Popover } from "./components/forms/Popover";
-
-// Layout components
-export { default as Container } from "./components/layout/Container";
-export { default as Grid } from "./components/layout/Grid";
 
 // Form components
 export { default as Input } from "./components/forms/Input";
