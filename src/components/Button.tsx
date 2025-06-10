@@ -1,5 +1,6 @@
 import React, { ButtonHTMLAttributes } from "react";
 import classNames from "classnames";
+import Spinner from "./Spinner";
 
 export type ButtonVariant =
   | "solid"
@@ -143,27 +144,7 @@ const Button: React.FC<ButtonProps> = ({
     className
   );
 
-  const spinner = (
-    <span
-      className={classNames(
-        "animate-spin inline-block size-4 border-[3px] border-current border-t-transparent rounded-full",
-        {
-          "text-white":
-            variant === "solid" &&
-            (color === "dark" ||
-              color === "gray" ||
-              color === "teal" ||
-              color === "blue" ||
-              color === "red" ||
-              color === "yellow"),
-        }
-      )}
-      role="status"
-      aria-label="loading"
-    >
-      <span className="sr-only">Loading...</span>
-    </span>
-  );
+  const spinner = <Spinner size="sm" color="white" />;
 
   return (
     <button
