@@ -1,12 +1,18 @@
 import React, { InputHTMLAttributes, ReactNode } from "react";
 import classNames from "classnames";
 
-export interface InputGroupProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface InputGroupProps
+  extends Omit<InputHTMLAttributes<HTMLInputElement>, "prefix" | "suffix"> {
   prefix?: ReactNode;
   suffix?: ReactNode;
 }
 
-const InputGroup: React.FC<InputGroupProps> = ({ prefix, suffix, className, ...props }) => {
+const InputGroup: React.FC<InputGroupProps> = ({
+  prefix,
+  suffix,
+  className,
+  ...props
+}) => {
   return (
     <div className="flex rounded-lg">
       {prefix && (
