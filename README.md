@@ -74,7 +74,17 @@ function App() {
 ### Basic Components
 
 ```tsx
-import { Button, Card, Alert, Badge, Avatar } from "preline-react";
+import {
+  Button,
+  Card,
+  Alert,
+  Badge,
+  Avatar,
+  AvatarGroup,
+  Progress,
+  Spinner,
+  Toast,
+} from "preline-react";
 
 function MyComponent() {
   return (
@@ -98,6 +108,18 @@ function MyComponent() {
       </Badge>
 
       <Avatar src="/path/to/avatar.jpg" alt="User avatar" size="md" />
+
+      <AvatarGroup>
+        <Avatar src="/avatar1.jpg" alt="User 1" />
+        <Avatar src="/avatar2.jpg" alt="User 2" />
+        <Avatar src="/avatar3.jpg" alt="User 3" />
+      </AvatarGroup>
+
+      <Progress value={75} max={100} />
+
+      <Spinner size="md" />
+
+      <Toast variant="success">Task completed successfully!</Toast>
     </Card>
   );
 }
@@ -106,12 +128,27 @@ function MyComponent() {
 ### Form Components
 
 ```tsx
-import { Input, Textarea, Select, Checkbox, Switch } from "preline-react";
+import {
+  Input,
+  InputGroup,
+  Textarea,
+  Select,
+  Checkbox,
+  Switch,
+  FileInput,
+  RangeSlider,
+  ColorPicker,
+  TimePicker,
+} from "preline-react";
 
 function ContactForm() {
   return (
     <form>
       <Input type="text" placeholder="Enter your name" label="Name" />
+
+      <InputGroup>
+        <Input type="email" placeholder="Enter email" />
+      </InputGroup>
 
       <Textarea placeholder="Enter your message" rows={4} />
 
@@ -121,6 +158,14 @@ function ContactForm() {
         <option value="support">Support</option>
       </Select>
 
+      <FileInput accept="image/*" />
+
+      <RangeSlider min={0} max={100} value={50} />
+
+      <ColorPicker />
+
+      <TimePicker />
+
       <Checkbox>I agree to the terms and conditions</Checkbox>
 
       <Switch>Receive email notifications</Switch>
@@ -129,30 +174,46 @@ function ContactForm() {
 }
 ```
 
-### Navigation Components
+### Overlay & Interactive Components
 
 ```tsx
-import { Navbar, Sidebar, Breadcrumb, Tabs } from "preline-react";
+import {
+  Modal,
+  Tooltip,
+  Accordion,
+  Collapse,
+  Timeline,
+  Blockquote,
+} from "preline-react";
 
-function NavigationExample() {
+function InteractiveExample() {
   return (
     <div>
-      <Navbar>
-        <div>Logo</div>
-        <div>Menu</div>
-      </Navbar>
+      <Modal>
+        <h2>Modal Title</h2>
+        <p>Modal content goes here.</p>
+      </Modal>
 
-      <Breadcrumb>
-        <li>Home</li>
-        <li>Products</li>
-        <li>Details</li>
-      </Breadcrumb>
+      <Tooltip content="This is a tooltip">
+        <button>Hover me</button>
+      </Tooltip>
 
-      <Tabs>
-        <button>Tab 1</button>
-        <button>Tab 2</button>
-        <button>Tab 3</button>
-      </Tabs>
+      <Accordion>
+        <div>Accordion Item 1</div>
+        <div>Accordion Item 2</div>
+      </Accordion>
+
+      <Collapse>
+        <summary>Click to expand</summary>
+        <p>Collapsible content</p>
+      </Collapse>
+
+      <Timeline>
+        <div>Timeline item 1</div>
+        <div>Timeline item 2</div>
+      </Timeline>
+
+      <Blockquote>"This is an inspirational quote."</Blockquote>
     </div>
   );
 }
@@ -160,39 +221,57 @@ function NavigationExample() {
 
 ## Available Components
 
-> **Note:** Currently, only the basic components have been implemented.
-
 ### Basic Components
 
+- `Alert` - Alert messages
+- `Avatar` - User avatar
+- `AvatarGroup` - Group of avatars
+- `Badge` - Status badge
+- `Blockquote` - Quote block
 - `Button` - Button
-- `Card` - Card
-- `Alert` - Alert
-- `Badge` - Badge
-- `Avatar` - Avatar
-- `Toast` - Toast
+- `ButtonGroup` - Group of buttons
+- `Card` - Card container
+- `ChatBubble` - Chat message bubble
+- `Collapse` - Collapsible content
+- `Device` - Device mockup
+- `LegendIndicator` - Legend indicator
+- `List` - List component
 - `Progress` - Progress bar
+- `Ratings` - Star ratings
+- `Spinner` - Loading spinner
+- `StyledIcon` - Styled icon
+- `Timeline` - Timeline component
+- `Toast` - Toast notification
 
 ### Form Components
 
 - `Input` - Text input
+- `InputGroup` - Input with addons
 - `Textarea` - Text area
-- `Select` - Select
+- `Select` - Select dropdown
 - `Checkbox` - Checkbox
 - `Radio` - Radio button
-- `Switch` - Switch
-
-### Navigation Components
-
-- `Navbar` - Navigation bar
-- `Sidebar` - Sidebar
-- `Breadcrumb` - Breadcrumb
-- `Pagination` - Pagination
-- `Tabs` - Tabs
+- `Switch` - Toggle switch
+- `FileInput` - File upload input
+- `RangeSlider` - Range slider
+- `ColorPicker` - Color picker
+- `TimePicker` - Time picker
 
 ### Layout Components
 
 - `Container` - Container
 - `Grid` - Grid
+
+### Overlay Components
+
+- `Modal` - Modal dialog
+- `Tooltip` - Tooltip
+- `Popover` - Popover
+
+### Navigation Components
+
+- `Accordion` - Accordion/collapsible sections
+- `Pagination` - Pagination controls
 
 ## Customization
 
