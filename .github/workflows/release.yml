@@ -63,7 +63,7 @@ jobs:
           npm version ${{ steps.get_version.outputs.VERSION }} --no-git-tag-version
 
       - name: Publish to npm
-        run: pnpm publish --access public --no-git-checks
+        run: NPM_CONFIG_PROVENANCE=true pnpm publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
