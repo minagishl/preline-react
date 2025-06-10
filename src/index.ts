@@ -23,6 +23,7 @@ export { default as Avatar } from "./components/Avatar";
 // Overlay components
 export { default as Modal } from "./components/overlays/Modal";
 export { default as Tooltip } from "./components/overlays/Tooltip";
+export { default as Popover } from "./components/forms/Popover";
 
 // Navigation components
 export { default as Navbar } from "./components/navigation/Navbar";
