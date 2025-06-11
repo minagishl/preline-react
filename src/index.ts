@@ -38,6 +38,7 @@ export { default as Popover } from "./components/forms/Popover";
 // Form components
 export { default as Input } from "./components/forms/Input";
 export { default as InputGroup } from "./components/forms/InputGroup";
+export { default as InputNumber } from "./components/forms/InputNumber";
 export { default as Textarea } from "./components/forms/Textarea";
 export { default as FileInput } from "./components/forms/FileInput";
 export { default as Checkbox } from "./components/forms/Checkbox";
