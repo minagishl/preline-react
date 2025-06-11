@@ -11,6 +11,12 @@ jobs:
     permissions:
       contents: write
       id-token: write
+    env:
+      # Skip all npm/pnpm scripts
+      npm_config_ignore_scripts: true
+      # Skip Husky installation and execution on CI
+      HUSKY_SKIP_INSTALL: 1
+      HUSKY_SKIP_HOOKS: 1
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -40,7 +46,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile --ignore-scripts
 
       - name: Run linting
         run: pnpm run lint
