@@ -9,11 +9,13 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -58,22 +60,42 @@ jobs:
 
       - name: Update package.json version
         run: |
-          npm version ${{ steps.get_version.outputs.VERSION }} --no-git-tag-version
+          npm version ${{ steps.get_version.outputs.VERSION }} \
+            --no-git-tag-version \
+            --allow-same-version
 
-      - name: Publish to npm
-        run: NPM_CONFIG_PROVENANCE=true pnpm publish --access public --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Configure Git for push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Create GitHub Release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          body: |
-            Changes in this Release
-            - See CHANGELOG.md for details
-          draft: false
-          prerelease: false
+      - name: Commit version bump
+        run: |
+          git add package.json
+          git commit -m "chore: bump version to ${{ steps.get_version.outputs.VERSION }}" || echo "No changes to commit"
+
+      - name: Push version bump
+        run: |
+          git push origin HEAD:${{ github.ref_name }}
+
+      - name: Pack package
+        run: pnpm pack
+
+      - name: Get existing release by tag
+        id: get_release
+        run: |
+          TAG=${{ github.ref_name }}
+          RELEASE_JSON=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/${{ github.repository }}/releases/tags/$TAG)
+          # Extract the "id" field from the JSON
+          RELEASE_ID=$(echo "$RELEASE_JSON" | grep '"id":' | head -n1 | sed -E 's/.*"id":[[:space:]]*([0-9]+).*/\1/')
+          echo "RELEASE_ID=$RELEASE_ID" >> $GITHUB_ENV
+
+      - name: Upload package asset
+        run: |
+          ASSET_FILE=$(ls *.tgz)
+          curl -s -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Content-Type: application/octet-stream" \
+            --data-binary @"$ASSET_FILE" \
+            "https://uploads.github.com/repos/${{ github.repository }}/releases/${{ env.RELEASE_ID }}/assets?name=$ASSET_FILE&label=$ASSET_FILE"
