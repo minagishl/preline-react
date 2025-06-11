@@ -135,6 +135,7 @@ function MyComponent() {
 import {
   Input,
   InputGroup,
+  InputNumber,
   Textarea,
   Select,
   Checkbox,
@@ -143,6 +144,8 @@ import {
   RangeSlider,
   ColorPicker,
   TimePicker,
+  StrongPassword,
+  TogglePassword,
 } from "preline-react";
 
 function ContactForm() {
@@ -153,6 +156,8 @@ function ContactForm() {
       <InputGroup>
         <Input type="email" placeholder="Enter email" />
       </InputGroup>
+
+      <InputNumber placeholder="Enter age" min={0} max={100} />
 
       <Textarea placeholder="Enter your message" rows={4} />
 
@@ -169,6 +174,10 @@ function ContactForm() {
       <ColorPicker />
 
       <TimePicker />
+
+      <StrongPassword placeholder="Enter strong password" />
+
+      <TogglePassword placeholder="Enter password" />
 
       <Checkbox>I agree to the terms and conditions</Checkbox>
 
@@ -263,6 +272,7 @@ function InteractiveExample() {
 
 - `Input` - Text input
 - `InputGroup` - Input with addons
+- `InputNumber` - Number input
 - `Textarea` - Text area
 - `Select` - Select dropdown
 - `Checkbox` - Checkbox
@@ -272,6 +282,8 @@ function InteractiveExample() {
 - `RangeSlider` - Range slider
 - `ColorPicker` - Color picker
 - `TimePicker` - Time picker
+- `StrongPassword` - Password strength validation input
+- `TogglePassword` - Password visibility toggle input
 
 ### Overlay Components
 
