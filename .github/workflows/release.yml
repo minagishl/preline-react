@@ -74,9 +74,11 @@ jobs:
           git add package.json
           git commit -m "chore: bump version to ${{ steps.get_version.outputs.VERSION }}" || echo "No changes to commit"
 
-      - name: Push version bump
+      - name: Detect base branch and push version bump
         run: |
-          git push
+          BRANCH=$(git branch -r --contains $GITHUB_SHA | grep -v '\->' | grep -Eo '[^/]+$' | head -n 1)
+          echo "Pushing to $BRANCH"
+          git push origin HEAD:$BRANCH
 
       - name: Pack package
         run: pnpm pack
