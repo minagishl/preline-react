@@ -48,6 +48,7 @@ export { default as RangeSlider } from "./components/forms/RangeSlider";
 export { default as ColorPicker } from "./components/forms/ColorPicker";
 export { default as TimePicker } from "./components/forms/TimePicker";
 export { default as StrongPassword } from "./components/forms/StrongPassword";
+export { default as TogglePassword } from "./components/forms/TogglePassword";
 
 // Hooks
 export { default as usePreline } from "./hooks/usePreline";
