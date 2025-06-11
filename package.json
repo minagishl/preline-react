@@ -18,8 +18,8 @@
     "lint": "eslint src --ext .ts,.tsx",
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
     "type-check": "tsc --noEmit --project tsconfig.json",
-    "prepare": "pnpm run build && husky",
-    "prepublishOnly": "pnpm run build && pnpm run test",
+    "prepare": "husky",
+    "prepublishOnly": "pnpm run test",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
     "format": "prettier --write ."
