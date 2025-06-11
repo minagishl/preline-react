@@ -48,6 +48,9 @@ Add the following to your CSS file (e.g., `globals.css`):
 @import "preline/variants.css";
 @source "../node_modules/preline/dist/*.js";
 
+/* Preline React */
+@source "../node_modules/preline-react/dist/*.js";
+
 /* Optional Preline UI styles */
 @layer base {
   button:not(:disabled),
