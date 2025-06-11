@@ -75,158 +75,26 @@ function App() {
 
 ## Usage
 
-### Basic Components
-
 ```tsx
-import {
-  Button,
-  Card,
-  Alert,
-  Badge,
-  Avatar,
-  AvatarGroup,
-  Progress,
-  Spinner,
-  Toast,
-} from "preline-react";
+import { useState } from "react";
+import { Button } from "preline-react";
 
-function MyComponent() {
+function App() {
+  const [count, setCount] = useState(0);
+
   return (
-    <Card>
-      <h2>Hello Preline React!</h2>
+    <div className="p-6 text-center">
+      <h1 className="mb-4 text-2xl font-bold">Count: {count}</h1>
 
-      <Button
-        variant="solid"
-        color="primary"
-        onClick={() => alert("Button clicked!")}
-      >
-        Click me
-      </Button>
-
-      <Alert variant="success" dismissible>
-        Operation completed successfully!
-      </Alert>
-
-      <Badge color="primary" variant="soft">
-        New Feature
-      </Badge>
-
-      <Avatar src="/path/to/avatar.jpg" alt="User avatar" size="md" />
-
-      <AvatarGroup>
-        <Avatar src="/avatar1.jpg" alt="User 1" />
-        <Avatar src="/avatar2.jpg" alt="User 2" />
-        <Avatar src="/avatar3.jpg" alt="User 3" />
-      </AvatarGroup>
-
-      <Progress value={75} max={100} />
-
-      <Spinner size="md" />
-
-      <Toast variant="success">Task completed successfully!</Toast>
-    </Card>
-  );
-}
-```
-
-### Form Components
-
-```tsx
-import {
-  Input,
-  InputGroup,
-  InputNumber,
-  Textarea,
-  Select,
-  Checkbox,
-  Switch,
-  FileInput,
-  RangeSlider,
-  ColorPicker,
-  TimePicker,
-  StrongPassword,
-  TogglePassword,
-} from "preline-react";
-
-function ContactForm() {
-  return (
-    <form>
-      <Input type="text" placeholder="Enter your name" label="Name" />
-
-      <InputGroup>
-        <Input type="email" placeholder="Enter email" />
-      </InputGroup>
-
-      <InputNumber placeholder="Enter age" min={0} max={100} />
-
-      <Textarea placeholder="Enter your message" rows={4} />
-
-      <Select>
-        <option value="">Select category</option>
-        <option value="inquiry">Inquiry</option>
-        <option value="support">Support</option>
-      </Select>
-
-      <FileInput accept="image/*" />
-
-      <RangeSlider min={0} max={100} value={50} />
-
-      <ColorPicker />
-
-      <TimePicker />
-
-      <StrongPassword placeholder="Enter strong password" />
-
-      <TogglePassword placeholder="Enter password" />
-
-      <Checkbox>I agree to the terms and conditions</Checkbox>
-
-      <Switch>Receive email notifications</Switch>
-    </form>
-  );
-}
-```
-
-### Overlay & Interactive Components
-
-```tsx
-import {
-  Modal,
-  Tooltip,
-  Accordion,
-  Collapse,
-  Timeline,
-  Blockquote,
-} from "preline-react";
-
-function InteractiveExample() {
-  return (
-    <div>
-      <Modal>
-        <h2>Modal Title</h2>
-        <p>Modal content goes here.</p>
-      </Modal>
-
-      <Tooltip content="This is a tooltip">
-        <button>Hover me</button>
-      </Tooltip>
-
-      <Accordion>
-        <div>Accordion Item 1</div>
-        <div>Accordion Item 2</div>
-      </Accordion>
-
-      <Collapse>
-        <summary>Click to expand</summary>
-        <p>Collapsible content</p>
-      </Collapse>
-
-      <Timeline>
-        <div>Timeline item 1</div>
-        <div>Timeline item 2</div>
-      </Timeline>
-
-      <Blockquote>"This is an inspirational quote."</Blockquote>
+      <div className="space-x-2">
+        <Button
+          variant="solid"
+          color="blue"
+          onClick={() => setCount(count + 1)}
+        >
+          Click
+        </Button>
+      </div>
     </div>
   );
 }
