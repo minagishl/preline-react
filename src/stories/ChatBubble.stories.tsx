@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import ChatBubble, { ChatBubbleProps } from "../components/ChatBubble";
 
 const meta: Meta<ChatBubbleProps> = {
-  title: "Components/ChatBubble",
+  title: "Components/Chat Bubble",
   component: ChatBubble,
   parameters: {
     layout: "centered",

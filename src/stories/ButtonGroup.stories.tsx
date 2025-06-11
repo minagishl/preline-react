@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import ButtonGroup, { ButtonGroupProps } from "../components/ButtonGroup";
 
 const meta: Meta<ButtonGroupProps> = {
-  title: "Components/ButtonGroup",
+  title: "Components/Button Group",
   component: ButtonGroup,
   argTypes: {
     vertical: {

@@ -3,7 +3,7 @@ import AvatarGroup from "../components/AvatarGroup";
 import Avatar from "../components/Avatar";
 
 const meta: Meta<typeof AvatarGroup> = {
-  title: "Components/AvatarGroup",
+  title: "Components/Avatar Group",
   component: AvatarGroup,
   parameters: {
     layout: "centered",
