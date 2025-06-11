@@ -76,7 +76,7 @@ jobs:
 
       - name: Push version bump
         run: |
-          git push origin HEAD:${{ github.ref_name }}
+          git push
 
       - name: Pack package
         run: pnpm pack
