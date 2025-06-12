@@ -211,20 +211,20 @@ pnpm run storybook
 
 This package uses automated releases through GitHub Actions. To release a new version:
 
-1. Update the version in `package.json` (if not using automated versioning)
-2. Create and push a git tag with the format `v*.*.*`:
+1. Create a new GitHub release:
 
-```bash
-# Example for version 1.2.3
-git tag v1.2.3
-git push origin v1.2.3
-```
+   - Go to the [Releases page](https://github.com/minagishl/preline-react/releases) in the repository
+   - Click "Create a new release"
+   - Create a new tag with the format `v*.*.*` (e.g., `v1.2.3`)
+   - Add a release title and description
+   - Click "Publish release"
 
-3. GitHub Actions will automatically:
+2. GitHub Actions will automatically:
    - Run tests and linting
+   - Automatically update and push package.json version
    - Build the package
    - Publish to npm with public access
-   - Create a GitHub release
+   - Upload the package asset to the GitHub release
 
 **Prerequisites for automated publishing:**
 
