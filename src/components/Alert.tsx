@@ -1,7 +1,7 @@
 import React from "react";
 import { cn } from "../utils/classNames";
 
-type AlertVariant =
+export type AlertVariant =
   | "dark"
   | "secondary"
   | "info"
@@ -10,7 +10,7 @@ type AlertVariant =
   | "warning"
   | "light";
 
-interface AlertProps {
+export interface AlertProps {
   variant?: AlertVariant;
   children: React.ReactNode;
   soft?: boolean;
