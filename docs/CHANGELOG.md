@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.1.0 (2025-09-27)
+
+### Added
+
+- **TreeView**: New tree view component for hierarchical data display
+- **Skeleton**: New skeleton loading component for better UX
+
+### Changed
+
+- **KBD**: Added color variants support for keyboard key display component
+- **Icons**: Replaced SVG icons with Lucide icons for better consistency
+
+### Fixed
+
+- **KBD**: Updated component variants for improved styling
+
+---
+
 ## v1.0.0 (2025-06-11)
 
 Preline React is the first stable release of a component library that makes it easy to use Preline UI in React applications. Fully compatible with TypeScript and based on Tailwind CSS, it supports responsive design and accessibility, and is customizable to suit different use cases.
