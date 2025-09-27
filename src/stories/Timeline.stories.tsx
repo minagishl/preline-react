@@ -12,7 +12,8 @@ const meta: Meta<typeof Timeline> = {
   decorators: [
     (Story) => {
       usePreline();
-      return <Story />;
+      const StoryComponent = Story as React.ComponentType;
+      return <StoryComponent />;
     },
   ],
   tags: ["autodocs"],
@@ -45,7 +46,7 @@ const FileIcon = () => (
 
 interface Event {
   title: string;
-  icon?: JSX.Element;
+  icon?: React.ReactNode;
   description?: string;
   author?: {
     name: string;

@@ -3,8 +3,15 @@ import { cn } from "../../utils/classNames";
 
 type TooltipPlacement = "top" | "bottom" | "left" | "right";
 
+interface TooltipTriggerProps {
+  className?: string;
+  children?: ReactNode;
+}
+
+type TooltipTriggerElement = ReactElement<TooltipTriggerProps>;
+
 export interface TooltipProps {
-  children: ReactElement;
+  children: TooltipTriggerElement;
   content: ReactNode;
   placement?: TooltipPlacement;
   className?: string;
@@ -16,9 +23,9 @@ const Tooltip: React.FC<TooltipProps> = ({
   placement = "top",
   className,
 }) => {
-  const trigger = Children.only(children);
+  const trigger = Children.only(children) as TooltipTriggerElement;
 
-  const triggerWithTooltip = cloneElement(
+  const triggerWithTooltip = cloneElement<TooltipTriggerProps>(
     trigger,
     {
       className: cn("hs-tooltip-toggle", trigger.props.className),

@@ -123,13 +123,17 @@ const CloseButton: FC<HTMLAttributes<HTMLButtonElement>> = ({
 };
 CloseButton.displayName = "Modal.CloseButton";
 
-const Trigger: FC<{ children: ReactElement; asChild?: boolean }> = ({
-  children,
-  asChild = true,
-}) => {
+type OverlayChildProps = { className?: string } & Record<string, unknown>;
+
+const Trigger: FC<{
+  children: ReactElement<OverlayChildProps>;
+  asChild?: boolean;
+}> = ({ children, asChild = true }) => {
   const { modalId } = useModal();
   if (asChild) {
-    return cloneElement(children, { "data-hs-overlay": `#${modalId}` });
+    return cloneElement<OverlayChildProps>(children, {
+      "data-hs-overlay": `#${modalId}`,
+    });
   }
   return (
     <button type="button" data-hs-overlay={`#${modalId}`}>
@@ -139,13 +143,15 @@ const Trigger: FC<{ children: ReactElement; asChild?: boolean }> = ({
 };
 Trigger.displayName = "Modal.Trigger";
 
-const Close: FC<{ children: ReactElement; asChild?: boolean }> = ({
-  children,
-  asChild = true,
-}) => {
+const Close: FC<{
+  children: ReactElement<OverlayChildProps>;
+  asChild?: boolean;
+}> = ({ children, asChild = true }) => {
   const { modalId } = useModal();
   if (asChild) {
-    return cloneElement(children, { "data-hs-overlay": `#${modalId}` });
+    return cloneElement<OverlayChildProps>(children, {
+      "data-hs-overlay": `#${modalId}`,
+    });
   }
   return (
     <button type="button" data-hs-overlay={`#${modalId}`}>
@@ -238,14 +244,14 @@ interface ModalProps {
 }
 
 type ModalComponent = FC<ModalProps> & {
-  Trigger: FC<{ children: ReactElement; asChild?: boolean }>;
+  Trigger: FC<{ children: ReactElement<OverlayChildProps>; asChild?: boolean }>;
   Content: FC<ContentProps>;
   Header: FC<HTMLAttributes<HTMLDivElement>>;
   Title: FC<HTMLAttributes<HTMLHeadingElement>>;
   Body: FC<HTMLAttributes<HTMLDivElement>>;
   Footer: FC<HTMLAttributes<HTMLDivElement>>;
   CloseButton: FC<HTMLAttributes<HTMLButtonElement>>;
-  Close: FC<{ children: ReactElement; asChild?: boolean }>;
+  Close: FC<{ children: ReactElement<OverlayChildProps>; asChild?: boolean }>;
 };
 
 const Modal: ModalComponent = ({ children }) => {

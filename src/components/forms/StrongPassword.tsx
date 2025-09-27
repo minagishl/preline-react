@@ -67,7 +67,7 @@ const STRENGTH_LEVELS_TEXT = [
 ];
 
 export interface StrongPasswordProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, "onChange"> {
+  extends Omit<InputHTMLAttributes<HTMLInputElement>, "onChange" | "popover"> {
   value?: string;
   onChange?: (value: string) => void;
   minLength?: number;

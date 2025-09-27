@@ -4,8 +4,15 @@ import { cn } from "../../utils/classNames";
 export type PopoverPlacement = "top" | "bottom" | "left" | "right";
 export type PopoverTrigger = "click" | "hover" | "focus";
 
+interface PopoverTriggerProps {
+  className?: string;
+  children?: ReactNode;
+}
+
+type PopoverTriggerElement = ReactElement<PopoverTriggerProps>;
+
 export interface PopoverProps {
-  children: ReactElement;
+  children: PopoverTriggerElement;
   content: ReactNode;
   placement?: PopoverPlacement;
   trigger?: PopoverTrigger;
@@ -19,9 +26,9 @@ const Popover: React.FC<PopoverProps> = ({
   trigger = "click",
   className,
 }) => {
-  const triggerElement = Children.only(children);
+  const triggerElement = Children.only(children) as PopoverTriggerElement;
 
-  const triggerWithPopover = cloneElement(
+  const triggerWithPopover = cloneElement<PopoverTriggerProps>(
     triggerElement,
     {
       className: cn("hs-tooltip-toggle", triggerElement.props.className),

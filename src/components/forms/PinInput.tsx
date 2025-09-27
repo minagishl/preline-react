@@ -98,7 +98,9 @@ const PinInput: React.FC<PinInputProps> = ({
       {Array.from({ length }).map((_, index) => (
         <input
           key={index}
-          ref={(el) => (inputRefs.current[index] = el)}
+          ref={(el) => {
+            inputRefs.current[index] = el;
+          }}
           type={props.type || "text"}
           value={pin[index]}
           onChange={(e) => handleInputChange(index, e)}

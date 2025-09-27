@@ -71,14 +71,14 @@ const ButtonGroup: ButtonGroupComponent = ({
 
   const childrenWithProps = Children.map(children, (child) => {
     if (
-      isValidElement(child) &&
+      isValidElement<{ className?: string }>(child) &&
       (child.type as any).displayName === "GroupButton"
     ) {
       const additionalClasses = vertical
         ? classNames("first:rounded-t-lg last:rounded-b-lg")
         : classNames("first:rounded-s-lg first:ms-0 last:rounded-e-lg");
 
-      return cloneElement(child as React.ReactElement<any>, {
+      return cloneElement(child, {
         className: classNames(child.props.className, additionalClasses),
       });
     }

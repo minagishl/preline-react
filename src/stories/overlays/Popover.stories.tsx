@@ -1,5 +1,5 @@
 import React from "react";
-import type { Meta, StoryObj, StoryFn } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import Popover from "../../components/forms/Popover";
 
 const ChevronUp = () => (
@@ -74,11 +74,14 @@ const meta: Meta<typeof Popover> = {
   title: "Overlays/Popover",
   component: Popover,
   decorators: [
-    (Story: StoryFn) => (
-      <div className="p-8">
-        <Story />
-      </div>
-    ),
+    (Story) => {
+      const StoryComponent = Story as React.ComponentType;
+      return (
+        <div className="p-8">
+          <StoryComponent />
+        </div>
+      );
+    },
   ],
   parameters: {
     layout: "padded",

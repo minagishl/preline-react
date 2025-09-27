@@ -120,7 +120,9 @@ export const Accordion: React.FC<AccordionProps> = ({
             </button>
             <div
               id={`hs-basic-collapse-${item.id}`}
-              ref={(el) => (contentRefs.current[item.id] = el)}
+              ref={(el) => {
+                contentRefs.current[item.id] = el;
+              }}
               className="hs-accordion-content overflow-hidden"
               aria-labelledby={`hs-basic-heading-${item.id}`}
               style={{
