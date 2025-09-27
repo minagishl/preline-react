@@ -462,11 +462,11 @@ export const MultipleSelection: Story = {
     <div className="w-full max-w-md">
       <Alert soft variant="info" className="mb-4">
         Hold{" "}
-        <KBD variant="light" size="xs">
+        <KBD variant="outline" size="xs" color="info">
           Ctrl
         </KBD>{" "}
         or{" "}
-        <KBD variant="light" size="xs">
+        <KBD variant="outline" size="xs" color="info">
           Cmd
         </KBD>{" "}
         key to select multiple items
