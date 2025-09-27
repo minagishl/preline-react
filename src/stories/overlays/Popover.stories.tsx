@@ -99,6 +99,9 @@ const meta: Meta<typeof Popover> = {
       control: "select",
       options: ["click", "hover", "focus"],
     },
+    children: {
+      control: false,
+    },
   },
 };
 
@@ -119,11 +122,10 @@ export const Default: Story = {
     content: "Popover on top",
     placement: "top",
     trigger: "click",
-    children: renderButton(<ChevronUp />),
   },
   render: (args) => (
     <div className="flex h-48 items-center justify-center">
-      <Popover {...args} />
+      <Popover {...args}>{renderButton(<ChevronUp />)}</Popover>
     </div>
   ),
 };

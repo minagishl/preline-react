@@ -95,6 +95,9 @@ const meta: Meta<typeof Tooltip> = {
       control: "select",
       options: ["top", "bottom", "left", "right"],
     },
+    children: {
+      control: false,
+    },
   },
 };
 
@@ -114,11 +117,10 @@ export const Default: Story = {
   args: {
     content: "Tooltip on top",
     placement: "top",
-    children: renderButton(<ChevronUp />),
   },
   render: (args) => (
     <div className="flex h-48 items-center justify-center">
-      <Tooltip {...args} />
+      <Tooltip {...args}>{renderButton(<ChevronUp />)}</Tooltip>
     </div>
   ),
 };
