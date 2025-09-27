@@ -33,7 +33,7 @@ const Popover: React.FC<PopoverProps> = ({
     {
       className: cn("hs-tooltip-toggle", triggerElement.props.className),
     },
-    ...[
+    [
       triggerElement.props.children,
       <span
         key="popover"

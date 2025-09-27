@@ -30,7 +30,7 @@ const Tooltip: React.FC<TooltipProps> = ({
     {
       className: cn("hs-tooltip-toggle", trigger.props.className),
     },
-    ...[
+    [
       trigger.props.children,
       <span
         key="tooltip"
