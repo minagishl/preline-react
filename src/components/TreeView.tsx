@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useRef, useEffect } from "react";
+import { File, Folder, Minus, Plus } from "lucide-react";
 import { cn } from "../utils/classNames";
 
 export interface TreeNode {
@@ -46,66 +47,37 @@ export interface TreeItemProps {
 }
 
 const FolderIcon: React.FC<{ className?: string }> = ({ className }) => (
-  <svg
+  <Folder
     className={cn(
       "size-4 shrink-0 text-gray-500 dark:text-neutral-500",
       className,
     )}
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" />
-  </svg>
+    strokeWidth={1.5}
+  />
 );
 
 const FileIcon: React.FC<{ className?: string }> = ({ className }) => (
-  <svg
+  <File
     className={cn(
       "size-4 shrink-0 text-gray-500 dark:text-neutral-500",
       className,
     )}
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
-    <path d="M14 2v4a2 2 0 0 0 2 2h4" />
-  </svg>
+    strokeWidth={1.5}
+  />
 );
 
 const ExpandIcon: React.FC<{ expanded: boolean; className?: string }> = ({
   expanded,
   className,
-}) => (
-  <svg
-    className={cn("size-4 text-gray-800 dark:text-neutral-200", className)}
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M5 12h14" />
-    <path className={cn(expanded ? "hidden" : "block")} d="M12 5v14" />
-  </svg>
-);
+}) => {
+  const Icon = expanded ? Minus : Plus;
+  return (
+    <Icon
+      className={cn("size-4 text-gray-800 dark:text-neutral-200", className)}
+      strokeWidth={1.5}
+    />
+  );
+};
 
 const TreeItem: React.FC<TreeItemProps> = ({
   node,

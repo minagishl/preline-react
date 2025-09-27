@@ -62,6 +62,7 @@
   },
   "dependencies": {
     "classnames": "^2.5.1",
+    "lucide-react": "^0.544.0",
     "preline": "^3.2.0"
   },
   "devDependencies": {
