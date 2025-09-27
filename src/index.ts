@@ -29,6 +29,7 @@ export { default as Blockquote } from "./components/Blockquote";
 export { default as Badge } from "./components/Badge";
 export { default as AvatarGroup } from "./components/AvatarGroup";
 export { default as Avatar } from "./components/Avatar";
+export { default as Skeleton } from "./components/Skeleton";
 export { default as TreeView } from "./components/TreeView";
 
 // Overlay components

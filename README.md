@@ -128,6 +128,7 @@ export default function App() {
 - `List` - List component
 - `Progress` - Progress bar
 - `Ratings` - Star ratings
+- `Skeleton` - Loading placeholder
 - `Spinner` - Loading spinner
 - `StyledIcon` - Styled icon
 - `Toast` - Toast notification
