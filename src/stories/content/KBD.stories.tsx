@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { Command } from "lucide-react";
 import KBD, { KBDProps } from "../../components/content/KBD";
 
 const meta: Meta<KBDProps> = {
@@ -12,6 +13,19 @@ const meta: Meta<KBDProps> = {
     variant: {
       control: { type: "select" },
       options: ["ghost", "subtle", "light", "outline", "shadow"],
+    },
+    color: {
+      control: { type: "select" },
+      options: [
+        "gray",
+        "dark",
+        "secondary",
+        "info",
+        "success",
+        "danger",
+        "warning",
+        "light",
+      ],
     },
     size: {
       control: { type: "radio" },
@@ -50,20 +64,7 @@ export const Sizes: Story = {
 };
 
 const CommandIcon = () => (
-  <svg
-    className="size-3 shrink-0"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3"></path>
-  </svg>
+  <Command className="size-3 shrink-0" strokeWidth={2} />
 );
 
 export const WithIcon: Story = {
@@ -83,5 +84,26 @@ export const Combination: Story = {
       and
       <KBD>b</KBD>
     </span>
+  ),
+};
+
+export const Colors: Story = {
+  render: () => (
+    <div className="space-y-3">
+      <p className="text-sm text-gray-500 dark:text-neutral-400">
+        Color variants are experimental and not part of the official Preline
+        design spec.
+      </p>
+      <div className="flex flex-wrap items-center gap-3">
+        <KBD color="gray">Gray</KBD>
+        <KBD color="dark">Dark</KBD>
+        <KBD color="secondary">Secondary</KBD>
+        <KBD color="info">Info</KBD>
+        <KBD color="success">Success</KBD>
+        <KBD color="danger">Danger</KBD>
+        <KBD color="warning">Warning</KBD>
+        <KBD color="light">Light</KBD>
+      </div>
+    </div>
   ),
 };

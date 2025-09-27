@@ -155,6 +155,35 @@ describe("KBD Component", () => {
     });
   });
 
+  describe("Colors", () => {
+    it("applies info color styling to light variant", () => {
+      render(<KBD color="info">Info</KBD>);
+      const kbd = screen.getByText("Info");
+      expect(kbd).toHaveClass("bg-blue-100", "text-blue-700");
+      expect(kbd).toHaveClass("border");
+    });
+
+    it("applies danger color styling to ghost variant", () => {
+      render(
+        <KBD variant="ghost" color="danger">
+          Esc
+        </KBD>,
+      );
+      const kbd = screen.getByText("Esc");
+      expect(kbd).toHaveClass("text-red-500");
+    });
+
+    it("applies success color styling to shadow variant", () => {
+      render(
+        <KBD variant="shadow" color="success">
+          Enter
+        </KBD>,
+      );
+      const kbd = screen.getByText("Enter");
+      expect(kbd).toHaveClass("bg-teal-500", "text-white", "border-teal-500");
+    });
+  });
+
   it("applies custom className", () => {
     render(<KBD className="custom-class">Custom Key</KBD>);
     const kbd = screen.getByText("Custom Key");
