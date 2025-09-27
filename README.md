@@ -130,8 +130,9 @@ export default function App() {
 - `Ratings` - Star ratings
 - `Spinner` - Loading spinner
 - `StyledIcon` - Styled icon
-- `Timeline` - Timeline component
 - `Toast` - Toast notification
+- `Timeline` - Timeline component
+- `TreeView` - Tree View component
 
 ### Form Components
 
@@ -212,7 +213,6 @@ pnpm run storybook
 This package uses automated releases through GitHub Actions. To release a new version:
 
 1. Create a new GitHub release:
-
    - Go to the [Releases page](https://github.com/minagishl/preline-react/releases) in the repository
    - Click "Create a new release"
    - Create a new tag with the format `v*.*.*` (e.g., `v1.2.3`)
