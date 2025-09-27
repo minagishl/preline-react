@@ -17,7 +17,7 @@
     "test": "jest",
     "lint": "eslint src --ext .ts,.tsx",
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
-    "type-check": "tsc --noEmit --project tsconfig.json",
+    "typecheck": "tsc --noEmit --project tsconfig.json",
     "prepare": "husky",
     "prepublishOnly": "pnpm run test",
     "storybook": "storybook dev -p 6006",
