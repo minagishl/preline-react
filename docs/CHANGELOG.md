@@ -27,14 +27,6 @@ Preline React is the first stable release of a component library that makes it e
 For more details, please refer to the [Storybook](https://minagishl.github.io/preline-react/)
 
 <details>
-<summary><strong>Layout</strong></summary>
-
-- Container
-- Grid
-
-</details>
-
-<details>
 <summary><strong>Content</strong></summary>
 
 - Typography
