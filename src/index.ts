@@ -1,5 +1,6 @@
 // Layout & Content components
 export { default as Container } from "./components/layout/Container";
+export { default as Columns } from "./components/layout/Columns";
 export { default as Grid } from "./components/layout/Grid";
 export { default as Typography } from "./components/content/Typography";
 export { default as Link } from "./components/content/Link";

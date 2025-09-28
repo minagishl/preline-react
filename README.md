@@ -102,6 +102,7 @@ export default function App() {
 ### Layout Components
 
 - `Container` - Container
+- `Columns` - Multi-column layout wrapper
 - `Grid` - Grid
 
 ### Content Components
