@@ -105,9 +105,6 @@ export default function App() {
 - `Columns` - Multi-column layout wrapper
 - `Grid` - Grid
 - `LayoutSplitter` - Layout Splitter component
-
-### Content Components
-
 - `Typography` - Text styling component
 - `Link` - Hyperlink component
 - `Divider` - Horizontal or vertical line separator
