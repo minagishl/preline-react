@@ -104,6 +104,7 @@ export default function App() {
 - `Container` - Container
 - `Columns` - Multi-column layout wrapper
 - `Grid` - Grid
+- `LayoutSplitter` - Layout Splitter component
 
 ### Content Components
 
