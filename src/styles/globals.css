@@ -4,7 +4,6 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @import "preline/variants.css";
-@source "../node_modules/preline/dist/*.js";
 
 /* Adds pointer cursor to buttons */
 @layer base {
