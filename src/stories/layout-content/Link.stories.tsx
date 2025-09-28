@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import Link, { LinkProps } from "../../components/content/Link";
 
 const meta: Meta<LinkProps> = {
-  title: "Content/Link",
+  title: "Layout & Content/Link",
   component: Link,
   tags: ["autodocs"],
   argTypes: {

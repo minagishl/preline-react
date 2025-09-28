@@ -4,7 +4,7 @@ import Typography, {
 } from "../../components/content/Typography";
 
 const meta: Meta<TypographyProps> = {
-  title: "Content/Typography",
+  title: "Layout & Content/Typography",
   component: Typography,
   tags: ["autodocs"],
   argTypes: {

@@ -3,7 +3,7 @@ import { Command } from "lucide-react";
 import KBD, { KBDProps } from "../../components/content/KBD";
 
 const meta: Meta<KBDProps> = {
-  title: "Content/KBD",
+  title: "Layout & Content/KBD",
   component: KBD,
   tags: ["autodocs"],
   argTypes: {
