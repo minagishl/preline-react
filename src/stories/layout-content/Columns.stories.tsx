@@ -82,8 +82,10 @@ export default meta;
 type Story = StoryObj<ColumnsProps>;
 
 const StorySection = ({ children }: { children: ReactNode }) => (
-  <div className="m-6 rounded-xl border-2 border-dashed border-red-400 p-6">
-    {children}
+  <div className="flex w-full justify-center p-6">
+    <div className="rounded-xl border-2 border-dashed border-red-400 p-6">
+      {children}
+    </div>
   </div>
 );
 
