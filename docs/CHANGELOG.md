@@ -1,5 +1,28 @@
 # Changelog
 
+## v1.1.1 (2025-09-29)
+
+### Added
+
+- **Grid**: New grid component for flexible layout arrangement
+- **Container**: New container component for consistent content wrapping
+- **Columns**: New columns component for multi-column layouts
+- **LayoutSplitter**: New layout splitter component for resizable panes
+
+### Changed
+
+- **Layout**: Merged layout and content components for better organization
+- **Stories**: Updated to use render props pattern for improved flexibility
+- **Styles**: Updated components to use padding instead of margin for better consistency
+
+### Fixed
+
+- **TypeScript**: Resolved typecheck errors across components
+- **Imports**: Removed unnecessary JavaScript imports for cleaner code
+- **Documentation**: Removed non-existent component references
+
+---
+
 ## v1.1.0 (2025-09-27)
 
 ### Added
