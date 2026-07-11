@@ -6,8 +6,7 @@ export type ContainerBreakpoint = "base" | "sm" | "md" | "lg" | "xl" | "2xl";
 export type ContainerPadding = "none" | "2" | "4" | "6" | "8";
 
 export interface ContainerProps
-  extends Omit<HTMLAttributes<HTMLElement>, "className">,
-    BaseProps {
+  extends Omit<HTMLAttributes<HTMLElement>, "className">, BaseProps {
   as?: ElementType;
   breakpoint?: ContainerBreakpoint;
   centered?: boolean;

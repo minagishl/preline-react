@@ -8,8 +8,10 @@ import React, {
 } from "react";
 import classNames from "classnames";
 
-export interface PinInputProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, "onChange" | "value"> {
+export interface PinInputProps extends Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  "onChange" | "value"
+> {
   length?: number;
   value?: string;
   onChange?: (value: string) => void;

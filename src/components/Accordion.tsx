@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Minus, Plus } from "lucide-react";
 
 export interface AccordionItemProps {
   id: string;
@@ -84,35 +85,14 @@ export const Accordion: React.FC<AccordionProps> = ({
               <span className="flex items-center gap-x-3">
                 {!noArrow && (
                   <>
-                    <svg
+                    <Plus
                       className={`${isOpen ? "hidden" : "block"} size-3.5`}
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M5 12h14" />
-                      <path d="M12 5v14" />
-                    </svg>
-                    <svg
+                      aria-hidden="true"
+                    />
+                    <Minus
                       className={`${isOpen ? "block" : "hidden"} size-3.5`}
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M5 12h14" />
-                    </svg>
+                      aria-hidden="true"
+                    />
                   </>
                 )}
                 {item.title}

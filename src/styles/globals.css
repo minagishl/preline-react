@@ -3,7 +3,9 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@import "preline/variants.css";
+/* Preline v4.2 ships this file but does not expose it through package exports. */
+@import "../../node_modules/preline/variants.css";
+@import "../../styles/themes.css";
 
 /* Adds pointer cursor to buttons */
 @layer base {

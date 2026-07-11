@@ -10,6 +10,8 @@ export type ButtonVariant =
   | "white"
   | "link";
 export type ButtonColor =
+  | "primary"
+  | "secondary"
   | "dark"
   | "gray"
   | "teal"
@@ -52,6 +54,10 @@ const buttonStyles = {
   },
   variants: {
     solid: {
+      primary:
+        "border border-transparent bg-primary text-primary-foreground hover:bg-primary-hover focus:bg-primary-hover",
+      secondary:
+        "border border-transparent bg-secondary text-secondary-foreground hover:opacity-90 focus:opacity-90",
       dark: "border border-transparent bg-gray-800 text-white hover:bg-gray-900 focus:bg-gray-900 dark:bg-white dark:text-neutral-800",
       gray: "border border-transparent bg-gray-500 text-white hover:bg-gray-600 focus:bg-gray-600",
       teal: "border border-transparent bg-teal-500 text-white hover:bg-teal-600 focus:bg-teal-600",
@@ -63,6 +69,10 @@ const buttonStyles = {
         "border border-transparent bg-white text-gray-800 hover:bg-gray-200 focus:bg-gray-200",
     },
     outline: {
+      primary:
+        "border border-primary text-primary hover:bg-primary hover:text-primary-foreground",
+      secondary:
+        "border border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground",
       dark: "border border-gray-800 text-gray-800 hover:border-gray-500 hover:text-gray-500 dark:border-white dark:text-white dark:hover:text-neutral-300 dark:hover:border-neutral-300",
       gray: "border border-gray-500 text-gray-500 hover:border-gray-800 hover:text-gray-800 dark:border-neutral-400 dark:text-neutral-400 dark:hover:text-neutral-300 dark:hover:border-neutral-300",
       teal: "border border-teal-500 text-teal-500 hover:border-teal-400 hover:text-teal-400",
@@ -74,6 +84,9 @@ const buttonStyles = {
         "border border-white text-white hover:border-white/70 hover:text-white/70",
     },
     ghost: {
+      primary: "border border-transparent text-primary hover:bg-primary/10",
+      secondary:
+        "border border-transparent text-secondary hover:bg-secondary/10",
       dark: "border border-transparent text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-neutral-700",
       gray: "border border-transparent text-gray-500 hover:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-800",
       teal: "border border-transparent text-teal-500 hover:bg-teal-100 hover:text-teal-800 dark:hover:bg-teal-800/30 dark:hover:text-teal-400",
@@ -85,6 +98,10 @@ const buttonStyles = {
         "border border-transparent text-white hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-white/10 dark:hover:text-white",
     },
     soft: {
+      primary:
+        "border border-transparent bg-primary/10 text-primary hover:bg-primary/20",
+      secondary:
+        "border border-transparent bg-secondary/10 text-secondary hover:bg-secondary/20",
       dark: "border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-white/10 dark:text-white dark:hover:bg-white/20",
       gray: "border border-transparent bg-gray-100 text-gray-500 hover:bg-gray-200 dark:bg-white/10 dark:text-neutral-400 dark:hover:bg-white/20 dark:hover:text-neutral-300",
       teal: "border border-transparent bg-teal-100 text-teal-800 hover:bg-teal-200 dark:text-teal-500 dark:bg-teal-800/30 dark:hover:bg-teal-800/20",
@@ -96,6 +113,10 @@ const buttonStyles = {
         "border border-transparent bg-white/10 text-white hover:bg-white/20",
     },
     white: {
+      primary:
+        "border border-border bg-layer text-primary shadow-2xs hover:bg-muted",
+      secondary:
+        "border border-border bg-layer text-secondary shadow-2xs hover:bg-muted",
       dark: "border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700",
       gray: "border border-gray-200 bg-white text-gray-500 shadow-2xs hover:bg-gray-50 dark:bg-neutral-800 dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700",
       teal: "border border-gray-200 bg-white text-teal-500 shadow-2xs hover:bg-gray-50 dark:bg-neutral-800 dark:border-neutral-700 dark:hover:bg-neutral-700",
@@ -106,6 +127,8 @@ const buttonStyles = {
       white: "", // This combination doesn't exist, but added for type completeness.
     },
     link: {
+      primary: "text-primary hover:text-primary-hover",
+      secondary: "text-secondary hover:opacity-75",
       dark: "text-gray-800 hover:text-blue-600 dark:text-white dark:hover:text-white/70",
       gray: "text-gray-500 hover:text-blue-600 dark:text-neutral-400 dark:hover:text-white",
       teal: "text-teal-500 hover:text-teal-600 dark:text-teal-400 dark:hover:text-teal-300", // Example, not in docs
@@ -121,7 +144,7 @@ const buttonStyles = {
 const Button: React.FC<ButtonProps> = ({
   children,
   variant = "solid",
-  color = "blue",
+  color = "primary",
   size = "md",
   shape = "default",
   loading = false,

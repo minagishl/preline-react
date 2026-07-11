@@ -1,5 +1,6 @@
 import React, { FC, HTMLAttributes, ReactNode } from "react";
 import classNames from "classnames";
+import { CheckCheck, CircleAlert } from "lucide-react";
 
 // --- Sub-components ---
 
@@ -72,40 +73,10 @@ interface FooterProps extends HTMLAttributes<HTMLSpanElement> {
 }
 
 const SentIcon = () => (
-  <svg
-    className="size-3 shrink-0"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M18 6 7 17l-5-5"></path>
-    <path d="m22 10-7.5 7.5L13 16"></path>
-  </svg>
+  <CheckCheck className="size-3 shrink-0" aria-hidden="true" />
 );
-
 const NotSentIcon = () => (
-  <svg
-    className="size-3 shrink-0"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <circle cx="12" cy="12" r="10"></circle>
-    <line x1="12" x2="12" y1="8" y2="12"></line>
-    <line x1="12" x2="12.01" y1="16" y2="16"></line>
-  </svg>
+  <CircleAlert className="size-3 shrink-0" aria-hidden="true" />
 );
 
 const Footer: FC<FooterProps> = ({ className, status, children, ...props }) => {

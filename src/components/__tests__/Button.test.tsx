@@ -18,17 +18,17 @@ describe("Button Component", () => {
     expect(button).toHaveClass("inline-flex");
     expect(button).toHaveClass("py-3"); // md size
     expect(button).toHaveClass("rounded-lg"); // default shape
-    expect(button).toHaveClass("bg-blue-600"); // solid blue (default)
+    expect(button).toHaveClass("bg-primary"); // theme-aware primary default
   });
 
   describe("Variants", () => {
     it.each([
-      ["solid", "bg-blue-600"],
-      ["outline", "border-blue-600"],
-      ["ghost", "text-blue-600"],
-      ["soft", "bg-blue-100"],
-      ["white", "bg-white"],
-      ["link", "text-blue-600"],
+      ["solid", "bg-primary"],
+      ["outline", "border-primary"],
+      ["ghost", "text-primary"],
+      ["soft", "bg-primary/10"],
+      ["white", "bg-layer"],
+      ["link", "text-primary"],
     ])("renders %s variant correctly", (variant, expectedClass) => {
       render(
         <Button

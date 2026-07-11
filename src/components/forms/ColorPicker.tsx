@@ -1,8 +1,7 @@
 import React, { InputHTMLAttributes } from "react";
 import classNames from "classnames";
 
-export interface ColorPickerProps
-  extends InputHTMLAttributes<HTMLInputElement> {
+export interface ColorPickerProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
 }
 

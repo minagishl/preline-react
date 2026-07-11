@@ -41,7 +41,8 @@ export interface FormFieldProps extends BaseProps {
 
 // Input types
 export interface InputProps
-  extends FormFieldProps,
+  extends
+    FormFieldProps,
     Omit<InputHTMLAttributes<HTMLInputElement>, "className" | "size"> {
   fieldSize?: Size;
 }
@@ -49,7 +50,29 @@ export interface InputProps
 // Preline UI context types
 export interface PrelineContextValue {
   initialized: boolean;
-  autoInit: () => void;
+  autoInit: (plugins?: string | string[]) => void;
+}
+
+export type PrelineTheme =
+  | "theme"
+  | "theme-harvest"
+  | "theme-retro"
+  | "theme-ocean"
+  | "theme-bubblegum"
+  | "theme-autumn"
+  | "theme-moon"
+  | "theme-cashmere"
+  | "theme-olive";
+
+export type ColorMode = "light" | "dark" | "system";
+
+export interface PrelineThemeContextValue {
+  theme: PrelineTheme;
+  mode: ColorMode;
+  resolvedMode: "light" | "dark";
+  setTheme: (theme: PrelineTheme) => void;
+  setMode: (mode: ColorMode) => void;
+  setTokens: (tokens: Record<string, string>) => void;
 }
 
 // Component ref types

@@ -12,6 +12,7 @@ React component library for Preline UI - Easy integration of Preline UI componen
 - Responsive design support
 - Accessibility support
 - Customizable
+- Lucide React icons, matching Preline UI's official icon resource
 
 ## Installation
 
@@ -41,11 +42,10 @@ npm install -D tailwindcss @tailwindcss/forms
 Add the following to your CSS file (e.g., `globals.css`):
 
 ```css
-@import "tailwindcss";
+@import "preline-react/styles/preline.css";
 @plugin "@tailwindcss/forms";
 
-/* Preline UI */
-@import "preline/variants.css";
+/* Preline UI source files */
 @source "../node_modules/preline/dist/*.js";
 
 /* Preline React */
@@ -62,14 +62,15 @@ Add the following to your CSS file (e.g., `globals.css`):
 
 ### 3. Provider Setup
 
-Use `PrelineProvider` at the root of your application:
+Use `PrelineProvider` at the root of your application. It initializes the official
+`preline/non-auto` entry after React mounts, and manages Preline v4 themes:
 
 ```tsx
 import { PrelineProvider } from "preline-react";
 
 function App() {
   return (
-    <PrelineProvider>
+    <PrelineProvider theme="theme-ocean" mode="system">
       <div className="App">{/* Your application */}</div>
     </PrelineProvider>
   );
@@ -89,7 +90,7 @@ export default function App() {
     <div className="p-6 text-center">
       <h1 className="mb-4 text-2xl font-bold">Count: {count}</h1>
 
-      <Button variant="solid" color="blue" onClick={() => setCount(count + 1)}>
+      <Button variant="solid" onClick={() => setCount(count + 1)}>
         Click
       </Button>
     </div>
@@ -109,6 +110,8 @@ export default function App() {
 - `Link` - Hyperlink component
 - `Divider` - Horizontal or vertical line separator
 - `KBD` - Keyboard input element
+- `Image` - Responsive image primitive
+- `CustomScrollbar` - Scrollable content wrapper
 
 ### Basic Components
 
@@ -133,6 +136,11 @@ export default function App() {
 - `Toast` - Toast notification
 - `Timeline` - Timeline component
 - `TreeView` - Tree View component
+- `Carousel` - Accessible React carousel
+- `Marquee` - Motion-safe ticker/marquee
+- `Datepicker` / `DatePicker` - Native, accessible date input
+- `ListGroup` / `ListGroupItem` - Grouped list primitives
+- `FileUpload` / `FileUploadingProgress` - File selection and upload progress UI
 
 ### Form Components
 
@@ -150,19 +158,67 @@ export default function App() {
 - `TimePicker` - Time picker
 - `StrongPassword` - Password strength validation input
 - `TogglePassword` - Password visibility toggle input
+- `PinInput` - Multi-field PIN input
+- `AdvancedSelect` - Semantic advanced select fallback
+- `ComboBox` - Searchable option input
+- `SearchBox` - Search input
+- `ToggleCount` - Increment/decrement control
+- `CopyMarkup` - Clipboard control
 
 ### Overlay Components
 
 - `Modal` - Modal dialog
 - `Tooltip` - Tooltip
 - `Popover` - Popover
+- `Dropdown` - Controlled dropdown menu
+- `Drawer` - Controlled offcanvas drawer
+- `Offcanvas` - Drawer alias matching Preline terminology
+- `ContextMenu` - Right-click context menu
 
 ### Navigation Components
 
 - `Accordion` - Accordion/collapsible sections
 - `Pagination` - Pagination controls
+- `Breadcrumb` - Breadcrumb trail
+- `Tabs` - Accessible tab panels
+- `Stepper` - Progress stepper
+- `Navbar`, `Nav`, `NavLink`, `Sidebar` - Navigation layout primitives
+- `MegaMenu` - Dropdown-based mega menu
+- `Scrollspy` - Active-section navigation
+
+### Data Components
+
+- `Table` - Responsive table wrapper
+
+### Optional Integration Components
+
+These dependency-free React fallbacks cover Preline's third-party plugin pages. Install
+and initialize the corresponding optional dependency when an application needs its full
+plugin feature set.
+
+- `AdvancedRangeSlider`, `AdvancedDatepicker`, `Clipboard`, `Datatable` / `DataTable`
+- `Chart`, `Datamap`, `Confetti`, `DragAndDrop`, `FileUploader`, `Map`, `WYSIWYGEditor`
 
 ## Customization
+
+### Themes and brand colors
+
+The default `primary` and `secondary` variants use semantic CSS tokens, so changing
+the theme updates every theme-aware component. Built-in theme values are `theme`,
+`theme-harvest`, `theme-retro`, `theme-ocean`, `theme-bubblegum`, `theme-autumn`,
+`theme-moon`, `theme-cashmere`, and `theme-olive`.
+
+```tsx
+const { setTheme, setMode, setTokens } = usePrelineTheme();
+
+setTheme("theme-ocean");
+setMode("dark");
+setTokens({ primary: "#7c3aed", "primary-hover": "#6d28d9" });
+```
+
+`mode` supports `"light"`, `"dark"`, and `"system"`. The provider persists the
+selected theme and mode, applies `data-theme` and `.dark` to `<html>`, and leaves
+custom token values under your application’s control.
 
 All components accept the `className` property, making it easy to apply custom styles:
 

@@ -6,42 +6,13 @@ import React, {
   useEffect,
 } from "react";
 import { cn } from "../../utils/classNames";
+import { Check, X } from "lucide-react";
 import Input from "./Input";
 
 const CheckIcon = () => (
-  <svg
-    className="size-4 shrink-0"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <polyline points="20 6 9 17 4 12"></polyline>
-  </svg>
+  <Check className="size-4 shrink-0" aria-hidden="true" />
 );
-
-const UncheckIcon = () => (
-  <svg
-    className="size-4 shrink-0"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M18 6 6 18"></path>
-    <path d="m6 6 12 12"></path>
-  </svg>
-);
+const UncheckIcon = () => <X className="size-4 shrink-0" aria-hidden="true" />;
 
 type Rule =
   | "min-length"
@@ -66,8 +37,10 @@ const STRENGTH_LEVELS_TEXT = [
   "Super Strong",
 ];
 
-export interface StrongPasswordProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, "onChange" | "popover"> {
+export interface StrongPasswordProps extends Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  "onChange" | "popover"
+> {
   value?: string;
   onChange?: (value: string) => void;
   minLength?: number;

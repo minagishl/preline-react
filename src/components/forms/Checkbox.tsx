@@ -7,8 +7,10 @@ import React, {
 } from "react";
 import classNames from "classnames";
 
-export interface CheckboxProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, "id"> {
+export interface CheckboxProps extends Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  "id"
+> {
   id?: string;
   label?: React.ReactNode;
   description?: React.ReactNode;

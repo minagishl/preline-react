@@ -50,8 +50,7 @@ const formatResponsiveClasses = (
     : [];
 
 export interface GridProps
-  extends Omit<HTMLAttributes<HTMLElement>, "className">,
-    BaseProps {
+  extends Omit<HTMLAttributes<HTMLElement>, "className">, BaseProps {
   as?: ElementType;
   inline?: boolean;
   columns?: GridTemplateColumnsValue;
@@ -125,8 +124,7 @@ const GridComponent: React.FC<GridProps> = ({
 GridComponent.displayName = "Grid";
 
 export interface GridItemProps
-  extends Omit<HTMLAttributes<HTMLElement>, "className">,
-    BaseProps {
+  extends Omit<HTMLAttributes<HTMLElement>, "className">, BaseProps {
   as?: ElementType;
   colSpan?: GridColumnSpanValue;
   colSpanResponsive?: ResponsiveValue<GridColumnSpanValue>;

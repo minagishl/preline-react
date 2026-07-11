@@ -1,8 +1,10 @@
 import React, { InputHTMLAttributes, ReactNode } from "react";
 import classNames from "classnames";
 
-export interface InputGroupProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, "prefix" | "suffix"> {
+export interface InputGroupProps extends Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  "prefix" | "suffix"
+> {
   prefix?: ReactNode;
   suffix?: ReactNode;
 }

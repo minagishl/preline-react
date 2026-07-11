@@ -361,8 +361,7 @@ const GAP_CLASS_MAP: Record<GapPrefix, Record<GapSize, string>> = {
 };
 
 export interface ColumnsProps
-  extends Omit<HTMLAttributes<HTMLElement>, "className">,
-    BaseProps {
+  extends Omit<HTMLAttributes<HTMLElement>, "className">, BaseProps {
   as?: ElementType;
   columns?: ColumnValue;
   responsive?: Partial<Record<ColumnBreakpoint, ColumnValue>>;

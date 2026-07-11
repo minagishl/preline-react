@@ -1,73 +1,24 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import Popover from "../../components/forms/Popover";
+import {
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  ChevronUp,
+} from "lucide-react";
 
-const ChevronUp = () => (
-  <svg
-    className="size-4 shrink-0"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="m18 15-6-6-6 6" />
-  </svg>
+const ChevronUpIcon = () => (
+  <ChevronUp className="size-4 shrink-0" aria-hidden="true" />
 );
-
-const ChevronLeft = () => (
-  <svg
-    className="size-4 shrink-0"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="m15 18-6-6 6-6" />
-  </svg>
+const ChevronLeftIcon = () => (
+  <ChevronLeft className="size-4 shrink-0" aria-hidden="true" />
 );
-
-const ChevronRight = () => (
-  <svg
-    className="size-4 shrink-0"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="m9 18 6-6-6-6" />
-  </svg>
+const ChevronRightIcon = () => (
+  <ChevronRight className="size-4 shrink-0" aria-hidden="true" />
 );
-
-const ChevronDown = () => (
-  <svg
-    className="size-4 shrink-0"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="m6 9 6 6 6-6" />
-  </svg>
+const ChevronDownIcon = () => (
+  <ChevronDown className="size-4 shrink-0" aria-hidden="true" />
 );
 
 const meta: Meta<typeof Popover> = {
@@ -125,7 +76,7 @@ export const Default: Story = {
   },
   render: (args) => (
     <div className="flex h-48 items-center justify-center">
-      <Popover {...args}>{renderButton(<ChevronUp />)}</Popover>
+      <Popover {...args}>{renderButton(<ChevronUpIcon />)}</Popover>
     </div>
   ),
 };
@@ -134,16 +85,16 @@ export const Placements: Story = {
   render: () => (
     <div className="flex h-20 justify-center gap-4">
       <Popover content="Left popover" placement="left">
-        {renderButton(<ChevronLeft />)}
+        {renderButton(<ChevronLeftIcon />)}
       </Popover>
       <Popover content="Top popover" placement="top">
-        {renderButton(<ChevronUp />)}
+        {renderButton(<ChevronUpIcon />)}
       </Popover>
       <Popover content="Bottom popover" placement="bottom">
-        {renderButton(<ChevronDown />)}
+        {renderButton(<ChevronDownIcon />)}
       </Popover>
       <Popover content="Right popover" placement="right">
-        {renderButton(<ChevronRight />)}
+        {renderButton(<ChevronRightIcon />)}
       </Popover>
     </div>
   ),

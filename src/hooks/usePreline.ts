@@ -1,36 +1,18 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { HSStaticMethods } from "preline/non-auto";
 
 const usePreline = () => {
   const [initialized, setInitialized] = useState(false);
 
   useEffect(() => {
-    const initPreline = async () => {
-      try {
-        // Dynamically load preline UI
-        if (typeof window !== "undefined") {
-          const script = document.createElement("script");
-          script.src = "/node_modules/preline/dist/preline.js";
-          script.onload = () => {
-            if (window.HSStaticMethods) {
-              window.HSStaticMethods.autoInit();
-              setInitialized(true);
-            }
-          };
-          document.head.appendChild(script);
-        }
-      } catch (error) {
-        console.warn("Failed to initialize Preline UI:", error);
-      }
-    };
-
-    initPreline();
+    HSStaticMethods.autoInit();
+    setInitialized(true);
   }, []);
 
-  const autoInit = () => {
-    if (window.HSStaticMethods) {
-      window.HSStaticMethods.autoInit();
-    }
-  };
+  const autoInit = useCallback((plugins?: string | string[]) => {
+    HSStaticMethods.autoInit(plugins);
+    setInitialized(true);
+  }, []);
 
   return { initialized, autoInit };
 };

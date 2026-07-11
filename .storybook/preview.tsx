@@ -1,14 +1,7 @@
 import type { Preview } from "@storybook/react-vite";
 import "../src/styles/globals.css";
 import React, { useEffect } from "react";
-
-declare global {
-  interface Window {
-    HSStaticMethods: {
-      autoInit: () => void;
-    };
-  }
-}
+import { HSStaticMethods } from "preline/non-auto";
 
 const preview: Preview = {
   parameters: {
@@ -46,9 +39,7 @@ const preview: Preview = {
       }, [theme]);
 
       useEffect(() => {
-        import("preline/dist/preline.js").then(() => {
-          window.HSStaticMethods.autoInit();
-        });
+        HSStaticMethods.autoInit();
       }, []);
 
       return <Story />;

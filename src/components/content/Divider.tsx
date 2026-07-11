@@ -13,8 +13,9 @@ type DividerColor =
 type DividerHeight = "1" | "2" | "4" | "8";
 type LabelPosition = "left" | "center" | "right";
 
-export interface DividerProps
-  extends HTMLAttributes<HTMLHRElement | HTMLDivElement> {
+export interface DividerProps extends HTMLAttributes<
+  HTMLHRElement | HTMLDivElement
+> {
   color?: DividerColor;
   height?: DividerHeight;
   label?: ReactNode;

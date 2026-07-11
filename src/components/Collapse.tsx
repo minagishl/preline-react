@@ -12,6 +12,7 @@ import {
   isValidElement,
 } from "react";
 import classNames from "classnames";
+import { ChevronDown } from "lucide-react";
 
 interface CollapseContextProps {
   isOpen: boolean;
@@ -30,28 +31,17 @@ const useCollapse = () => {
 
 // --- Sub-components ---
 
-const Icon: FC<HTMLAttributes<SVGElement>> = ({ className, ...props }) => {
+const Icon: FC<HTMLAttributes<SVGElement>> = ({ className }) => {
   const { isOpen } = useCollapse();
   return (
-    <svg
+    <ChevronDown
       className={classNames(
         "size-4 shrink-0 transition-transform duration-300",
         { "rotate-180": isOpen },
         className,
       )}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      {...props}
-    >
-      <path d="m6 9 6 6 6-6"></path>
-    </svg>
+      aria-hidden="true"
+    />
   );
 };
 Icon.displayName = "Collapse.Icon";
@@ -124,8 +114,10 @@ const Content: FC<HTMLAttributes<HTMLDivElement>> = ({
 };
 Content.displayName = "Collapse.Content";
 
-interface TriggerLinkProps
-  extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "children"> {
+interface TriggerLinkProps extends Omit<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  "children"
+> {
   openText: string;
   closedText: string;
 }

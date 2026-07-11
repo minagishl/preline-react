@@ -1,73 +1,24 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import Tooltip from "../../components/overlays/Tooltip";
+import {
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  ChevronUp,
+} from "lucide-react";
 
-const ChevronUp = () => (
-  <svg
-    className="size-4 shrink-0"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="m18 15-6-6-6 6" />
-  </svg>
+const ChevronUpIcon = () => (
+  <ChevronUp className="size-4 shrink-0" aria-hidden="true" />
 );
-
-const ChevronLeft = () => (
-  <svg
-    className="size-4 shrink-0"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="m15 18-6-6 6-6" />
-  </svg>
+const ChevronLeftIcon = () => (
+  <ChevronLeft className="size-4 shrink-0" aria-hidden="true" />
 );
-
-const ChevronRight = () => (
-  <svg
-    className="size-4 shrink-0"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="m9 18 6-6-6-6" />
-  </svg>
+const ChevronRightIcon = () => (
+  <ChevronRight className="size-4 shrink-0" aria-hidden="true" />
 );
-
-const ChevronDown = () => (
-  <svg
-    className="size-4 shrink-0"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="m6 9 6 6 6-6" />
-  </svg>
+const ChevronDownIcon = () => (
+  <ChevronDown className="size-4 shrink-0" aria-hidden="true" />
 );
 
 const meta: Meta<typeof Tooltip> = {
@@ -120,7 +71,7 @@ export const Default: Story = {
   },
   render: (args) => (
     <div className="flex h-48 items-center justify-center">
-      <Tooltip {...args}>{renderButton(<ChevronUp />)}</Tooltip>
+      <Tooltip {...args}>{renderButton(<ChevronUpIcon />)}</Tooltip>
     </div>
   ),
 };
@@ -131,22 +82,22 @@ export const Placements: Story = {
       <div className="mx-auto grid max-w-60 grid-cols-3 gap-x-2 gap-y-4">
         <div className="col-start-2 text-center">
           <Tooltip content="Tooltip on top" placement="top">
-            {renderButton(<ChevronUp />)}
+            {renderButton(<ChevronUpIcon />)}
           </Tooltip>
         </div>
         <div className="col-start-1 text-end">
           <Tooltip content="Tooltip on left" placement="left">
-            {renderButton(<ChevronLeft />)}
+            {renderButton(<ChevronLeftIcon />)}
           </Tooltip>
         </div>
         <div className="col-start-3">
           <Tooltip content="Tooltip on right" placement="right">
-            {renderButton(<ChevronRight />)}
+            {renderButton(<ChevronRightIcon />)}
           </Tooltip>
         </div>
         <div className="col-start-2 text-center">
           <Tooltip content="Tooltip on bottom" placement="bottom">
-            {renderButton(<ChevronDown />)}
+            {renderButton(<ChevronDownIcon />)}
           </Tooltip>
         </div>
       </div>

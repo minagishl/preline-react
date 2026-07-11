@@ -1,8 +1,7 @@
 import React, { InputHTMLAttributes } from "react";
 import classNames from "classnames";
 
-export interface RangeSliderProps
-  extends InputHTMLAttributes<HTMLInputElement> {
+export interface RangeSliderProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
 }
 

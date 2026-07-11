@@ -1,9 +1,7 @@
 import "@testing-library/jest-dom";
 
 // Mock IntersectionObserver
-global.IntersectionObserver = class MockIntersectionObserver
-  implements IntersectionObserver
-{
+global.IntersectionObserver = class MockIntersectionObserver implements IntersectionObserver {
   root = null;
   rootMargin = "";
   thresholds: readonly number[] = [];

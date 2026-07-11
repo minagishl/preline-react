@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@import "preline/variants.css";
+@import "./themes.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}

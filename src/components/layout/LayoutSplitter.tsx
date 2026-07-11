@@ -170,8 +170,7 @@ const flattenChildren = (children: React.ReactNode): ReactElement[] => {
 };
 
 export interface LayoutSplitterItemProps
-  extends Omit<React.HTMLAttributes<HTMLDivElement>, "children">,
-    BaseProps {
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, "children">, BaseProps {
   defaultSize?: number;
   minSize?: number;
   maxSize?: number;
@@ -200,7 +199,8 @@ type LayoutSplitterItemElement = React.ReactElement<
 >;
 
 export interface LayoutSplitterProps
-  extends Omit<React.HTMLAttributes<HTMLDivElement>, "children" | "onChange">,
+  extends
+    Omit<React.HTMLAttributes<HTMLDivElement>, "children" | "onChange">,
     BaseProps {
   direction?: LayoutSplitterDirection;
   sizes?: number[];

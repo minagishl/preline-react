@@ -7,6 +7,7 @@ import {
   ReactNode,
 } from "react";
 import classNames from "classnames";
+import { Check } from "lucide-react";
 
 // --- Context ---
 interface ListContextProps {
@@ -42,20 +43,7 @@ interface IconProps extends HTMLAttributes<HTMLSpanElement> {
 }
 
 const CheckIcon: FC = () => (
-  <svg
-    className="size-3.5 shrink-0"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="3"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <polyline points="20 6 9 17 4 12"></polyline>
-  </svg>
+  <Check className="size-3.5 shrink-0" aria-hidden="true" strokeWidth={3} />
 );
 
 const Icon: FC<IconProps> = ({
@@ -146,8 +134,9 @@ const Item: FC<ItemProps> = ({ children, className, ...props }) => {
 Item.displayName = "List.Item";
 
 // --- List ---
-export interface ListProps
-  extends HTMLAttributes<HTMLUListElement | HTMLOListElement> {
+export interface ListProps extends HTMLAttributes<
+  HTMLUListElement | HTMLOListElement
+> {
   variant?: "disc" | "decimal" | "none" | "inline" | "checked";
   as?: "ul" | "ol";
   markerColor?: boolean;

@@ -9,6 +9,7 @@ import {
   useId,
 } from "react";
 import classNames from "classnames";
+import { X } from "lucide-react";
 
 // --- Context ---
 interface ModalContextProps {
@@ -103,21 +104,7 @@ const CloseButton: FC<HTMLAttributes<HTMLButtonElement>> = ({
       {...props}
     >
       <span className="sr-only">Close</span>
-      <svg
-        className="size-4 shrink-0"
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M18 6 6 18"></path>
-        <path d="m6 6 12 12"></path>
-      </svg>
+      <X className="size-4 shrink-0" aria-hidden="true" />
     </button>
   );
 };

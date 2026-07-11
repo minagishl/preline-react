@@ -98,7 +98,9 @@ const TreeItem: React.FC<TreeItemProps> = ({
   const selected = isSelected(node.id);
   const contentRef = useRef<HTMLDivElement>(null);
   const isAnimatingRef = useRef(false);
-  const transitionTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const transitionTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(
+    null,
+  );
   const lastMeasuredHeightRef = useRef(0);
   const [shouldRenderChildren, setShouldRenderChildren] = useState(expanded);
 

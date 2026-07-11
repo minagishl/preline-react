@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import { X } from "lucide-react";
 
 type Color = "dark" | "gray" | "teal" | "blue" | "red" | "yellow" | "white";
 type Variant = "solid" | "soft" | "outline" | "white";
@@ -117,21 +118,7 @@ const Badge: React.FC<BadgeProps> = ({
           onClick={onRemove}
         >
           <span className="sr-only">Remove badge</span>
-          <svg
-            className="size-3 shrink-0"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M18 6 6 18"></path>
-            <path d="m6 6 12 12"></path>
-          </svg>
+          <X className="size-3 shrink-0" aria-hidden="true" />
         </button>
       )}
     </span>

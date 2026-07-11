@@ -1,63 +1,22 @@
 import React from "react";
 import { cn } from "../../utils/classNames";
 import usePreline from "../../hooks/usePreline";
+import { CircleAlert, Minus, Plus } from "lucide-react";
 
 const MinusIcon = () => (
-  <svg
-    className="size-3.5 shrink-0"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M5 12h14"></path>
-  </svg>
+  <Minus className="size-3.5 shrink-0" aria-hidden="true" />
 );
-
 const PlusIcon = () => (
-  <svg
-    className="size-3.5 shrink-0"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M5 12h14"></path>
-    <path d="M12 5v14"></path>
-  </svg>
+  <Plus className="size-3.5 shrink-0" aria-hidden="true" />
 );
-
 const ExclamationCircleIcon = () => (
-  <svg
-    className="size-4 shrink-0 text-red-500"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <circle cx="12" cy="12" r="10"></circle>
-    <line x1="12" x2="12" y1="8" y2="12"></line>
-    <line x1="12" x2="12.01" y1="16" y2="16"></line>
-  </svg>
+  <CircleAlert className="size-4 shrink-0 text-red-500" aria-hidden="true" />
 );
 
-export interface InputNumberProps
-  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size"> {
+export interface InputNumberProps extends Omit<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  "size"
+> {
   min?: number;
   max?: number;
   step?: number;

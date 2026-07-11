@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import Link, { LinkProps } from "../../components/content/Link";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const meta: Meta<LinkProps> = {
   title: "Layout & Content/Link",
@@ -57,37 +58,11 @@ export const Underline: Story = {
 };
 
 const BackIcon = () => (
-  <svg
-    className="size-4 shrink-0"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="m15 18-6-6 6-6" />
-  </svg>
+  <ChevronLeft className="size-4 shrink-0" aria-hidden="true" />
 );
 
 const ForwardIcon = () => (
-  <svg
-    className="size-4 shrink-0"
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="m9 18 6-6-6-6" />
-  </svg>
+  <ChevronRight className="size-4 shrink-0" aria-hidden="true" />
 );
 
 export const WithIcons: Story = {
