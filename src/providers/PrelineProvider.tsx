@@ -45,7 +45,7 @@ interface PrelineProviderProps {
 
 const PrelineProvider: React.FC<PrelineProviderProps> = ({
   children,
-  theme: initialTheme = "theme",
+  theme: initialTheme = "theme-default",
   mode: initialMode = "system",
   tokens: initialTokens = {},
   storageKey = "preline-react",
@@ -57,7 +57,6 @@ const PrelineProvider: React.FC<PrelineProviderProps> = ({
   const [resolvedMode, setResolvedMode] = useState<"light" | "dark">("light");
 
   useEffect(() => {
-    const root = document.documentElement;
     const saved = window.localStorage.getItem(storageKey);
     if (saved) {
       try {

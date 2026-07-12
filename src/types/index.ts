@@ -54,6 +54,8 @@ export interface PrelineContextValue {
 }
 
 export type PrelineTheme =
+  | "theme-default"
+  /** @deprecated Use `theme-default`, the official Preline v4.2 name. */
   | "theme"
   | "theme-harvest"
   | "theme-retro"

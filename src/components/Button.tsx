@@ -55,7 +55,7 @@ const buttonStyles = {
   variants: {
     solid: {
       primary:
-        "border border-transparent bg-primary text-primary-foreground hover:bg-primary-hover focus:bg-primary-hover",
+        "border border-primary-line bg-primary text-primary-foreground hover:bg-primary-hover focus:bg-primary-focus",
       secondary:
         "border border-transparent bg-secondary text-secondary-foreground hover:opacity-90 focus:opacity-90",
       dark: "border border-transparent bg-gray-800 text-white hover:bg-gray-900 focus:bg-gray-900 dark:bg-white dark:text-neutral-800",
@@ -70,7 +70,7 @@ const buttonStyles = {
     },
     outline: {
       primary:
-        "border border-primary text-primary hover:bg-primary hover:text-primary-foreground",
+        "border border-layer-line text-muted-foreground-1 hover:border-primary-hover hover:text-primary-hover focus:border-primary-focus focus:text-primary-focus",
       secondary:
         "border border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground",
       dark: "border border-gray-800 text-gray-800 hover:border-gray-500 hover:text-gray-500 dark:border-white dark:text-white dark:hover:text-neutral-300 dark:hover:border-neutral-300",
@@ -84,7 +84,8 @@ const buttonStyles = {
         "border border-white text-white hover:border-white/70 hover:text-white/70",
     },
     ghost: {
-      primary: "border border-transparent text-primary hover:bg-primary/10",
+      primary:
+        "border border-transparent text-primary-600 hover:bg-primary-100 hover:text-primary-800 focus:bg-primary-100 focus:text-primary-800 dark:text-primary-500 dark:hover:bg-primary-500/20 dark:hover:text-primary-400 dark:focus:bg-primary-800/30 dark:focus:text-primary-400",
       secondary:
         "border border-transparent text-secondary hover:bg-secondary/10",
       dark: "border border-transparent text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-neutral-700",
@@ -99,7 +100,7 @@ const buttonStyles = {
     },
     soft: {
       primary:
-        "border border-transparent bg-primary/10 text-primary hover:bg-primary/20",
+        "border border-transparent bg-primary-100 text-primary-800 hover:bg-primary-200 focus:bg-primary-200 dark:bg-primary-500/20 dark:text-primary-400 dark:hover:bg-primary-500/30 dark:focus:bg-primary-500/30",
       secondary:
         "border border-transparent bg-secondary/10 text-secondary hover:bg-secondary/20",
       dark: "border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-white/10 dark:text-white dark:hover:bg-white/20",
@@ -114,7 +115,7 @@ const buttonStyles = {
     },
     white: {
       primary:
-        "border border-border bg-layer text-primary shadow-2xs hover:bg-muted",
+        "border border-layer-line bg-layer text-layer-foreground shadow-2xs hover:bg-layer-hover focus:bg-layer-focus",
       secondary:
         "border border-border bg-layer text-secondary shadow-2xs hover:bg-muted",
       dark: "border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700",
@@ -127,7 +128,7 @@ const buttonStyles = {
       white: "", // This combination doesn't exist, but added for type completeness.
     },
     link: {
-      primary: "text-primary hover:text-primary-hover",
+      primary: "text-primary hover:text-primary-hover focus:text-primary-focus",
       secondary: "text-secondary hover:opacity-75",
       dark: "text-gray-800 hover:text-blue-600 dark:text-white dark:hover:text-white/70",
       gray: "text-gray-500 hover:text-blue-600 dark:text-neutral-400 dark:hover:text-white",

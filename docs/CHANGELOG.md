@@ -4,17 +4,20 @@
 
 ### Added
 
+- **Private reference sync**: Added `pnpm sync:preline-docs`, which snapshots all public `/docs/` pages and their required CSS/JavaScript into an ignored local cache for visual comparison.
 - **Independent component modules**: Added dedicated public modules for the Preline v4 additions, replacing grouped public exports with component-specific import paths.
 - **Coverage audit**: Added `docs/COMPONENT_COVERAGE.md`, which maps every component in Preline UI's official v4.2 Components index to this package's public API.
 - **Preline v4.2 compatibility**: Updated the package target for Preline UI v4.2, including its current React lifecycle model.
 - **Themes**: Added semantic token styles and all built-in Preline theme selectors: default, Harvest, Retro, Ocean, Bubblegum, Autumn, Moon, Cashmere, and Olive.
 - **Theme API**: `PrelineProvider` now supports theme, color mode, persisted preferences, and runtime CSS token overrides through `usePrelineTheme`.
-- **Components**: Added React implementations for Breadcrumb, Tabs, Pagination, Stepper, Dropdown, Drawer, Table, Carousel, and Marquee.
+- **Components**: Added React implementations for Breadcrumb, Tabs, Pagination, Stepper, Dropdown, Offcanvas, Table, Carousel, and Marquee.
 - **Official component coverage**: Added Image, CustomScrollbar, Datepicker, ListGroup, FileUploadingProgress, FileUpload, Navbar, Nav, NavLink, Sidebar, MegaMenu, Scrollspy, ContextMenu, Offcanvas, AdvancedSelect, ComboBox, SearchBox, ToggleCount, CopyMarkup, and PinInput exports.
 - **Optional integration coverage**: Added dependency-free React fallbacks for AdvancedRangeSlider, AdvancedDatepicker, Clipboard, Datatable, Chart, Datamap, Confetti, DragAndDrop, FileUploader, Map, and WYSIWYGEditor. Apps may replace these with the corresponding optional third-party packages when they need their full feature set.
 
 ### Changed
 
+- **Preline design tokens**: Aligned the public theme stylesheet with the Preline v4.2 semantic token schema, official `theme-default` name, color scales, interaction tokens, dark mode values, and built-in theme palettes.
+- **Button**: Matched primary button variants to the official v4.2 border, hover, focus, soft, and link token usage.
 - **Icons**: Replaced inline SVG icons in library components with `lucide-react` components. Lucide is the icon library listed in Preline UI's official resources, so icons now have stable names, shared sizing props, and a single upgrade path.
 - **Initialization**: Replaced the browser-only `/node_modules` script injection with the official `preline/non-auto` import and explicit `HSStaticMethods.autoInit()` call.
 - **Button**: Added semantic `primary` and `secondary` colors; `primary` is now the default and follows the selected Preline theme.

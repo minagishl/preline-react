@@ -35,10 +35,32 @@ export { default as Skeleton } from "./components/Skeleton";
 export { default as TreeView } from "./components/TreeView";
 
 // Overlay components
-export { default as Modal } from "./components/overlays/Modal";
-export { default as Tooltip } from "./components/overlays/Tooltip";
-export { default as Popover } from "./components/forms/Popover";
-export { Dropdown, Drawer } from "./components/overlays/Dropdown";
+export {
+  default as Modal,
+  type ModalProps,
+  type ModalContentProps,
+  type ModalSize,
+  type ModalAnimation,
+} from "./components/overlays/Modal";
+export {
+  default as Tooltip,
+  type TooltipProps,
+  type TooltipPlacement,
+  type TooltipTriggerMode,
+} from "./components/overlays/Tooltip";
+export {
+  default as Popover,
+  type PopoverProps,
+  type PopoverPlacement,
+  type PopoverTrigger,
+} from "./components/forms/Popover";
+export {
+  Dropdown,
+  type DropdownProps,
+  type DropdownPlacement,
+  type DropdownTrigger,
+  type DropdownTransition,
+} from "./components/overlays/Dropdown";
 export { default as Breadcrumb } from "./components/Breadcrumb";
 export { default as Tabs } from "./components/Tabs";
 export { default as Pagination } from "./components/Pagination";
@@ -59,7 +81,11 @@ export { default as Navbar } from "./components/Navbar";
 export { default as Nav, NavLink } from "./components/Nav";
 export { default as Sidebar } from "./components/Sidebar";
 export { default as MegaMenu } from "./components/MegaMenu";
-export { default as Offcanvas } from "./components/Offcanvas";
+export {
+  default as Offcanvas,
+  type OffcanvasPlacement,
+  type OffcanvasProps,
+} from "./components/Offcanvas";
 export { default as Scrollspy } from "./components/Scrollspy";
 export { default as ContextMenu } from "./components/ContextMenu";
 export { default as AdvancedRangeSlider } from "./components/AdvancedRangeSlider";

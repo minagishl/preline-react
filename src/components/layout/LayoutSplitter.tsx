@@ -249,7 +249,6 @@ const LayoutSplitterRoot = React.forwardRef<
 
     useEffect(() => {
       if (childElements.length && childElements.length !== items.length) {
-        // eslint-disable-next-line no-console
         console.warn(
           "LayoutSplitter children should be LayoutSplitter.Item components.",
         );
@@ -341,7 +340,6 @@ const LayoutSplitterRoot = React.forwardRef<
       if (!sizes) return;
       if (sizes.length !== itemCount) {
         if (sizes.length) {
-          // eslint-disable-next-line no-console
           console.warn(
             "LayoutSplitter received a sizes prop that does not match the number of items.",
           );

@@ -56,7 +56,7 @@ const Title: FC<HTMLAttributes<HTMLHeadingElement>> = ({
   ...props
 }) => {
   const titleClasses = classNames(
-    "text-lg font-bold text-gray-800 dark:text-white",
+    "text-foreground text-lg font-bold",
     className,
   );
   return <h3 className={titleClasses} {...props} />;
@@ -69,7 +69,7 @@ const Subtitle: FC<HTMLAttributes<HTMLParagraphElement>> = ({
   ...props
 }) => {
   const subtitleClasses = classNames(
-    "mt-1 text-xs font-medium uppercase text-gray-500 dark:text-neutral-500",
+    "text-muted-foreground mt-1 text-xs font-medium uppercase",
     className,
   );
   return <p className={subtitleClasses} {...props} />;
@@ -81,10 +81,7 @@ const Text: FC<HTMLAttributes<HTMLParagraphElement>> = ({
   className,
   ...props
 }) => {
-  const textClasses = classNames(
-    "mt-1 text-gray-500 dark:text-neutral-400",
-    className,
-  );
+  const textClasses = classNames("text-muted-foreground-1 mt-1", className);
   return <p className={textClasses} {...props} />;
 };
 Text.displayName = "Card.Text";
@@ -109,7 +106,7 @@ const Header: FC<HTMLAttributes<HTMLDivElement>> = ({
   ...props
 }) => {
   const headerClasses = classNames(
-    "bg-gray-100 border-b border-gray-200 rounded-t-xl py-3 px-4 md:py-4 md:px-5 dark:bg-neutral-900 dark:border-neutral-700",
+    "bg-card-header border-card-line rounded-t-xl border-b px-4 py-3 md:px-5 md:py-4",
     className,
   );
   return (
@@ -127,7 +124,7 @@ const Footer: FC<HTMLAttributes<HTMLDivElement>> = ({
   ...props
 }) => {
   const footerClasses = classNames(
-    "bg-gray-100 border-t border-gray-200 rounded-b-xl py-3 px-4 md:py-4 md:px-5 dark:bg-neutral-900 dark:border-neutral-700",
+    "bg-card-header border-card-line rounded-b-xl border-t px-4 py-3 md:px-5 md:py-4",
     className,
   );
   return (
@@ -167,7 +164,7 @@ const Card: CardComponent = ({
   ...props
 }) => {
   const cardClasses = classNames(
-    "flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70",
+    "bg-card border-card-line flex flex-col rounded-xl border shadow-2xs",
     {
       "group hover:shadow-lg focus:outline-hidden focus:shadow-lg transition":
         hoverEffect,

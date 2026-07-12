@@ -100,6 +100,10 @@ public
 .storybook-out
 storybook-static
 
+# Private, regenerable reference material fetched from preline.co.
+# Do not commit or redistribute this directory.
+.preline-reference/
+
 # Temporary folders
 tmp/
 temp/

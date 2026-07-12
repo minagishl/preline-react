@@ -1,7 +1,7 @@
 import React, { HTMLAttributes } from "react";
 import { cn } from "../utils/classNames";
 
-const baseBackground = "bg-gray-200 dark:bg-neutral-700";
+const baseBackground = "bg-skeleton";
 
 type SkeletonVariant = "block" | "circle" | "text";
 type SkeletonAnimation = "pulse" | "none";

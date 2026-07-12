@@ -171,8 +171,7 @@ export default function App() {
 - `Tooltip` - Tooltip
 - `Popover` - Popover
 - `Dropdown` - Controlled dropdown menu
-- `Drawer` - Controlled offcanvas drawer
-- `Offcanvas` - Drawer alias matching Preline terminology
+- `Offcanvas` - Controlled Preline offcanvas (drawer)
 - `ContextMenu` - Right-click context menu
 
 ### Navigation Components
@@ -204,9 +203,9 @@ plugin feature set.
 ### Themes and brand colors
 
 The default `primary` and `secondary` variants use semantic CSS tokens, so changing
-the theme updates every theme-aware component. Built-in theme values are `theme`,
+the theme updates every theme-aware component. Built-in theme values are `theme-default`,
 `theme-harvest`, `theme-retro`, `theme-ocean`, `theme-bubblegum`, `theme-autumn`,
-`theme-moon`, `theme-cashmere`, and `theme-olive`.
+`theme-moon`, `theme-cashmere`, and `theme-olive`. `theme` remains a backwards-compatible alias for `theme-default`.
 
 ```tsx
 const { setTheme, setMode, setTokens } = usePrelineTheme();

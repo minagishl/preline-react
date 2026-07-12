@@ -7,7 +7,10 @@ export const Table: React.FC<React.TableHTMLAttributes<HTMLTableElement>> = ({
 }) => (
   <div className="w-full overflow-x-auto">
     <table
-      className={cn("w-full border-collapse text-left text-sm", className)}
+      className={cn(
+        "bg-table text-foreground [&_td]:border-table-line [&_th]:bg-table-header [&_th]:border-table-line w-full border-collapse text-left text-sm [&_td]:border-b [&_td]:px-4 [&_td]:py-3 [&_th]:border-b [&_th]:px-4 [&_th]:py-3 [&_th]:font-medium",
+        className,
+      )}
       {...props}
     />
   </div>

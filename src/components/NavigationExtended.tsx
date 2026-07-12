@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { cn } from "../utils/classNames";
-import { Drawer, Dropdown } from "./overlays/Dropdown";
+import { Dropdown } from "./overlays/Dropdown";
 
 export const Navbar: React.FC<React.HTMLAttributes<HTMLElement>> = ({
   className,
   ...props
 }) => (
   <header
-    className={cn("border-border bg-layer border-b", className)}
+    className={cn("border-navbar-line bg-navbar border-b", className)}
     {...props}
   />
 );
@@ -33,7 +33,10 @@ export const Sidebar: React.FC<React.HTMLAttributes<HTMLElement>> = ({
   ...props
 }) => (
   <aside
-    className={cn("border-border bg-layer h-full border-r p-3", className)}
+    className={cn(
+      "border-sidebar-line bg-sidebar h-full border-r p-3",
+      className,
+    )}
     {...props}
   />
 );
@@ -46,8 +49,6 @@ export const MegaMenu: React.FC<{
     <div className="grid min-w-72 gap-2 p-2 sm:grid-cols-2">{children}</div>
   </Dropdown>
 );
-export const Offcanvas = Drawer;
-
 export interface ScrollspyItem {
   id: string;
   label: React.ReactNode;
@@ -60,13 +61,10 @@ export const Scrollspy: React.FC<{
   const [active, setActive] = useState(items[0]?.id);
   useEffect(() => {
     const update = () => {
-      const found = [...items]
-        .reverse()
-        .find(
-          (item) =>
-            document.getElementById(item.id)?.getBoundingClientRect().top! <=
-            offset,
-        );
+      const found = [...items].reverse().find((item) => {
+        const element = document.getElementById(item.id);
+        return element ? element.getBoundingClientRect().top <= offset : false;
+      });
       if (found) setActive(found.id);
     };
     update();

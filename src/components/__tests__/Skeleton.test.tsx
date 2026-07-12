@@ -6,11 +6,7 @@ describe("Skeleton", () => {
   it("renders a block skeleton by default", () => {
     render(<Skeleton data-testid="skeleton" />);
     const skeleton = screen.getByTestId("skeleton");
-    expect(skeleton).toHaveClass(
-      "bg-gray-200",
-      "dark:bg-neutral-700",
-      "rounded-md",
-    );
+    expect(skeleton).toHaveClass("bg-skeleton", "rounded-md");
     expect(skeleton).toHaveClass("animate-pulse");
     expect(skeleton).toHaveAttribute("aria-hidden", "true");
   });

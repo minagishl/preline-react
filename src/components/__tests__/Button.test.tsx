@@ -24,9 +24,9 @@ describe("Button Component", () => {
   describe("Variants", () => {
     it.each([
       ["solid", "bg-primary"],
-      ["outline", "border-primary"],
-      ["ghost", "text-primary"],
-      ["soft", "bg-primary/10"],
+      ["outline", "border-layer-line"],
+      ["ghost", "text-primary-600"],
+      ["soft", "bg-primary-100"],
       ["white", "bg-layer"],
       ["link", "text-primary"],
     ])("renders %s variant correctly", (variant, expectedClass) => {
